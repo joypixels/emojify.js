@@ -18,8 +18,10 @@ Add the required lines to the ``<head>`` part of your HTML code:
 Now type in an emoji keyword in your HTML, for example ``:smile:``
 Now run emojify using ``emojify.run()``.
 
+
 ## Dependencies
 This module depends on LESS, or at least requires you to compile the LESS source to CSS.
+
 
 ## License
 Copyright 2012 Hassan Khan
