@@ -1,9 +1,7 @@
-// 5.1.1
-// A Practical Module
-
 (function( global ) {
   var emojify = (function() {
 
+    // Get DOM as local variable for simplicity's sake
     var document = global.window.document;
 
     return {
@@ -18,7 +16,6 @@
         lang: "en-Us"
       },
       config: function() {
-
       },
       run: function() {
 
@@ -26,21 +23,19 @@
           [/:bowtie:/g, "<div class='emoji bowtie'></div>"],
           [/:smile:/g, "<div class='emoji smile' /></div>"],
           [/:laughing:/g, "<div class='emoji laughing' /></div>"],
-          [/:blush:/g, "<div class='emoji blush' /></div>"],
-          [/:smiley:/g, "<div class='emoji smiley' /></div>"],
-          [/:relaxed:/g, "<div class='emoji relaxed' /></div>"],
-          [/:smirk:/g, "<div class='emoji smirk' /></div>"],
+          [/:blush:|\:-\)|\:\)/g, "<div class='emoji blush' /></div>"],
+          [/:relaxed:|:-*\$/g, "<div class='emoji relaxed' /></div>"],
+          [/:smirk:|\:]|;-*]/g, "<div class='emoji smirk' /></div>"],
           [/:heart_eyes:/g, "<div class='emoji heart_eyes'></div>"],
-          [/:kissing_heart:/g, "<div class='emoji kissing_heart' /></div>"],
+          [/:kissing_heart:|:-*\*/g, "<div class='emoji kissing_heart' /></div>"],
           [/:kissing_closed_eyes:/g, "<div class='emoji kissing_closed_eyes' /></div>"],
-          [/:flushed:/g, "<div class='emoji flushed' /></div>"],
+          [/:flushed:|:-*\|/g, "<div class='emoji flushed' /></div>"],
           [/:relieved:/g, "<div class='emoji relieved' /></div>"],
           [/:satisfied:/g, "<div class='emoji satisfied' /></div>"],
           [/:grin:/g, "<div class='emoji grin' /></div>"],
-          [/:wink:/g, "<div class='emoji wink' /></div>"],
+          [/:wink:|;-*\)/g, "<div class='emoji wink' /></div>"],
           [/:wink2:/g, "<div class='emoji wink2' /></div>"],
-          [/:stuck_out_tongue_winking_eye:/g, "<div class='emoji stuck_out_tongue_winking_eye' /></div>"],
-          [/:stuck_out_tongue_closed_eyes:/g, "<div class='emoji stuck_out_tongue_closed_eyes' /></div>"],
+          [/:stuck_out_tongue_closed_eyes:|xd/gi, "<div class='emoji stuck_out_tongue_closed_eyes' /></div>"],
           [/:grinning:/g, "<div class='emoji grinning' /></div>"],
           [/:kissing:/g, "<div class='emoji kissing' /></div>"],
           [/:kissing_smiling_eyes:/g, "<div class='emoji kissing_smiling_eyes' /></div>"],
@@ -58,25 +53,23 @@
           [/:sweat_smile:/g, "<div class='emoji sweat_smile' /></div>"],          
           [/:sweat:/g, "<div class='emoji sweat' /></div>"],
           [/:weary:/g, "<div class='emoji weary' /></div>"],
-          [/:pensive:/g, "<div class='emoji pensive' /></div>"],
-          [/:disappointed:/g, "<div class='emoji disappointed' /></div>"],
-          [/:confounded:/g, "<div class='emoji confounded' /></div>"],
+          [/:pensive:|:-*\//g, "<div class='emoji pensive' /></div>"],
+          [/:disappointed:|:(-*\()/g, "<div class='emoji disappointed' /></div>"],
           [/:fearful:/g, "<div class='emoji fearful' /></div>"],
           [/:cold_sweat:/g, "<div class='emoji cold_sweat' /></div>"],
           [/:persevere:/g, "<div class='emoji persevere' /></div>"],
           [/:cry:/g, "<div class='emoji cry' /></div>"],
-          [/:sob:/g, "<div class='emoji sob' /></div>"],
+          [/:sob:|:'-*\(/g, "<div class='emoji sob' /></div>"],
           [/:joy:/g, "<div class='emoji joy' /></div>"],
           [/:astonished:/g, "<div class='emoji astonished' /></div>"],
-          [/:scream:/g, "<div class='emoji scream' /></div>"],
           [/:neckbeard:/g, "<div class='emoji neckbeard' /></div>"],
           [/:tired_face:/g, "<div class='emoji tired_face' /></div>"],
           [/:angry:/g, "<div class='emoji angry' /></div>"],
-          [/:rage:/g, "<div class='emoji rage' /></div>"],
+          [/:rage:|:(-*(\[|\|\||@))/g, "<div class='emoji rage' /></div>"],
           [/:triumph:/g, "<div class='emoji triumph' /></div>"],
           [/:sleepy:/g, "<div class='emoji sleepy' /></div>"],
           [/:yum:/g, "<div class='emoji yum' /></div>"],
-          [/:mask:/g, "<div class='emoji mask' /></div>"],
+          [/:mask:|:-*x/gi, "<div class='emoji mask' /></div>"],
           [/:sunglasses:/g, "<div class='emoji sunglasses' /></div>"],
           [/:dizzy_face:/g, "<div class='emoji dizzy_face' /></div>"],
           [/:imp:/g, "<div class='emoji imp' /></div>"],
@@ -88,9 +81,9 @@
           [/:yellow_heart:/g, "<div class='emoji yellow_heart' /></div>"],
           [/:blue_heart:/g, "<div class='emoji blue_heart' /></div>"],
           [/:purple_heart:/g, "<div class='emoji purple_heart' /></div>"],
-          [/:heart:/g, "<div class='emoji heart'></div>"],
+          [/:heart:|&lt;3/g, "<div class='emoji heart'></div>"],
           [/:green_heart:/g, "<div class='emoji green_heart' /></div>"],
-          [/:broken_heart:/g, "<div class='emoji broken_heart' /></div>"],
+          [/:broken_heart:|&lt;\/3/g, "<div class='emoji broken_heart' /></div>"],
           [/:heartbeat:/g, "<div class='emoji heartbeat'></div>"],
           [/:heartpulse:/g, "<div class='emoji heartpulse'></div>"],
           [/:two_hearts:/g, "<div class='emoji two_hearts' /></div>"],
@@ -212,7 +205,13 @@
           [/:rage3:/g, "<div class='emoji rage3' /></div>"],
           [/:rage4:/g, "<div class='emoji rage4' /></div>"],
           [/:suspect:/g, "<div class='emoji suspect' /></div>"],
-          [/:trollface:/g, "<div class='emoji trollface' /></div>"]
+          [/:trollface:/g, "<div class='emoji trollface' /></div>"],
+
+          // Moving problematic matches to the bottom
+          [/:smiley:|;D|:-*D/gi, "<div class='emoji smiley' /></div>"],
+          [/:scream:|\:-*o/gi, "<div class='emoji scream' /></div>"],
+          [/:stuck_out_tongue_winking_eye:|:-*p/gi, "<div class='emoji stuck_out_tongue_winking_eye' /></div>"],
+          [/:confounded:|:-*s/gi, "<div class='emoji confounded' /></div>"]
         ], r;
         
         while ((r = persons.shift()) && (document.body.innerHTML = String.prototype.replace.apply(document.body.innerHTML, r))) {}
