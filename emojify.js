@@ -65,7 +65,7 @@
           [/:neckbeard:/g, "<div class='emoji neckbeard' /></div>"],
           [/:tired_face:/g, "<div class='emoji tired_face' /></div>"],
           [/:angry:/g, "<div class='emoji angry' /></div>"],
-          [/:rage:|:(-*(\[|\|\||@))/g, "<div class='emoji rage' /></div>"],
+          [/:rage:|:(-*(\[|@))/g, "<div class='emoji rage' /></div>"],
           [/:triumph:/g, "<div class='emoji triumph' /></div>"],
           [/:sleepy:/g, "<div class='emoji sleepy' /></div>"],
           [/:yum:/g, "<div class='emoji yum' /></div>"],
