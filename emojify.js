@@ -626,6 +626,18 @@
           [/:eggplant:/g, "emojify eggplant"],
           [/:tomato:/g, "emojify tomato"],
           [/:corn:/g, "emojify corn"]
+        ], places = [
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"]
+        ], symbols = [
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"],
+          [/:xxx:/g, "emojify xxx"]
         ], r;
 
         while (r = people.shift()) {
