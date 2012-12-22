@@ -9,3 +9,4 @@
 
 ## Other
 * Create a proper build script with options
+* Delete *.png images
