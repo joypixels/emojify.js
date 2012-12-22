@@ -1,7 +1,7 @@
 ## General
 * Create a proper build script with options
 * Delete *.png images
-* Need a way of escaping emoticons and keywords
+* Need a way of escaping emoticons and keywords - make a class ``no-emojify`` or something
 
 ## CSS
 * Make sure CSS accounts for smileys being used in normal text
