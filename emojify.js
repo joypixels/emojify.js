@@ -5,18 +5,10 @@
     var document = global.window.document;
 
     return {
-      // This is some boolean property
-      bool: true,
-      // Some string value
-      string: "a string",
-      // An array property
-      array: [ 1, 2, 3, 4 ],
-      // An object property
-      object: {
-        lang: "en-Us"
-      },
+     // Eventually add configuration options here
       config: function() {
       },
+      // Helper class to find text within DOM
       findText: function(element, pattern, callback) {
         for (var childi = element.childNodes.length; childi-->0;) {
           var child = element.childNodes[childi];
@@ -38,8 +30,8 @@
           }
         }
       },
+      // Main method
       run: function() {
-
         var emoticons = [
           [/:-*\)/g, "emojify blush"],
           [/:-*o/gi, "emojify scream"],
@@ -640,6 +632,7 @@
           [/:xxx:/g, "emojify xxx"]
         ], r;
 
+        // This could definitely be cleaned up a bit
         while (r = people.shift()) {
           this.findText(document.body, r[0], function(node, match) {
             var wrap = document.createElement('div');
