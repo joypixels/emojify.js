@@ -3,9 +3,6 @@
 * Delete *.png images
 * Need a way of escaping emoticons and keywords - make a class ``no-emojify`` or something
 
-## CSS
-* Make sure CSS accounts for smileys being used in normal text
-
 ## Javascript
 * Add configuration options, like maybe allow user to specify a tag and an attribute and emojify would only work on that tag.
 * Another configuration option: turn regex off for say, emoticons, or people, or other parts.
