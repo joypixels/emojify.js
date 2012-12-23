@@ -5,10 +5,26 @@
     var document = global.window.document;
 
     return {
-     // Eventually add configuration options here
-      config: function() {
+
+      // Configuration options
+      emoticons_enabled: true,
+      people_enabled: true,
+      nature_enabled: true,
+      objects_enabled: true,
+      places_enabled: true,
+      symbols_enabled: true,
+
+     // This functions sets configuration options
+      config: function(emoticons = true, people = true, nature = true, objects = true, place = true, symbols = true) {
+        this.emoticons_enabled = emoticons;
+        this.people_enabled = people;
+        this.nature_enabled = nature;
+        this.objects_enabled = objects;
+        this.places_enabled = place;
+        this.symbols_enabled = symbols;
       },
-      // Helper class to find text within DOM
+
+      // Helper function to find text within DOM
       findText: function(element, pattern, callback) {
         for (var childi = element.childNodes.length; childi-->0;) {
           var child = element.childNodes[childi];
@@ -644,46 +660,35 @@
           [/:xxx:/g, "emojify xxx"]
         ], r;
 
-        // This could definitely be cleaned up a bit
-        while (r = people.shift()) {
-          this.findText(document.body, r[0], function(node, match) {
-            var wrap = document.createElement('div');
-            wrap.setAttribute('class', r[1]);
-            node.splitText(match.index);
-            node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-            wrap.appendChild(node.splitText(match.index));
-            node.parentNode.insertBefore(wrap, node.nextSibling);
-          });
-        }
-        while (r = nature.shift()) {
-          this.findText(document.body, r[0], function(node, match) {
-            var wrap = document.createElement('div');
-            wrap.setAttribute('class', r[1]);
-            node.splitText(match.index);
-            node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-            wrap.appendChild(node.splitText(match.index));
-            node.parentNode.insertBefore(wrap, node.nextSibling);
-          });
-        }
-        while (r = objects.shift()) {
-          this.findText(document.body, r[0], function(node, match) {
-            var wrap = document.createElement('div');
-            wrap.setAttribute('class', r[1]);
-            node.splitText(match.index);
-            node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-            wrap.appendChild(node.splitText(match.index));
-            node.parentNode.insertBefore(wrap, node.nextSibling);
-          });
-        }
-        while (r = emoticons.shift()) {
-          this.findText(document.body, r[0], function(node, match) {
-            var wrap = document.createElement('div');
-            wrap.setAttribute('class', r[1]);
-            node.splitText(match.index);
-            node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-            wrap.appendChild(node.splitText(match.index));
-            node.parentNode.insertBefore(wrap, node.nextSibling);
-          });
+        // Create array of selected icon sets
+        var selected_sets = [];
+        if(this.people_enabled)
+          selected_sets.push(people);
+        if(this.nature_enabled)
+          selected_sets.push(nature);
+        if(this.objects_enabled)
+          selected_sets.push(objects);
+        if(this.places_enabled)
+          selected_sets.push(places);
+        if(this.symbols_enabled)
+          selected_sets.push(symbols);
+        if(this.emoticons_enabled)
+          selected_sets.push(emoticons);
+
+        // Iterate through selected icon sets
+        for (var index in selected_sets) {
+          // Iterate through all regexes
+          while (r = selected_sets[index].shift()) {
+            // Find and replace matches with <div> tags
+            this.findText(document.body, r[0], function(node, match) {
+              var wrap = document.createElement('div');
+              wrap.setAttribute('class', r[1]);
+              node.splitText(match.index);
+              node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
+              wrap.appendChild(node.splitText(match.index));
+              node.parentNode.insertBefore(wrap, node.nextSibling);
+            });
+          }
         }
       }
     };
