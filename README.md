@@ -5,6 +5,8 @@ A Javascript module to convert emoji keywords to images.
 
 The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 
+Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to see this module in action.
+
 
 ## Rationale
 I wanted [my blog](http://hassankhan.me) to display smileys nicely, decided to use Emojis because they look nice.
