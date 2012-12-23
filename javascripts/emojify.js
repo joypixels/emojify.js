@@ -6,22 +6,14 @@
 
     return {
 
-      // Configuration options
-      emoticons_enabled: true,
-      people_enabled: true,
-      nature_enabled: true,
-      objects_enabled: true,
-      places_enabled: true,
-      symbols_enabled: true,
-
      // This functions sets configuration options
-      config: function(emoticons = true, people = true, nature = true, objects = true, place = true, symbols = true) {
-        this.emoticons_enabled = emoticons;
-        this.people_enabled = people;
-        this.nature_enabled = nature;
-        this.objects_enabled = objects;
-        this.places_enabled = place;
-        this.symbols_enabled = symbols;
+      config: function(emoticons, people, nature, objects, places, symbols) {
+        this.emoticons_enabled = typeof emoticons !== 'undefined' ? emoticons : true;
+        this.people_enabled = typeof people !== 'undefined' ? people : true;
+        this.nature_enabled = typeof nature !== 'undefined' ? nature : true;
+        this.objects_enabled = typeof objects !== 'undefined' ? objects : true;
+        this.places_enabled = typeof places !== 'undefined' ? places : true;
+        this.symbols_enabled = typeof symbols !== 'undefined' ? symbols : true;
       },
 
       // Helper function to find text within DOM
@@ -676,7 +668,7 @@
           selected_sets.push(emoticons);
 
         // Iterate through selected icon sets
-        for (var index in selected_sets) {
+        for (var index = 0; index < selected_sets.length; index++) {
           // Iterate through all regexes
           while (r = selected_sets[index].shift()) {
             // Find and replace matches with <div> tags
