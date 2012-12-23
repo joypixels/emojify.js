@@ -13,20 +13,32 @@
         for (var childi = element.childNodes.length; childi-->0;) {
           var child = element.childNodes[childi];
           if (child.nodeType == 1) {
-            var tag = child.tagName.toLowerCase();
-            if (tag !== 'script' && tag !== 'style' && tag !== 'textarea')
-              this.findText(child, pattern, callback);
-            } else if (child.nodeType == 3) {
+            
+            // Get tag name and class attribute
+            var tag = child.tagName.toLowerCase(), classname;
+            if(child.hasAttribute('class'))
+              classname = child.getAttribute('class').toLowerCase();
+
+            // Hacky at the minute, needs to be fixed
+            if (classname) {
+               if (tag !== 'script' && tag !== 'style' && tag !== 'textarea' && classname !== 'no-emojify')
+                 this.findText(child, pattern, callback);
+            } else {
+               if (tag !== 'script' && tag !== 'style' && tag !== 'textarea')
+                 this.findText(child, pattern, callback);
+            }
+            
+          } else if (child.nodeType == 3) {
             var matches = [];
             if (typeof pattern === 'string') {
               console.error("Accepts regex only");
-          } else {
-            var match;
-            while (match = pattern.exec(child.data))
-              matches.push(match);
-          }
-          for (var i = matches.length; i-->0;)
-            callback.call(window, child, matches[i]);
+            } else {
+              var match;
+              while (match = pattern.exec(child.data))
+                matches.push(match);
+            }
+            for (var i = matches.length; i-->0;)
+              callback.call(window, child, matches[i]);
           }
         }
       },
