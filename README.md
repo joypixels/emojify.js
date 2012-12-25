@@ -1,4 +1,4 @@
-emojify.js v.0.5
+emojify.js v.0.6
 ==========
 
 A Javascript module to convert emoji keywords to images.
