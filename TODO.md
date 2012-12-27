@@ -1,7 +1,5 @@
 ## General
 * Create a proper build script with options
-* Delete *.png images
-* Make configuration method accept a JSON object
 * Some of the emojis are duplicates, use the regex to catch them and remove the duplicate data uri from the .less file
 
 ## Javascript

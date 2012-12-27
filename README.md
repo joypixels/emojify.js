@@ -1,4 +1,4 @@
-emojify.js v0.6
+emojify.js v0.7
 ==========
 
 A Javascript module to convert emoji keywords to images.
@@ -20,6 +20,8 @@ Add the required lines to the ``<head>`` part of your HTML code:
 
 Now type in an emoji keyword in your HTML, for example ``:smile:``
 Now run emojify using ``emojify.run()``.
+
+To set configuration options, use ``emojify.setConfig()`` with a JSON object as a parameter.
 
 To exclude tags from being emojified, add ``no-emojify`` to their ``class`` attributes.
 

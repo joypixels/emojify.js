@@ -973,7 +973,14 @@
       </p>
   </div>
   <script async>
-      emojify.config(true,true,true,true,true,true);
+      emojify.setConfig({
+          emoticons_enabled: true,
+          people_enabled: true,
+          nature_enabled: true,
+          objects_enabled: true,
+          places_enabled: true,
+          symbols_enabled: true
+      });
   	emojify.run();
   </script>
 </body>
