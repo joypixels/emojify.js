@@ -944,7 +944,6 @@
 
   	  setConfig: function(newConfig) {
   		  this.defaultConfig = newConfig;
-  		  console.log(this.defaultConfig);
   	  },
 
       // Main method
