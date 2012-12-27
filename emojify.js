@@ -13,7 +13,7 @@
       [/:-*p/gi, 'emojify stuck_out_tongue_winking_eye'],
       [/:-*(\[|@)/g, 'emojify rage'],
       [/:-*\(/g, 'emojify disappointed'],
-      [/:'-*\(/g, 'emojify sob'],
+      [/:('|’)-*\(/g, 'emojify sob'],
       [/:-*\*/g, 'emojify kissing_heart'],
       [/;-*\)/g, 'emojify wink'],
       [/:-*\//g, 'emojify pensive'],
