@@ -20,10 +20,27 @@ Add the required lines to the ``<head>`` part of your HTML code:
 
 Now type in an emoji keyword in your HTML, for example ``:smile:``
 Now run emojify using ``emojify.run()``.
-
-To set configuration options, use ``emojify.setConfig()`` with a JSON object as a parameter.
-
 To exclude tags from being emojified, add ``no-emojify`` to their ``class`` attributes.
+
+### Configuration
+To set configuration options, use ``emojify.setConfig()`` and a JSON object as a parameter with the following attributes:
+* ``emojify_tag_type``: Set to ``<div>`` by default. Sets the element the emojify.js uses to replace emoji keywords
+* ``emoticons_enabled``: Set to ``true`` by default. Enables detection of emoticon keywords.
+* ``people_enabled: Set to ``false`` by default. Enables detection of emoji people keywords.
+* ``nature_enabled: Set to ``false`` by default. Enables detection of emoji nature keywords.
+* ``objects_enabled: Set to ``false`` by default. Enables detection of emoji objects keywords.
+* ``places_enabled: Set to ``false`` by default. Enables detection of emoji places keywords.
+* ``symbols_enabled: Set to ``false`` by default. Enables detection of emoji symbols keywords.
+Example:
+    emojify.setConfig({
+        emojify_tag_type: 'img',
+        emoticons_enabled: true,
+        people_enabled: true,
+        nature_enabled: true,
+        objects_enabled: true,
+        places_enabled: true,
+        symbols_enabled: true
+    });
 
 
 ## Dependencies
