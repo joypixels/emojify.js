@@ -31,7 +31,9 @@ To set configuration options, use ``emojify.setConfig()`` and a JSON object as a
 * ``objects_enabled: Set to ``false`` by default. Enables detection of emoji objects keywords.
 * ``places_enabled: Set to ``false`` by default. Enables detection of emoji places keywords.
 * ``symbols_enabled: Set to ``false`` by default. Enables detection of emoji symbols keywords.
+
 Example:
+
     emojify.setConfig({
         emojify_tag_type: 'img',
         emoticons_enabled: true,
