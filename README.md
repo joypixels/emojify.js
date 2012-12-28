@@ -32,7 +32,7 @@ To set configuration options, use ``emojify.setConfig()`` and a JSON object as a
 * ``places_enabled: Set to ``false`` by default. Enables detection of emoji places keywords.
 * ``symbols_enabled: Set to ``false`` by default. Enables detection of emoji symbols keywords.
 
-Example:
+### Code Example
 
     emojify.setConfig({
         emojify_tag_type: 'img',
