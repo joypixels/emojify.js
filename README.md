@@ -43,7 +43,7 @@ Example:
         places_enabled: true,
         symbols_enabled: true
     });
-
+    emojify.run();
 
 ## Dependencies
 This module depends on LESS, or at least requires you to compile the LESS source to CSS.
