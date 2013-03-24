@@ -23,14 +23,15 @@ Now run emojify using ``emojify.run()``.
 To exclude tags from being emojified, add ``no-emojify`` to their ``class`` attributes.
 
 ### Configuration
-To set configuration options, use ``emojify.setConfig()`` and a JSON object as a parameter with the following attributes:
-* ``emojify_tag_type``: Set to ``<div>`` by default. Sets the element the emojify.js uses to replace emoji keywords
-* ``emoticons_enabled``: Set to ``true`` by default. Enables detection of emoticon keywords.
-* ``people_enabled: Set to ``false`` by default. Enables detection of emoji people keywords.
-* ``nature_enabled: Set to ``false`` by default. Enables detection of emoji nature keywords.
-* ``objects_enabled: Set to ``false`` by default. Enables detection of emoji objects keywords.
-* ``places_enabled: Set to ``false`` by default. Enables detection of emoji places keywords.
-* ``symbols_enabled: Set to ``false`` by default. Enables detection of emoji symbols keywords.
+To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with the following attributes:
+* ``emojify_tag_type``: Set to `<div>` by default. Sets the element the emojify.js uses to replace emoji keywords
+* ``emoticons_enabled``: Set to `true` by default. Enables detection of emoticon keywords.
+* ``people_enabled``: Set to `false` by default. Enables detection of emoji people keywords.
+* ``nature_enabled``: Set to `false` by default. Enables detection of emoji nature keywords.
+* ``objects_enabled``: Set to `false` by default. Enables detection of emoji objects keywords.
+* ``places_enabled``: Set to `false` by default. Enables detection of emoji places keywords.
+* ``symbols_enabled``: Set to `false` by default. Enables detection of emoji symbols keywords.
+* ``only_crawl_id``: Set to `null` by default. Restricts searching for emojis to a specified element & it's children.  If null, `document.body` is used.
 
 ### Code Example
 
@@ -41,7 +42,8 @@ To set configuration options, use ``emojify.setConfig()`` and a JSON object as a
         nature_enabled: true,
         objects_enabled: true,
         places_enabled: true,
-        symbols_enabled: true
+        symbols_enabled: true,
+        only_crawl_id: 'messages_container'  #only do this when you want to restrict where emojify looks.
     });
     emojify.run();
 
