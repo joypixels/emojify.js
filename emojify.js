@@ -961,15 +961,23 @@
             // Main method
             run: function () {
                 var el = document.body;
-
                 // Create array of selected icon sets
                 var selected_sets = [];
-                if (this.defaultConfig.people_enabled) selected_sets.push(people);
-                if (this.defaultConfig.nature_enabled) selected_sets.push(nature);
-                if (this.defaultConfig.objects_enabled) selected_sets.push(objects);
-                if (this.defaultConfig.places_enabled) selected_sets.push(places);
-                if (this.defaultConfig.symbols_enabled) selected_sets.push(symbols);
-                if (this.defaultConfig.emoticons_enabled) selected_sets.push(emoticons);
+
+                // Quick way to duplicate arrays, cache them here in these local variables.
+                var _people = people.slice(0),
+                    _nature = nature.slice(0),
+                    _objects = objects.slice(0),
+                    _places = places.slice(0),
+                    _symbols = symbols.slice(0),
+                    _emoticons = emoticons.slice(0);
+
+                if (this.defaultConfig.people_enabled) selected_sets.push(_people);
+                if (this.defaultConfig.nature_enabled) selected_sets.push(_nature);
+                if (this.defaultConfig.objects_enabled) selected_sets.push(_objects);
+                if (this.defaultConfig.places_enabled) selected_sets.push(_places);
+                if (this.defaultConfig.symbols_enabled) selected_sets.push(_symbols);
+                if (this.defaultConfig.emoticons_enabled) selected_sets.push(_emoticons);
                 if (this.defaultConfig.only_crawl_id) {
                     el = document.getElementById(this.defaultConfig.only_crawl_id);
                 }
