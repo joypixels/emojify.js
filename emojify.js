@@ -931,13 +931,14 @@
                     callback.call(window, child, matches[i]);
                 }
             }
-        }
+        };
 
         return {
 
             // Sane defaults
             defaultConfig: {
                 emojify_tag_type: 'div',
+                only_crawl_id: null,
                 emoticons_enabled: true,
                 people_enabled: false,
                 nature_enabled: false,
@@ -954,18 +955,32 @@
                 this.defaultConfig.objects_enabled = typeof newConfig.objects_enabled !== 'undefined' ? newConfig.objects_enabled : this.defaultConfig.objects_enabled;
                 this.defaultConfig.places_enabled = typeof newConfig.places_enabled !== 'undefined' ? newConfig.places_enabled : this.defaultConfig.places_enabled;
                 this.defaultConfig.symbols_enabled = typeof newConfig.symbols_enabled !== 'undefined' ? newConfig.symbols_enabled : this.defaultConfig.symbols_enabled;
+                this.defaultConfig.only_crawl_id = typeof newConfig.only_crawl_id !== 'undefined' ? newConfig.only_crawl_id : this.defaultConfig.only_crawl_id;
             },
 
             // Main method
             run: function () {
+                var el = document.body;
                 // Create array of selected icon sets
                 var selected_sets = [];
-                if (this.defaultConfig.people_enabled) selected_sets.push(people);
-                if (this.defaultConfig.nature_enabled) selected_sets.push(nature);
-                if (this.defaultConfig.objects_enabled) selected_sets.push(objects);
-                if (this.defaultConfig.places_enabled) selected_sets.push(places);
-                if (this.defaultConfig.symbols_enabled) selected_sets.push(symbols);
-                if (this.defaultConfig.emoticons_enabled) selected_sets.push(emoticons);
+
+                // Quick way to duplicate arrays, cache them here in these local variables.
+                var _people = people.slice(0),
+                    _nature = nature.slice(0),
+                    _objects = objects.slice(0),
+                    _places = places.slice(0),
+                    _symbols = symbols.slice(0),
+                    _emoticons = emoticons.slice(0);
+
+                if (this.defaultConfig.people_enabled) selected_sets.push(_people);
+                if (this.defaultConfig.nature_enabled) selected_sets.push(_nature);
+                if (this.defaultConfig.objects_enabled) selected_sets.push(_objects);
+                if (this.defaultConfig.places_enabled) selected_sets.push(_places);
+                if (this.defaultConfig.symbols_enabled) selected_sets.push(_symbols);
+                if (this.defaultConfig.emoticons_enabled) selected_sets.push(_emoticons);
+                if (this.defaultConfig.only_crawl_id) {
+                    el = document.getElementById(this.defaultConfig.only_crawl_id);
+                }
 
                 // Iterate through selected icon sets
                 for (var index = 0; index < selected_sets.length; index++) {
@@ -973,7 +988,7 @@
                     var r;
                     while (r = selected_sets[index].shift()) {
                         // Find and replace matches with <div> tags
-                        findText(document.body, r[0], function (node, match) {
+                        findText(el, r[0], function (node, match) {
                             var wrap = document.createElement(this.emojify.defaultConfig.emojify_tag_type);
                             wrap.setAttribute('class', r[1]);
                             // wrap.setAttribute('alt', ':' + r[1].replace(/emojify /g, '') + ':');
