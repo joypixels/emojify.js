@@ -16,7 +16,7 @@
             [/:('|’)-*\(/g, 'emojify sob'],
             [/:-*\*/g, 'emojify kissing_heart'],
             [/;-*\)/g, 'emojify wink'],
-            [/:-*\//g, 'emojify pensive'],
+            [/(?!http\|https\|ftp)(?!:\/\/)\:-*\//g, 'emojify pensive'],
             [/:-*s/gi, 'emojify confounded'],
             [/:-*\|/g, 'emojify flushed'],
             [/:-*\$/g, 'emojify relaxed'],
