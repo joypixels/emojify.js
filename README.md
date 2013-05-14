@@ -43,7 +43,7 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
         objects_enabled: true,
         places_enabled: true,
         symbols_enabled: true,
-        only_crawl_id: 'messages_container'  #only do this when you want to restrict where emojify looks.
+        only_crawl_id: 'messages_container'  #only do this when you want to restrict where emojify.js applies.
     });
     emojify.run();
 
