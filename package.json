@@ -1,0 +1,31 @@
+{
+  "name": "emojify.js",
+  "version": "0.8.0",
+  "description": "A Javascript module to convert emoji keywords to images.",
+  "main": "emojify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://hassankhan@github.com/hassankhan/emojify.js.git"
+  },
+  "keywords": [
+    "emoji",
+    "emojify",
+    "javascript"
+  ],
+  "author": "Hassan Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hassankhan/emojify.js/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-recess": "~0.4.0",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-clean": "~0.5.0"
+  }
+}

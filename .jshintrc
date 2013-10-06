@@ -1,0 +1,28 @@
+{
+    "maxerr"        : 50,       // {int} Maximum error before stopping
+
+    // Enforcing
+    "curly"         : true,     // true: Require {} for every new block or scope
+    "eqeqeq"        : true,     // true: Require triple equals (===) for comparison
+    "forin"         : false,     // true: Require filtering for..in loops with obj.hasOwnProperty()
+    "indent"        : 4,        // {int} Number of spaces to use for indentation
+    "noempty"       : true,     // true: Prohibit use of empty blocks
+    "nonew"         : false,    // true: Prohibit use of constructors for side-effects (without assignment)
+    "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
+    "unused"        : true,     // true: Require all defined variables be used
+    "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
+    "trailing"      : true,    // true: Prohibit trailing whitespaces
+
+    // Environments
+    "browser"       : true,     // Web Browser (window, document, etc)
+    "jquery"        : false,    // jQuery
+
+    // Custom Globals
+    "globals"       : {         // additional predefined global variables
+        "Ember"      : "false",
+        "DS"         : "false",
+        "App"        : "true",
+        "moment"     : "false",
+        "Highcharts" : "true"
+    }
+}
