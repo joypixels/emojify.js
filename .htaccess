@@ -1,0 +1,8 @@
+# Gzip assets before sending to client
+AddOutputFilterByType DEFLATE text/html text/event-stream text/xml text/css text/javascript application/javascript application/json
+
+# Set cache lifetime for these files as a week
+# <FilesMatch ".(js|css)$">
+#     Header set Cache-Control "max-age=604800, public"
+# </FilesMatch>
+
