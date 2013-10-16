@@ -959,8 +959,8 @@
             },
 
             // Main method
-            run: function () {
-                var el = document.body;
+            run: function (el) {                            
+                
                 // Create array of selected icon sets
                 var selected_sets = [];
 
@@ -978,9 +978,16 @@
                 if (this.defaultConfig.places_enabled) selected_sets.push(_places);
                 if (this.defaultConfig.symbols_enabled) selected_sets.push(_symbols);
                 if (this.defaultConfig.emoticons_enabled) selected_sets.push(_emoticons);
-                if (this.defaultConfig.only_crawl_id) {
-                    el = document.getElementById(this.defaultConfig.only_crawl_id);
-                }
+
+                // Check if an element was not passed.
+                if(typeof el === 'undefined'){
+                    // Check if an element was configured. If not, default to the body.
+                    if (this.defaultConfig.only_crawl_id) {
+                        el = document.getElementById(this.defaultConfig.only_crawl_id);
+                    } else {
+                        el = document.body;    
+                    }                    
+                };                            
 
                 // Iterate through selected icon sets
                 for (var index = 0; index < selected_sets.length; index++) {
