@@ -22,6 +22,8 @@ Now type in an emoji keyword in your HTML, for example ``:smile:``
 Now run emojify using ``emojify.run()``.
 To exclude tags from being emojified, add ``no-emojify`` to their ``class`` attributes.
 
+You can optionally pass an object to ``emojify.run()`` to restrict the **emojification** to that object only: ``emojify.run(document.getElementById('my-element'))``
+
 ### Configuration
 To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with the following attributes:
 * ``emojify_tag_type``: Set to `<div>` by default. Sets the element the emojify.js uses to replace emoji keywords
@@ -31,7 +33,7 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 * ``objects_enabled``: Set to `false` by default. Enables detection of emoji objects keywords.
 * ``places_enabled``: Set to `false` by default. Enables detection of emoji places keywords.
 * ``symbols_enabled``: Set to `false` by default. Enables detection of emoji symbols keywords.
-* ``only_crawl_id``: Set to `null` by default. Restricts searching for emojis to a specified element & it's children.  If null, `document.body` is used.
+* ``only_crawl_id``: Set to `null` by default. Restricts searching for emojis to a specified element & it's children.  If null, and no object is passed to run(), `document.body` is used.
 
 ### Code Example
 
