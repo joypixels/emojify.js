@@ -1,0 +1,17 @@
+{
+  "name": "emojify.js",
+  "main": "emojify.js",
+  "version": "0.8.1",
+  "homepage": "https://github.com/island205/emojify.js",
+  "authors": [
+    "island205 <island205@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

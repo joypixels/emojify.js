@@ -40,7 +40,6 @@
       [/:satisfied:/g, 'emojify satisfied'],
       [/:grin:/g, 'emojify grin'],
       [/:wink:/g, 'emojify wink'],
-      [/:wink2:/g, 'emojify wink2'],
       [/:stuck_out_tongue_winking_eye:/g, 'emojify stuck_out_tongue_winking_eye'],
       [/:stuck_out_tongue_closed_eyes:/g, 'emojify stuck_out_tongue_closed_eyes'],
       [/:grinning:/g, 'emojify grinning'],
@@ -944,7 +943,7 @@
 
       // Sane defaults
       defaultConfig: {
-        emojify_tag_type: 'div',
+        emojify_tag_type: 'span',
         only_crawl_id: null,
         emoticons_enabled: true,
         people_enabled: false,
@@ -964,11 +963,7 @@
         this.defaultConfig.symbols_enabled = typeof newConfig.symbols_enabled !== 'undefined' ? newConfig.symbols_enabled : this.defaultConfig.symbols_enabled;
         this.defaultConfig.only_crawl_id = typeof newConfig.only_crawl_id !== 'undefined' ? newConfig.only_crawl_id : this.defaultConfig.only_crawl_id;
       },
-
-      // Main method
-      run: function(el) {
-        var that = this;
-
+      getSelectedSets: function () {
         // Create array of selected icon sets
         var selected_sets = [];
 
@@ -987,6 +982,14 @@
         if (this.defaultConfig.symbols_enabled) selected_sets.push(_symbols);
         if (this.defaultConfig.emoticons_enabled) selected_sets.push(_emoticons);
 
+        return selected_sets;
+      },
+      // Main method
+      run: function(el) {
+        var that = this;
+        var r;
+        var selected_sets = this.getSelectedSets();
+
         // Check if an element was not passed.
         if (typeof el === 'undefined') {
           // Check if an element was configured. If not, default to the body.
@@ -1000,7 +1003,6 @@
         // Iterate through selected icon sets
         for (var index = 0; index < selected_sets.length; index++) {
           // Iterate through all regexes
-          var r;
           while (r = selected_sets[index].shift()) {
             // Find and replace matches with <div> tags
             findText(el, r[0], function(node, match) {
@@ -1016,38 +1018,23 @@
           }
         }
       },
-      emojify: function(str) {
+      replace: function(str) {
         if (!str) {
           return
         }
-        // Create array of selected icon sets
-        var selected_sets = [];
+        var r;
+        var _r;
+        var selected_sets = this.getSelectedSets();
 
-        // Quick way to duplicate arrays, cache them here in these local variables.
-        var _people = people.slice(0),
-          _nature = nature.slice(0),
-          _objects = objects.slice(0),
-          _places = places.slice(0),
-          _symbols = symbols.slice(0),
-          _emoticons = emoticons.slice(0);
-
-        if (this.defaultConfig.people_enabled) selected_sets.push(_people);
-        if (this.defaultConfig.nature_enabled) selected_sets.push(_nature);
-        if (this.defaultConfig.objects_enabled) selected_sets.push(_objects);
-        if (this.defaultConfig.places_enabled) selected_sets.push(_places);
-        if (this.defaultConfig.symbols_enabled) selected_sets.push(_symbols);
-        if (this.defaultConfig.emoticons_enabled) selected_sets.push(_emoticons);
-
-        str = str.split('\n').join('NNNNN')
         // Iterate through selected icon sets
         for (var index = 0; index < selected_sets.length; index++) {
           // Iterate through all regexes
-          var r;
           while (r = selected_sets[index].shift()) {
+            _r = new RegExp(r[0].toString().match(/^\/(.*)\/g(i)?$/)[1], 'mg')
             str = str.replace(r[0], createTag(this.defaultConfig.emojify_tag_type, r[1]))
           }
         }
-        return str.split('NNNNN').join('\n');
+        return str;
       }
     };
   })();
