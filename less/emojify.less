@@ -1,6 +1,10 @@
 @emoji-size: 1.5em;
+@emoji-location: '../emojis/';
 
 .emojify { width: @emoji-size; height: @emoji-size; display: inline-block; margin-bottom: -0.25em; }
+.background (@emotion) {
+  background: url('@{emoji-location}@{emotion}.png') no-repeat;
+}
 
 // @import 'emojify.emoticons.less';
 @import 'emojify.people.less';
