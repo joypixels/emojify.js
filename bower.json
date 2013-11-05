@@ -1,10 +1,10 @@
 {
   "name": "emojify.js",
   "main": "emojify.js",
-  "version": "0.8.1",
-  "homepage": "https://github.com/island205/emojify.js",
+  "version": "0.9.0",
+  "homepage": "http://hassankhan.github.com/emojify.js/",
   "authors": [
-    "island205 <island205@gmail.com>"
+    "contact@hassankhan.me"
   ],
   "license": "MIT",
   "ignore": [
