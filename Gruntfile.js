@@ -62,8 +62,7 @@ module.exports = function (grunt) {
             // 'jshint',
             'recess',
             'uglify',
-            'cssmin',
-            'clean'
+            'cssmin'
         ]
     );
 };

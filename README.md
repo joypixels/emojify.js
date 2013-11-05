@@ -1,4 +1,4 @@
-emojify.js v0.8.0
+emojify.js v0.9.0
 ==========
 
 A Javascript module to convert emoji keywords to images.
@@ -10,6 +10,12 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 ## Rationale
 I wanted [my blog](http://hassankhan.me) to display smileys nicely, decided to use Emojis because they look nice.
+
+## Install
+
+in bower:
+
+    bower install emojify.js
 
 
 ## Usage
@@ -47,7 +53,16 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
         symbols_enabled: true,
         only_crawl_id: 'messages_container'  #only do this when you want to restrict where emojify.js applies.
     });
+    
+    // use emojify.run to emojify dom
     emojify.run();
+    
+    // emojify particular dom
+    emojify.run(domEl);
+    
+    // use emojify.replace to emijfy string.
+    // return "Smile<span class="emojify blush" alt=":blush:" title=":blush:"></span>"
+    emojify.replace('Smile:)')
 
 ## Dependencies
 This module depends on LESS, or at least requires you to compile the LESS source to CSS.

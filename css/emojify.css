@@ -1,0 +1,4321 @@
+.emojify {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: -0.25em;
+}
+
+.emojify.alien {
+  background: url('../emojis/alien.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.angel {
+  background: url('../emojis/angel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.anger {
+  background: url('../emojis/anger.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.angry {
+  background: url('../emojis/angry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.anguished {
+  background: url('../emojis/anguished.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.astonished {
+  background: url('../emojis/astonished.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baby {
+  background: url('../emojis/baby.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blue_heart {
+  background: url('../emojis/blue_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blush {
+  background: url('../emojis/blush.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.boom {
+  background: url('../emojis/boom.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bow {
+  background: url('../emojis/bow.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bowtie {
+  background: url('../emojis/bowtie.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.boy {
+  background: url('../emojis/boy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bride_with_veil {
+  background: url('../emojis/bride_with_veil.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.broken_heart {
+  background: url('../emojis/broken_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bust_in_silhouette {
+  background: url('../emojis/bust_in_silhouette.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.busts_in_silhouette {
+  background: url('../emojis/busts_in_silhouette.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clap {
+  background: url('../emojis/clap.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cold_sweat {
+  background: url('../emojis/cold_sweat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.collision {
+  background: url('../emojis/collision.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.confounded {
+  background: url('../emojis/confounded.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.confused {
+  background: url('../emojis/confused.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.construction_worker {
+  background: url('../emojis/construction_worker.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cop {
+  background: url('../emojis/cop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.couple_with_heart {
+  background: url('../emojis/couple_with_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.couple {
+  background: url('../emojis/couple.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.couplekiss {
+  background: url('../emojis/couplekiss.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cry {
+  background: url('../emojis/cry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.crying_cat_face {
+  background: url('../emojis/crying_cat_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cupid {
+  background: url('../emojis/cupid.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dancer {
+  background: url('../emojis/dancer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dancers {
+  background: url('../emojis/dancers.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dash {
+  background: url('../emojis/dash.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.disappointed {
+  background: url('../emojis/disappointed.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dizzy_face {
+  background: url('../emojis/dizzy_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dizzy {
+  background: url('../emojis/dizzy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.droplet {
+  background: url('../emojis/droplet.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ear {
+  background: url('../emojis/ear.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.exclamation {
+  background: url('../emojis/exclamation.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.expressionless {
+  background: url('../emojis/expressionless.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eyes {
+  background: url('../emojis/eyes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.facepunch {
+  background: url('../emojis/facepunch.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.family {
+  background: url('../emojis/family.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fearful {
+  background: url('../emojis/fearful.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.feelsgood {
+  background: url('../emojis/feelsgood.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.feet {
+  background: url('../emojis/feet.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.finnadie {
+  background: url('../emojis/finnadie.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fire {
+  background: url('../emojis/fire.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fist {
+  background: url('../emojis/fist.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.flushed {
+  background: url('../emojis/flushed.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.frowning {
+  background: url('../emojis/frowning.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.girl {
+  background: url('../emojis/girl.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.goberserk {
+  background: url('../emojis/goberserk.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.godmode {
+  background: url('../emojis/godmode.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.green_heart {
+  background: url('../emojis/green_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grey_exclamation {
+  background: url('../emojis/grey_exclamation.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grey_question {
+  background: url('../emojis/grey_question.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grimacing {
+  background: url('../emojis/grimacing.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grin {
+  background: url('../emojis/grin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grinning {
+  background: url('../emojis/grinning.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.guardsman {
+  background: url('../emojis/guardsman.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.haircut {
+  background: url('../emojis/haircut.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hand {
+  background: url('../emojis/hand.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hankey {
+  background: url('../emojis/hankey.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hear_no_evil {
+  background: url('../emojis/hear_no_evil.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heart_eyes_cat {
+  background: url('../emojis/heart_eyes_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heart_eyes {
+  background: url('../emojis/heart_eyes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heart {
+  background: url('../emojis/heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heartbeat {
+  background: url('../emojis/heartbeat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heartpulse {
+  background: url('../emojis/heartpulse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hurtrealbad {
+  background: url('../emojis/hurtrealbad.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hushed {
+  background: url('../emojis/hushed.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.imp {
+  background: url('../emojis/imp.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.information_desk_person {
+  background: url('../emojis/information_desk_person.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.innocent {
+  background: url('../emojis/innocent.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.japanese_goblin {
+  background: url('../emojis/japanese_goblin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.japanese_ogre {
+  background: url('../emojis/japanese_ogre.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.joy_cat {
+  background: url('../emojis/joy_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.joy {
+  background: url('../emojis/joy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kiss {
+  background: url('../emojis/kiss.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kissing_cat {
+  background: url('../emojis/kissing_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kissing_closed_eyes {
+  background: url('../emojis/kissing_closed_eyes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kissing_heart {
+  background: url('../emojis/kissing_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kissing_smiling_eyes {
+  background: url('../emojis/kissing_smiling_eyes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kissing {
+  background: url('../emojis/kissing.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.laughing {
+  background: url('../emojis/laughing.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lips {
+  background: url('../emojis/lips.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.love_letter {
+  background: url('../emojis/love_letter.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.man_with_gua_pi_mao {
+  background: url('../emojis/man_with_gua_pi_mao.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.man_with_turban {
+  background: url('../emojis/man_with_turban.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.man {
+  background: url('../emojis/man.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mask {
+  background: url('../emojis/mask.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.massage {
+  background: url('../emojis/massage.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.metal {
+  background: url('../emojis/metal.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.muscle {
+  background: url('../emojis/muscle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.musical_note {
+  background: url('../emojis/musical_note.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.nail_care {
+  background: url('../emojis/nail_care.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.neckbeard {
+  background: url('../emojis/neckbeard.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.neutral_face {
+  background: url('../emojis/neutral_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_good {
+  background: url('../emojis/no_good.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_mouth {
+  background: url('../emojis/no_mouth.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.nose {
+  background: url('../emojis/nose.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.notes {
+  background: url('../emojis/notes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ok_hand {
+  background: url('../emojis/ok_hand.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ok_woman {
+  background: url('../emojis/ok_woman.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.older_man {
+  background: url('../emojis/older_man.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.older_woman {
+  background: url('../emojis/older_woman.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.open_hands {
+  background: url('../emojis/open_hands.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.open_mouth {
+  background: url('../emojis/open_mouth.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pensive {
+  background: url('../emojis/pensive.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.persevere {
+  background: url('../emojis/persevere.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.person_frowning {
+  background: url('../emojis/person_frowning.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.person_with_blond_hair {
+  background: url('../emojis/person_with_blond_hair.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.person_with_pouting_face {
+  background: url('../emojis/person_with_pouting_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.point_down {
+  background: url('../emojis/point_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.point_left {
+  background: url('../emojis/point_left.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.point_right {
+  background: url('../emojis/point_right.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.point_up_2 {
+  background: url('../emojis/point_up_2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.point_up {
+  background: url('../emojis/point_up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.poop {
+  background: url('../emojis/poop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pouting_cat {
+  background: url('../emojis/pouting_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pray {
+  background: url('../emojis/pray.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.princess {
+  background: url('../emojis/princess.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.punch {
+  background: url('../emojis/punch.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.purple_heart {
+  background: url('../emojis/purple_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.question {
+  background: url('../emojis/question.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rage {
+  background: url('../emojis/rage.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rage1 {
+  background: url('../emojis/rage1.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rage2 {
+  background: url('../emojis/rage2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rage3 {
+  background: url('../emojis/rage3.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rage4 {
+  background: url('../emojis/rage4.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.raised_hand {
+  background: url('../emojis/raised_hand.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.raised_hands {
+  background: url('../emojis/raised_hands.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.relaxed {
+  background: url('../emojis/relaxed.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.relieved {
+  background: url('../emojis/relieved.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.revolving_hearts {
+  background: url('../emojis/revolving_hearts.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.runner {
+  background: url('../emojis/runner.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.running {
+  background: url('../emojis/running.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.satisfied {
+  background: url('../emojis/satisfied.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.scream_cat {
+  background: url('../emojis/scream_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.scream {
+  background: url('../emojis/scream.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.see_no_evil {
+  background: url('../emojis/see_no_evil.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shit {
+  background: url('../emojis/shit.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.skull {
+  background: url('../emojis/skull.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sleeping {
+  background: url('../emojis/sleeping.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sleepy {
+  background: url('../emojis/sleepy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smile_cat {
+  background: url('../emojis/smile_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smile {
+  background: url('../emojis/smile.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smiley_cat {
+  background: url('../emojis/smiley_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smiley {
+  background: url('../emojis/smiley.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smiling_imp {
+  background: url('../emojis/smiling_imp.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smirk_cat {
+  background: url('../emojis/smirk_cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smirk {
+  background: url('../emojis/smirk.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sob {
+  background: url('../emojis/sob.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sparkling_heart {
+  background: url('../emojis/sparkling_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sparkles {
+  background: url('../emojis/sparkles.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.speak_no_evil {
+  background: url('../emojis/speak_no_evil.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.speech_balloon {
+  background: url('../emojis/speech_balloon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.star {
+  background: url('../emojis/star.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.star2 {
+  background: url('../emojis/star2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.stuck_out_tongue_closed_eyes {
+  background: url('../emojis/stuck_out_tongue_closed_eyes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.stuck_out_tongue_winking_eye {
+  background: url('../emojis/stuck_out_tongue_winking_eye.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.stuck_out_tongue {
+  background: url('../emojis/stuck_out_tongue.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sunglasses {
+  background: url('../emojis/sunglasses.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.suspect {
+  background: url('../emojis/suspect.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sweat_drops {
+  background: url('../emojis/sweat_drops.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sweat_smile {
+  background: url('../emojis/sweat_smile.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sweat {
+  background: url('../emojis/sweat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.thought_balloon {
+  background: url('../emojis/thought_balloon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.thumbsdown {
+  background: url('../emojis/thumbsdown.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.thumbsup {
+  background: url('../emojis/thumbsup.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tired_face {
+  background: url('../emojis/tired_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tongue {
+  background: url('../emojis/tongue.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.triumph {
+  background: url('../emojis/triumph.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.trollface {
+  background: url('../emojis/trollface.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.two_hearts {
+  background: url('../emojis/two_hearts.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.two_men_holding_hands {
+  background: url('../emojis/two_men_holding_hands.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.two_women_holding_hands {
+  background: url('../emojis/two_women_holding_hands.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.unamused {
+  background: url('../emojis/unamused.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.v {
+  background: url('../emojis/v.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.walking {
+  background: url('../emojis/walking.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wave {
+  background: url('../emojis/wave.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.weary {
+  background: url('../emojis/weary.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wink {
+  background: url('../emojis/wink.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.woman {
+  background: url('../emojis/woman.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.worried {
+  background: url('../emojis/worried.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.yellow_heart {
+  background: url('../emojis/yellow_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.yum {
+  background: url('../emojis/yum.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.zzz {
+  background: url('../emojis/zzz.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sunny {
+  background: url('../emojis/sunny.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.umbrella {
+  background: url('../emojis/umbrella.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cloud {
+  background: url('../emojis/cloud.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.snowflake {
+  background: url('../emojis/snowflake.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.snowman {
+  background: url('../emojis/snowman.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.zap {
+  background: url('../emojis/zap.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cyclone {
+  background: url('../emojis/cyclone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.foggy {
+  background: url('../emojis/foggy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ocean {
+  background: url('../emojis/ocean.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cat {
+  background: url('../emojis/cat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dog {
+  background: url('../emojis/dog.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mouse {
+  background: url('../emojis/mouse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hamster {
+  background: url('../emojis/hamster.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rabbit {
+  background: url('../emojis/rabbit.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wolf {
+  background: url('../emojis/wolf.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.frog {
+  background: url('../emojis/frog.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tiger {
+  background: url('../emojis/tiger.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.koala {
+  background: url('../emojis/koala.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bear {
+  background: url('../emojis/bear.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pig {
+  background: url('../emojis/pig.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pig_nose {
+  background: url('../emojis/pig_nose.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cow {
+  background: url('../emojis/cow.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.boar {
+  background: url('../emojis/boar.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.monkey_face {
+  background: url('../emojis/monkey_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.monkey {
+  background: url('../emojis/monkey.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.horse {
+  background: url('../emojis/horse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.racehorse {
+  background: url('../emojis/racehorse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.camel {
+  background: url('../emojis/camel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sheep {
+  background: url('../emojis/sheep.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.elephant {
+  background: url('../emojis/elephant.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.panda_face {
+  background: url('../emojis/panda_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.snake {
+  background: url('../emojis/snake.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bird {
+  background: url('../emojis/bird.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baby_chick {
+  background: url('../emojis/baby_chick.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hatched_chick {
+  background: url('../emojis/hatched_chick.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hatching_chick {
+  background: url('../emojis/hatching_chick.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chicken {
+  background: url('../emojis/chicken.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.penguin {
+  background: url('../emojis/penguin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.turtle {
+  background: url('../emojis/turtle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bug {
+  background: url('../emojis/bug.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.honeybee {
+  background: url('../emojis/honeybee.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ant {
+  background: url('../emojis/ant.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.beetle {
+  background: url('../emojis/beetle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.snail {
+  background: url('../emojis/snail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.octopus {
+  background: url('../emojis/octopus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tropical_fish {
+  background: url('../emojis/tropical_fish.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fish {
+  background: url('../emojis/fish.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.whale {
+  background: url('../emojis/whale.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.whale2 {
+  background: url('../emojis/whale2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dolphin {
+  background: url('../emojis/dolphin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cow2 {
+  background: url('../emojis/cow2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ram {
+  background: url('../emojis/ram.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rat {
+  background: url('../emojis/rat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.water_buffalo {
+  background: url('../emojis/water_buffalo.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tiger2 {
+  background: url('../emojis/tiger2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rabbit2 {
+  background: url('../emojis/rabbit2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dragon {
+  background: url('../emojis/dragon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.goat {
+  background: url('../emojis/goat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rooster {
+  background: url('../emojis/rooster.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dog2 {
+  background: url('../emojis/dog2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pig2 {
+  background: url('../emojis/pig2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mouse2 {
+  background: url('../emojis/mouse2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ox {
+  background: url('../emojis/ox.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dragon_face {
+  background: url('../emojis/dragon_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blowfish {
+  background: url('../emojis/blowfish.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.crocodile {
+  background: url('../emojis/crocodile.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dromedary_camel {
+  background: url('../emojis/dromedary_camel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.leopard {
+  background: url('../emojis/leopard.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cat2 {
+  background: url('../emojis/cat2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.poodle {
+  background: url('../emojis/poodle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.paw_prints {
+  background: url('../emojis/paw_prints.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bouquet {
+  background: url('../emojis/bouquet.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cherry_blossom {
+  background: url('../emojis/cherry_blossom.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tulip {
+  background: url('../emojis/tulip.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.four_leaf_clover {
+  background: url('../emojis/four_leaf_clover.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rose {
+  background: url('../emojis/rose.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sunflower {
+  background: url('../emojis/sunflower.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hibiscus {
+  background: url('../emojis/hibiscus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.maple_leaf {
+  background: url('../emojis/maple_leaf.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.leaves {
+  background: url('../emojis/leaves.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fallen_leaf {
+  background: url('../emojis/fallen_leaf.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.herb {
+  background: url('../emojis/herb.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mushroom {
+  background: url('../emojis/mushroom.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cactus {
+  background: url('../emojis/cactus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.palm_tree {
+  background: url('../emojis/palm_tree.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.evergreen_tree {
+  background: url('../emojis/evergreen_tree.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.deciduous_tree {
+  background: url('../emojis/deciduous_tree.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chestnut {
+  background: url('../emojis/chestnut.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.seedling {
+  background: url('../emojis/seedling.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blossom {
+  background: url('../emojis/blossom.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ear_of_rice {
+  background: url('../emojis/ear_of_rice.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shell {
+  background: url('../emojis/shell.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.globe_with_meridians {
+  background: url('../emojis/globe_with_meridians.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sun_with_face {
+  background: url('../emojis/sun_with_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.full_moon_with_face {
+  background: url('../emojis/full_moon_with_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.new_moon_with_face {
+  background: url('../emojis/new_moon_with_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.new_moon {
+  background: url('../emojis/new_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.waxing_crescent_moon {
+  background: url('../emojis/waxing_crescent_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.first_quarter_moon {
+  background: url('../emojis/first_quarter_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.waxing_gibbous_moon {
+  background: url('../emojis/waxing_gibbous_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.full_moon {
+  background: url('../emojis/full_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.waning_gibbous_moon {
+  background: url('../emojis/waning_gibbous_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.last_quarter_moon {
+  background: url('../emojis/last_quarter_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.waning_crescent_moon {
+  background: url('../emojis/waning_crescent_moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.last_quarter_moon_with_face {
+  background: url('../emojis/last_quarter_moon_with_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.first_quarter_moon_with_face {
+  background: url('../emojis/first_quarter_moon_with_face.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.moon {
+  background: url('../emojis/moon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.earth_africa {
+  background: url('../emojis/earth_africa.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.earth_americas {
+  background: url('../emojis/earth_americas.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.earth_asia {
+  background: url('../emojis/earth_asia.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.volcano {
+  background: url('../emojis/volcano.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.milky_way {
+  background: url('../emojis/milky_way.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.partly_sunny {
+  background: url('../emojis/partly_sunny.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.octocat {
+  background: url('../emojis/octocat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.squirrel {
+  background: url('../emojis/squirrel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bamboo {
+  background: url('../emojis/bamboo.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gift_heart {
+  background: url('../emojis/gift_heart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dolls {
+  background: url('../emojis/dolls.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.school_satchel {
+  background: url('../emojis/school_satchel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mortar_board {
+  background: url('../emojis/mortar_board.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.flags {
+  background: url('../emojis/flags.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fireworks {
+  background: url('../emojis/fireworks.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sparkler {
+  background: url('../emojis/sparkler.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wind_chime {
+  background: url('../emojis/wind_chime.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rice_scene {
+  background: url('../emojis/rice_scene.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.jack_o_lantern {
+  background: url('../emojis/jack_o_lantern.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ghost {
+  background: url('../emojis/ghost.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.santa {
+  background: url('../emojis/santa.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.christmas_tree {
+  background: url('../emojis/christmas_tree.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gift {
+  background: url('../emojis/gift.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bell {
+  background: url('../emojis/bell.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_bell {
+  background: url('../emojis/no_bell.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tanabata_tree {
+  background: url('../emojis/tanabata_tree.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tada {
+  background: url('../emojis/tada.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.confetti_ball {
+  background: url('../emojis/confetti_ball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.balloon {
+  background: url('../emojis/balloon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.crystal_ball {
+  background: url('../emojis/crystal_ball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cd {
+  background: url('../emojis/cd.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dvd {
+  background: url('../emojis/dvd.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.floppy_disk {
+  background: url('../emojis/floppy_disk.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.camera {
+  background: url('../emojis/camera.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.video_camera {
+  background: url('../emojis/video_camera.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.movie_camera {
+  background: url('../emojis/movie_camera.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.computer {
+  background: url('../emojis/computer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tv {
+  background: url('../emojis/tv.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.iphone {
+  background: url('../emojis/iphone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.phone {
+  background: url('../emojis/phone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.telephone {
+  background: url('../emojis/telephone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.telephone_receiver {
+  background: url('../emojis/telephone_receiver.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pager {
+  background: url('../emojis/pager.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fax {
+  background: url('../emojis/fax.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.minidisc {
+  background: url('../emojis/minidisc.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.vhs {
+  background: url('../emojis/vhs.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sound {
+  background: url('../emojis/sound.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.speaker {
+  background: url('../emojis/speaker.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mute {
+  background: url('../emojis/mute.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.loudspeaker {
+  background: url('../emojis/loudspeaker.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mega {
+  background: url('../emojis/mega.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hourglass {
+  background: url('../emojis/hourglass.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hourglass_flowing_sand {
+  background: url('../emojis/hourglass_flowing_sand.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.alarm_clock {
+  background: url('../emojis/alarm_clock.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.watch {
+  background: url('../emojis/watch.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.radio {
+  background: url('../emojis/radio.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.satellite {
+  background: url('../emojis/satellite.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.loop {
+  background: url('../emojis/loop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mag {
+  background: url('../emojis/mag.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mag_right {
+  background: url('../emojis/mag_right.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.unlock {
+  background: url('../emojis/unlock.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lock {
+  background: url('../emojis/lock.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lock_with_ink_pen {
+  background: url('../emojis/lock_with_ink_pen.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.closed_lock_with_key {
+  background: url('../emojis/closed_lock_with_key.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.key {
+  background: url('../emojis/key.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bulb {
+  background: url('../emojis/bulb.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.flashlight {
+  background: url('../emojis/flashlight.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.high_brightness {
+  background: url('../emojis/high_brightness.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.low_brightness {
+  background: url('../emojis/low_brightness.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.electric_plug {
+  background: url('../emojis/electric_plug.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.battery {
+  background: url('../emojis/battery.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.calling {
+  background: url('../emojis/calling.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.email {
+  background: url('../emojis/email.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mailbox {
+  background: url('../emojis/mailbox.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.postbox {
+  background: url('../emojis/postbox.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bath {
+  background: url('../emojis/bath.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bathtub {
+  background: url('../emojis/bathtub.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shower {
+  background: url('../emojis/shower.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.toilet {
+  background: url('../emojis/toilet.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wrench {
+  background: url('../emojis/wrench.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.nut_and_bolt {
+  background: url('../emojis/nut_and_bolt.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hammer {
+  background: url('../emojis/hammer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.seat {
+  background: url('../emojis/seat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.moneybag {
+  background: url('../emojis/moneybag.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.yen {
+  background: url('../emojis/yen.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dollar {
+  background: url('../emojis/dollar.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pound {
+  background: url('../emojis/pound.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.euro {
+  background: url('../emojis/euro.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.credit_card {
+  background: url('../emojis/credit_card.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.money_with_wings {
+  background: url('../emojis/money_with_wings.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.e-mail {
+  background: url('../emojis/e-mail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.inbox_tray {
+  background: url('../emojis/inbox_tray.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.outbox_tray {
+  background: url('../emojis/outbox_tray.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.envelope {
+  background: url('../emojis/envelope.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.incoming_envelope {
+  background: url('../emojis/incoming_envelope.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.postal_horn {
+  background: url('../emojis/postal_horn.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mailbox_closed {
+  background: url('../emojis/mailbox_closed.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mailbox_with_mail {
+  background: url('../emojis/mailbox_with_mail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mailbox_with_no_mail {
+  background: url('../emojis/mailbox_with_no_mail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.door {
+  background: url('../emojis/door.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.smoking {
+  background: url('../emojis/smoking.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bomb {
+  background: url('../emojis/bomb.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gun {
+  background: url('../emojis/gun.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hocho {
+  background: url('../emojis/hocho.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pill {
+  background: url('../emojis/pill.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.syringe {
+  background: url('../emojis/syringe.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.page_facing_up {
+  background: url('../emojis/page_facing_up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.page_with_curl {
+  background: url('../emojis/page_with_curl.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bookmark_tabs {
+  background: url('../emojis/bookmark_tabs.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bar_chart {
+  background: url('../emojis/bar_chart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chart_with_upwards_trend {
+  background: url('../emojis/chart_with_upwards_trend.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chart_with_downwards_trend {
+  background: url('../emojis/chart_with_downwards_trend.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.scroll {
+  background: url('../emojis/scroll.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clipboard {
+  background: url('../emojis/clipboard.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.calendar {
+  background: url('../emojis/calendar.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.date {
+  background: url('../emojis/date.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.card_index {
+  background: url('../emojis/card_index.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.file_folder {
+  background: url('../emojis/file_folder.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.open_file_folder {
+  background: url('../emojis/open_file_folder.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.scissors {
+  background: url('../emojis/scissors.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pushpin {
+  background: url('../emojis/pushpin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.paperclip {
+  background: url('../emojis/paperclip.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.black_nib {
+  background: url('../emojis/black_nib.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pencil2 {
+  background: url('../emojis/pencil2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.straight_ruler {
+  background: url('../emojis/straight_ruler.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.triangular_ruler {
+  background: url('../emojis/triangular_ruler.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.closed_book {
+  background: url('../emojis/closed_book.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.green_book {
+  background: url('../emojis/green_book.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blue_book {
+  background: url('../emojis/blue_book.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.orange_book {
+  background: url('../emojis/orange_book.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.notebook {
+  background: url('../emojis/notebook.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.notebook_with_decorative_cover {
+  background: url('../emojis/notebook_with_decorative_cover.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ledger {
+  background: url('../emojis/ledger.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.books {
+  background: url('../emojis/books.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bookmark {
+  background: url('../emojis/bookmark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.name_badge {
+  background: url('../emojis/name_badge.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.microscope {
+  background: url('../emojis/microscope.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.telescope {
+  background: url('../emojis/telescope.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.newspaper {
+  background: url('../emojis/newspaper.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.football {
+  background: url('../emojis/football.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.basketball {
+  background: url('../emojis/basketball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.soccer {
+  background: url('../emojis/soccer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baseball {
+  background: url('../emojis/baseball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tennis {
+  background: url('../emojis/tennis.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eightball {
+  background: url('../emojis/8ball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rugby_football {
+  background: url('../emojis/rugby_football.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bowling {
+  background: url('../emojis/bowling.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.golf {
+  background: url('../emojis/golf.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mountain_bicyclist {
+  background: url('../emojis/mountain_bicyclist.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bicyclist {
+  background: url('../emojis/bicyclist.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.horse_racing {
+  background: url('../emojis/horse_racing.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.snowboarder {
+  background: url('../emojis/snowboarder.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.swimmer {
+  background: url('../emojis/swimmer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.surfer {
+  background: url('../emojis/surfer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ski {
+  background: url('../emojis/ski.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.spades {
+  background: url('../emojis/spades.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hearts {
+  background: url('../emojis/hearts.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clubs {
+  background: url('../emojis/clubs.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.diamonds {
+  background: url('../emojis/diamonds.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gem {
+  background: url('../emojis/gem.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ring {
+  background: url('../emojis/ring.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.trophy {
+  background: url('../emojis/trophy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.musical_score {
+  background: url('../emojis/musical_score.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.musical_keyboard {
+  background: url('../emojis/musical_keyboard.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.violin {
+  background: url('../emojis/violin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.space_invader {
+  background: url('../emojis/space_invader.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.video_game {
+  background: url('../emojis/video_game.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.black_joker {
+  background: url('../emojis/black_joker.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.flower_playing_cards {
+  background: url('../emojis/flower_playing_cards.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.game_die {
+  background: url('../emojis/game_die.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dart {
+  background: url('../emojis/dart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mahjong {
+  background: url('../emojis/mahjong.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clapper {
+  background: url('../emojis/clapper.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.memo {
+  background: url('../emojis/memo.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pencil {
+  background: url('../emojis/pencil.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.book {
+  background: url('../emojis/book.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.art {
+  background: url('../emojis/art.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.microphone {
+  background: url('../emojis/microphone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.headphones {
+  background: url('../emojis/headphones.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.trumpet {
+  background: url('../emojis/trumpet.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.saxophone {
+  background: url('../emojis/saxophone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.guitar {
+  background: url('../emojis/guitar.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shoe {
+  background: url('../emojis/shoe.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sandal {
+  background: url('../emojis/sandal.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.high_heel {
+  background: url('../emojis/high_heel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lipstick {
+  background: url('../emojis/lipstick.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.boot {
+  background: url('../emojis/boot.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shirt {
+  background: url('../emojis/shirt.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tshirt {
+  background: url('../emojis/tshirt.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.necktie {
+  background: url('../emojis/necktie.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.womans_clothes {
+  background: url('../emojis/womans_clothes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dress {
+  background: url('../emojis/dress.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.running_shirt_with_sash {
+  background: url('../emojis/running_shirt_with_sash.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.jeans {
+  background: url('../emojis/jeans.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kimono {
+  background: url('../emojis/kimono.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bikini {
+  background: url('../emojis/bikini.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ribbon {
+  background: url('../emojis/ribbon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tophat {
+  background: url('../emojis/tophat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.crown {
+  background: url('../emojis/crown.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.womans_hat {
+  background: url('../emojis/womans_hat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mans_shoe {
+  background: url('../emojis/mans_shoe.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.closed_umbrella {
+  background: url('../emojis/closed_umbrella.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.briefcase {
+  background: url('../emojis/briefcase.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.handbag {
+  background: url('../emojis/handbag.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pouch {
+  background: url('../emojis/pouch.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.purse {
+  background: url('../emojis/purse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eyeglasses {
+  background: url('../emojis/eyeglasses.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fishing_pole_and_fish {
+  background: url('../emojis/fishing_pole_and_fish.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.coffee {
+  background: url('../emojis/coffee.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tea {
+  background: url('../emojis/tea.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sake {
+  background: url('../emojis/sake.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baby_bottle {
+  background: url('../emojis/baby_bottle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.beer {
+  background: url('../emojis/beer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.beers {
+  background: url('../emojis/beers.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cocktail {
+  background: url('../emojis/cocktail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tropical_drink {
+  background: url('../emojis/tropical_drink.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wine_glass {
+  background: url('../emojis/wine_glass.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fork_and_knife {
+  background: url('../emojis/fork_and_knife.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pizza {
+  background: url('../emojis/pizza.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hamburger {
+  background: url('../emojis/hamburger.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fries {
+  background: url('../emojis/fries.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.poultry_leg {
+  background: url('../emojis/poultry_leg.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.meat_on_bone {
+  background: url('../emojis/meat_on_bone.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.spaghetti {
+  background: url('../emojis/spaghetti.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.curry {
+  background: url('../emojis/curry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fried_shrimp {
+  background: url('../emojis/fried_shrimp.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bento {
+  background: url('../emojis/bento.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sushi {
+  background: url('../emojis/sushi.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fish_cake {
+  background: url('../emojis/fish_cake.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rice_ball {
+  background: url('../emojis/rice_ball.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rice_cracker {
+  background: url('../emojis/rice_cracker.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rice {
+  background: url('../emojis/rice.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ramen {
+  background: url('../emojis/ramen.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.stew {
+  background: url('../emojis/stew.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.oden {
+  background: url('../emojis/oden.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.dango {
+  background: url('../emojis/dango.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.egg {
+  background: url('../emojis/egg.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bread {
+  background: url('../emojis/bread.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.doughnut {
+  background: url('../emojis/doughnut.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.custard {
+  background: url('../emojis/custard.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.icecream {
+  background: url('../emojis/icecream.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ice_cream {
+  background: url('../emojis/ice_cream.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shaved_ice {
+  background: url('../emojis/shaved_ice.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.birthday {
+  background: url('../emojis/birthday.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cake {
+  background: url('../emojis/cake.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cookie {
+  background: url('../emojis/cookie.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chocolate_bar {
+  background: url('../emojis/chocolate_bar.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.candy {
+  background: url('../emojis/candy.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lollipop {
+  background: url('../emojis/lollipop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.honey_pot {
+  background: url('../emojis/honey_pot.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.apple {
+  background: url('../emojis/apple.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.green_apple {
+  background: url('../emojis/green_apple.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tangerine {
+  background: url('../emojis/tangerine.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.lemon {
+  background: url('../emojis/lemon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cherries {
+  background: url('../emojis/cherries.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.grapes {
+  background: url('../emojis/grapes.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.watermelon {
+  background: url('../emojis/watermelon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.strawberry {
+  background: url('../emojis/strawberry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.peach {
+  background: url('../emojis/peach.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.melon {
+  background: url('../emojis/melon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.banana {
+  background: url('../emojis/banana.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pear {
+  background: url('../emojis/pear.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pineapple {
+  background: url('../emojis/pineapple.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sweet_potato {
+  background: url('../emojis/sweet_potato.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eggplant {
+  background: url('../emojis/eggplant.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tomato {
+  background: url('../emojis/tomato.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.corn {
+  background: url('../emojis/corn.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.house {
+  background: url('../emojis/house.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.house_with_garden {
+  background: url('../emojis/house_with_garden.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.school {
+  background: url('../emojis/school.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.office {
+  background: url('../emojis/office.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.post_office {
+  background: url('../emojis/post_office.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hospital {
+  background: url('../emojis/hospital.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bank {
+  background: url('../emojis/bank.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.convenience_store {
+  background: url('../emojis/convenience_store.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.love_hotel {
+  background: url('../emojis/love_hotel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hotel {
+  background: url('../emojis/hotel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wedding {
+  background: url('../emojis/wedding.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.church {
+  background: url('../emojis/church.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.department_store {
+  background: url('../emojis/department_store.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.european_post_office {
+  background: url('../emojis/european_post_office.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.city_sunrise {
+  background: url('../emojis/city_sunrise.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.city_sunset {
+  background: url('../emojis/city_sunset.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.japanese_castle {
+  background: url('../emojis/japanese_castle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.european_castle {
+  background: url('../emojis/european_castle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tent {
+  background: url('../emojis/tent.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.factory {
+  background: url('../emojis/factory.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tokyo_tower {
+  background: url('../emojis/tokyo_tower.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.japan {
+  background: url('../emojis/japan.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mount_fuji {
+  background: url('../emojis/mount_fuji.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sunrise_over_mountains {
+  background: url('../emojis/sunrise_over_mountains.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sunrise {
+  background: url('../emojis/sunrise.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.stars {
+  background: url('../emojis/stars.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.statue_of_liberty {
+  background: url('../emojis/statue_of_liberty.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bridge_at_night {
+  background: url('../emojis/bridge_at_night.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.carousel_horse {
+  background: url('../emojis/carousel_horse.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rainbow {
+  background: url('../emojis/rainbow.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ferris_wheel {
+  background: url('../emojis/ferris_wheel.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fountain {
+  background: url('../emojis/fountain.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.roller_coaster {
+  background: url('../emojis/roller_coaster.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ship {
+  background: url('../emojis/ship.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.speedboat {
+  background: url('../emojis/speedboat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.boat {
+  background: url('../emojis/boat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sailboat {
+  background: url('../emojis/sailboat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rowboat {
+  background: url('../emojis/rowboat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.anchor {
+  background: url('../emojis/anchor.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rocket {
+  background: url('../emojis/rocket.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.airplane {
+  background: url('../emojis/airplane.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.helicopter {
+  background: url('../emojis/helicopter.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.steam_locomotive {
+  background: url('../emojis/steam_locomotive.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tram {
+  background: url('../emojis/tram.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mountain_railway {
+  background: url('../emojis/mountain_railway.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bike {
+  background: url('../emojis/bike.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.aerial_tramway {
+  background: url('../emojis/aerial_tramway.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.suspension_railway {
+  background: url('../emojis/suspension_railway.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mountain_cableway {
+  background: url('../emojis/mountain_cableway.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tractor {
+  background: url('../emojis/tractor.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.blue_car {
+  background: url('../emojis/blue_car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.oncoming_automobile {
+  background: url('../emojis/oncoming_automobile.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.car {
+  background: url('../emojis/car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.red_car {
+  background: url('../emojis/red_car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.taxi {
+  background: url('../emojis/taxi.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.oncoming_taxi {
+  background: url('../emojis/oncoming_taxi.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.articulated_lorry {
+  background: url('../emojis/articulated_lorry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bus {
+  background: url('../emojis/bus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.oncoming_bus {
+  background: url('../emojis/oncoming_bus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rotating_light {
+  background: url('../emojis/rotating_light.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.police_car {
+  background: url('../emojis/police_car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.oncoming_police_car {
+  background: url('../emojis/oncoming_police_car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fire_engine {
+  background: url('../emojis/fire_engine.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ambulance {
+  background: url('../emojis/ambulance.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.minibus {
+  background: url('../emojis/minibus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.truck {
+  background: url('../emojis/truck.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.train {
+  background: url('../emojis/train.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.station {
+  background: url('../emojis/station.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.train2 {
+  background: url('../emojis/train2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bullettrain_front {
+  background: url('../emojis/bullettrain_front.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bullettrain_side {
+  background: url('../emojis/bullettrain_side.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.light_rail {
+  background: url('../emojis/light_rail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.monorail {
+  background: url('../emojis/monorail.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.railway_car {
+  background: url('../emojis/railway_car.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.trolleybus {
+  background: url('../emojis/trolleybus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ticket {
+  background: url('../emojis/ticket.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fuelpump {
+  background: url('../emojis/fuelpump.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.vertical_traffic_light {
+  background: url('../emojis/vertical_traffic_light.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.traffic_light {
+  background: url('../emojis/traffic_light.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.warning {
+  background: url('../emojis/warning.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.construction {
+  background: url('../emojis/construction.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.beginner {
+  background: url('../emojis/beginner.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.atm {
+  background: url('../emojis/atm.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.slot_machine {
+  background: url('../emojis/slot_machine.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.busstop {
+  background: url('../emojis/busstop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.barber {
+  background: url('../emojis/barber.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hotsprings {
+  background: url('../emojis/hotsprings.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.checkered_flag {
+  background: url('../emojis/checkered_flag.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.crossed_flags {
+  background: url('../emojis/crossed_flags.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.izakaya_lantern {
+  background: url('../emojis/izakaya_lantern.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.moyai {
+  background: url('../emojis/moyai.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.circus_tent {
+  background: url('../emojis/circus_tent.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.performing_arts {
+  background: url('../emojis/performing_arts.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.round_pushpin {
+  background: url('../emojis/round_pushpin.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.triangular_flag_on_post {
+  background: url('../emojis/triangular_flag_on_post.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.jp {
+  background: url('../emojis/jp.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.kr {
+  background: url('../emojis/kr.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cn {
+  background: url('../emojis/cn.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.us {
+  background: url('../emojis/us.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fr {
+  background: url('../emojis/fr.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.es {
+  background: url('../emojis/es.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.it {
+  background: url('../emojis/it.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ru {
+  background: url('../emojis/ru.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gb {
+  background: url('../emojis/gb.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.uk {
+  background: url('../emojis/uk.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.de {
+  background: url('../emojis/de.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.one {
+  background: url('../emojis/one.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.two {
+  background: url('../emojis/two.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.three {
+  background: url('../emojis/three.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.four {
+  background: url('../emojis/four.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.five {
+  background: url('../emojis/five.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.six {
+  background: url('../emojis/six.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.seven {
+  background: url('../emojis/seven.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eight {
+  background: url('../emojis/eight.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.nine {
+  background: url('../emojis/nine.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.keycap_ten {
+  background: url('../emojis/keycap_ten.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.onetwothreefour {
+  background: url('../emojis/1234.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.zero {
+  background: url('../emojis/zero.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.hash {
+  background: url('../emojis/hash.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.symbols {
+  background: url('../emojis/symbols.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_backward {
+  background: url('../emojis/arrow_backward.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_down {
+  background: url('../emojis/arrow_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_forward {
+  background: url('../emojis/arrow_forward.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_left {
+  background: url('../emojis/arrow_left.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.capital_abcd {
+  background: url('../emojis/capital_abcd.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.abcd {
+  background: url('../emojis/abcd.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.abc {
+  background: url('../emojis/abc.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_lower_left {
+  background: url('../emojis/arrow_lower_left.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_lower_right {
+  background: url('../emojis/arrow_lower_right.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_right {
+  background: url('../emojis/arrow_right.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_up {
+  background: url('../emojis/arrow_up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_upper_left {
+  background: url('../emojis/arrow_upper_left.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_upper_right {
+  background: url('../emojis/arrow_upper_right.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_double_down {
+  background: url('../emojis/arrow_double_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_double_up {
+  background: url('../emojis/arrow_double_up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_down_small {
+  background: url('../emojis/arrow_down_small.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_heading_down {
+  background: url('../emojis/arrow_heading_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_heading_up {
+  background: url('../emojis/arrow_heading_up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.leftwards_arrow_with_hook {
+  background: url('../emojis/leftwards_arrow_with_hook.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_right_hook {
+  background: url('../emojis/arrow_right_hook.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.left_right_arrow {
+  background: url('../emojis/left_right_arrow.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_up_down {
+  background: url('../emojis/arrow_up_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrow_up_small {
+  background: url('../emojis/arrow_up_small.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrows_clockwise {
+  background: url('../emojis/arrows_clockwise.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.arrows_counterclockwise {
+  background: url('../emojis/arrows_counterclockwise.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.rewind {
+  background: url('../emojis/rewind.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.fast_forward {
+  background: url('../emojis/fast_forward.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.information_source {
+  background: url('../emojis/information_source.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ok {
+  background: url('../emojis/ok.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.twisted_rightwards_arrows {
+  background: url('../emojis/twisted_rightwards_arrows.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.repeat {
+  background: url('../emojis/repeat.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.repeat_one {
+  background: url('../emojis/repeat_one.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.new {
+  background: url('../emojis/new.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.top {
+  background: url('../emojis/top.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.up {
+  background: url('../emojis/up.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cool {
+  background: url('../emojis/cool.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.free {
+  background: url('../emojis/free.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ng {
+  background: url('../emojis/ng.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cinema {
+  background: url('../emojis/cinema.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.koko {
+  background: url('../emojis/koko.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.signal_strength {
+  background: url('../emojis/signal_strength.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u5272 {
+  background: url('../emojis/u5272.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u5408 {
+  background: url('../emojis/u5408.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u55b6 {
+  background: url('../emojis/u55b6.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u6307 {
+  background: url('../emojis/u6307.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u6708 {
+  background: url('../emojis/u6708.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u6709 {
+  background: url('../emojis/u6709.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u6e80 {
+  background: url('../emojis/u6e80.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u7121 {
+  background: url('../emojis/u7121.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u7533 {
+  background: url('../emojis/u7533.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u7a7a {
+  background: url('../emojis/u7a7a.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.u7981 {
+  background: url('../emojis/u7981.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sa {
+  background: url('../emojis/sa.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.restroom {
+  background: url('../emojis/restroom.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mens {
+  background: url('../emojis/mens.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.womens {
+  background: url('../emojis/womens.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baby_symbol {
+  background: url('../emojis/baby_symbol.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_smoking {
+  background: url('../emojis/no_smoking.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.parking {
+  background: url('../emojis/parking.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wheelchair {
+  background: url('../emojis/wheelchair.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.metro {
+  background: url('../emojis/metro.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.baggage_claim {
+  background: url('../emojis/baggage_claim.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.accept {
+  background: url('../emojis/accept.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wc {
+  background: url('../emojis/wc.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.potable_water {
+  background: url('../emojis/potable_water.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.put_litter_in_its_place {
+  background: url('../emojis/put_litter_in_its_place.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.secret {
+  background: url('../emojis/secret.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.congratulations {
+  background: url('../emojis/congratulations.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.m {
+  background: url('../emojis/m.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.passport_control {
+  background: url('../emojis/passport_control.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.left_luggage {
+  background: url('../emojis/left_luggage.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.customs {
+  background: url('../emojis/customs.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ideograph_advantage {
+  background: url('../emojis/ideograph_advantage.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cl {
+  background: url('../emojis/cl.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sos {
+  background: url('../emojis/sos.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.id {
+  background: url('../emojis/id.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_entry_sign {
+  background: url('../emojis/no_entry_sign.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.underage {
+  background: url('../emojis/underage.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_mobile_phones {
+  background: url('../emojis/no_mobile_phones.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.do_not_litter {
+  background: url('../emojis/do_not_litter.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.non-potable_water {
+  background: url('../emojis/non-potable_water.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_bicycles {
+  background: url('../emojis/no_bicycles.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_pedestrians {
+  background: url('../emojis/no_pedestrians.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.children_crossing {
+  background: url('../emojis/children_crossing.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.no_entry {
+  background: url('../emojis/no_entry.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eight_spoked_asterisk {
+  background: url('../emojis/eight_spoked_asterisk.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.eight_pointed_black_star {
+  background: url('../emojis/eight_pointed_black_star.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heart_decoration {
+  background: url('../emojis/heart_decoration.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.vs {
+  background: url('../emojis/vs.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.vibration_mode {
+  background: url('../emojis/vibration_mode.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.mobile_phone_off {
+  background: url('../emojis/mobile_phone_off.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.chart {
+  background: url('../emojis/chart.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.currency_exchange {
+  background: url('../emojis/currency_exchange.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.aries {
+  background: url('../emojis/aries.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.taurus {
+  background: url('../emojis/taurus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.gemini {
+  background: url('../emojis/gemini.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.cancer {
+  background: url('../emojis/cancer.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.leo {
+  background: url('../emojis/leo.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.virgo {
+  background: url('../emojis/virgo.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.libra {
+  background: url('../emojis/libra.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.scorpius {
+  background: url('../emojis/scorpius.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.sagittarius {
+  background: url('../emojis/sagittarius.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.capricorn {
+  background: url('../emojis/capricorn.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.aquarius {
+  background: url('../emojis/aquarius.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.pisces {
+  background: url('../emojis/pisces.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ophiuchus {
+  background: url('../emojis/ophiuchus.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.six_pointed_star {
+  background: url('../emojis/six_pointed_star.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.negative_squared_cross_mark {
+  background: url('../emojis/negative_squared_cross_mark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.a {
+  background: url('../emojis/a.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.b {
+  background: url('../emojis/b.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ab {
+  background: url('../emojis/ab.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.o2 {
+  background: url('../emojis/o2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.diamond_shape_with_a_dot_inside {
+  background: url('../emojis/diamond_shape_with_a_dot_inside.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.recycle {
+  background: url('../emojis/recycle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.end {
+  background: url('../emojis/end.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.on {
+  background: url('../emojis/on.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.soon {
+  background: url('../emojis/soon.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock1 {
+  background: url('../emojis/clock1.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock130 {
+  background: url('../emojis/clock130.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock10 {
+  background: url('../emojis/clock10.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock1030 {
+  background: url('../emojis/clock1030.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock11 {
+  background: url('../emojis/clock11.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock1130 {
+  background: url('../emojis/clock1130.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock12 {
+  background: url('../emojis/clock12.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock1230 {
+  background: url('../emojis/clock1230.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock2 {
+  background: url('../emojis/clock2.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock230 {
+  background: url('../emojis/clock230.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock3 {
+  background: url('../emojis/clock3.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock330 {
+  background: url('../emojis/clock330.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock4 {
+  background: url('../emojis/clock4.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock430 {
+  background: url('../emojis/clock430.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock5 {
+  background: url('../emojis/clock5.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock530 {
+  background: url('../emojis/clock530.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock6 {
+  background: url('../emojis/clock6.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock630 {
+  background: url('../emojis/clock630.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock7 {
+  background: url('../emojis/clock7.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock730 {
+  background: url('../emojis/clock730.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock8 {
+  background: url('../emojis/clock8.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock830 {
+  background: url('../emojis/clock830.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock9 {
+  background: url('../emojis/clock9.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.clock930 {
+  background: url('../emojis/clock930.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_dollar_sign {
+  background: url('../emojis/heavy_dollar_sign.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.copyright {
+  background: url('../emojis/copyright.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.registered {
+  background: url('../emojis/registered.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.tm {
+  background: url('../emojis/tm.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.x {
+  background: url('../emojis/x.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_exclamation_mark {
+  background: url('../emojis/heavy_exclamation_mark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.bangbang {
+  background: url('../emojis/bangbang.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.interrobang {
+  background: url('../emojis/interrobang.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.o {
+  background: url('../emojis/o.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_multiplication_x {
+  background: url('../emojis/heavy_multiplication_x.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_plus_sign {
+  background: url('../emojis/heavy_plus_sign.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_minus_sign {
+  background: url('../emojis/heavy_minus_sign.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_division_sign {
+  background: url('../emojis/heavy_division_sign.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.white_flower {
+  background: url('../emojis/white_flower.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.onehundred {
+  background: url('../emojis/100.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.heavy_check_mark {
+  background: url('../emojis/heavy_check_mark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.ballot_box_with_check {
+  background: url('../emojis/ballot_box_with_check.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.radio_button {
+  background: url('../emojis/radio_button.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.link {
+  background: url('../emojis/link.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.curly_loop {
+  background: url('../emojis/curly_loop.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.wavy_dash {
+  background: url('../emojis/wavy_dash.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.part_alternation_mark {
+  background: url('../emojis/part_alternation_mark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.trident {
+  background: url('../emojis/trident.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.black_square {
+  background: url('../emojis/black_square.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.white_square {
+  background: url('../emojis/white_square.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.white_check_mark {
+  background: url('../emojis/white_check_mark.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.black_square_button {
+  background: url('../emojis/black_square_button.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.white_square_button {
+  background: url('../emojis/white_square_button.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.black_circle {
+  background: url('../emojis/black_circle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.white_circle {
+  background: url('../emojis/white_circle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.red_circle {
+  background: url('../emojis/red_circle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.large_blue_circle {
+  background: url('../emojis/large_blue_circle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.large_blue_diamond {
+  background: url('../emojis/large_blue_diamond.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.large_orange_diamond {
+  background: url('../emojis/large_orange_diamond.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.small_blue_diamond {
+  background: url('../emojis/small_blue_diamond.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.small_orange_diamond {
+  background: url('../emojis/small_orange_diamond.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.small_red_triangle {
+  background: url('../emojis/small_red_triangle.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.small_red_triangle_down {
+  background: url('../emojis/small_red_triangle_down.png') no-repeat;
+  background-size: 1.5em;
+}
+
+.emojify.shipit {
+  background: url('../emojis/shipit.png') no-repeat;
+  background-size: 1.5em;
+}
