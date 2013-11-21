@@ -12,7 +12,7 @@
 <body>
   <div>
       <h1>Exclusion Zone</h1>
-      <p class="no-emojify">
+      <p class="no-emojify" id="no-emojify">
             Smile:
             :) :-)
             Scream:
@@ -981,5 +981,7 @@
             symbols_enabled: true
       });
       emojify.run();
+      var noEmojify = document.getElementById('no-emojify');
+      noEmojify.innerHTML = emojify.replace(noEmojify.innerHTML);
 </script>
 </html>

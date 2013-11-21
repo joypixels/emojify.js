@@ -17,7 +17,7 @@
       [/:-*\*/g, 'emojify kissing_heart'],
       [/;-*\)/g, 'emojify wink'],
       [/:-*\//g, 'emojify pensive'],
-      [/:-*s/gi, 'emojify confounded'],
+      [/:-*s\s+/gi, 'emojify confounded'],
       [/:-*\|/g, 'emojify flushed'],
       [/:-*\$/g, 'emojify relaxed'],
       [/:-*x/gi, 'emojify mask'],
