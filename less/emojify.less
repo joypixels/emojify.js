@@ -1,9 +1,27 @@
 @emoji-size: 1.5em;
 @emoji-location: '../emojis/';
 
-.emojify { width: @emoji-size; height: @emoji-size; display: inline-block; margin-bottom: -0.25em; }
-.background (@emotion) {
-  background: url('@{emoji-location}@{emotion}.png') no-repeat;
+.emojify { 
+  width: @emoji-size; 
+  height: @emoji-size; 
+  display: inline-block; 
+  margin-bottom: -0.25em; 
+  background-repeat: no-repeat;
+
+  -webkit-background-size: @emoji-size; /* Safari 3.0 */
+     -moz-background-size: @emoji-size; /* Gecko 1.9.2 (Firefox 3.6) */
+       -o-background-size: @emoji-size; /* Opera 9.5 */
+          background-size: @emoji-size;
+}
+
+.emojify(@emojis, @index: 1) when (@index <= length(@emojis)) {
+  @emoji: extract(@emojis, @index);
+
+  .emojify.@{emoji} { 
+    background-image: url('@{emoji-location}@{emoji}.png'); 
+  }
+
+  .emojify(@emojis, @index + 1);
 }
 
 // @import 'emojify.emoticons.less';
