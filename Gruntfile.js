@@ -13,7 +13,7 @@ module.exports = function (grunt) {
             jshintrc     : '.jshintrc',
             files        : ['emojify.js']
         },
-        recess : {
+        less : {
             dist : {
                 options : {
                     compile : true
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-recess');
+    grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
         'default',
         [
             // 'jshint',
-            'recess',
+            'less',
             'uglify',
             'cssmin'
         ]
