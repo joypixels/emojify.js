@@ -1,0 +1,17 @@
+{
+  "name": "emojify.js",
+  "main": "emojify.js",
+  "version": "0.9.1",
+  "homepage": "http://hassankhan.github.com/emojify.js/",
+  "authors": [
+    "contact@hassankhan.me"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

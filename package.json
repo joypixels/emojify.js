@@ -1,6 +1,6 @@
 {
   "name": "emojify.js",
-  "version": "0.8.0",
+  "version": "0.9.1",
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "emojify.js",
   "scripts": {
@@ -23,9 +23,9 @@
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.4",
-    "grunt-recess": "~0.4.0",
     "grunt-contrib-uglify": "~0.2.4",
     "grunt-contrib-cssmin": "~0.6.2",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-less": "~0.8.3"
   }
 }
