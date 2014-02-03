@@ -13,9 +13,8 @@ I wanted [my blog](http://hassankhan.me) to display smileys nicely, decided to u
 
 
 ## Usage
-Add the required lines to the ``<head>`` part of your HTML code:
+Add the following line to your HTML:
 
-    <link rel="stylesheet" type="text/css" href="emojify.css">
     <script src="emojify.js"></script>
 
 Now type in an emoji keyword in your HTML, for example ``:smile:``
