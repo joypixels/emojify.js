@@ -106,8 +106,6 @@
             }
 
             function run(el) {
-                var start = Date.now();
-
                 function emojiValidator(match) {
                     /* Validator */
                     var emojiName = getEmojiNameForMatch(match);
@@ -192,8 +190,6 @@
                         insertEmojicon(node, matches[i], emojiName);
                     }
                 });
-
-                window.alert(Date.now() - start);
             }
 
             return {
