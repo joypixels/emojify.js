@@ -1,7 +1,7 @@
-emojify.js v0.8.0
+emojify.js v0.9.0
 ==========
 
-A Javascript module to convert emoji keywords to images.
+A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
 
 The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 
@@ -9,7 +9,7 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 
 ## Rationale
-I wanted [my blog](http://hassankhan.me) to display smileys nicely, decided to use Emojis because they look nice.
+I wanted [my blog](http://hassankhan.me) to display smileys nicely, decided to use Emojis because they look nice. [GitterHQ](https://github.com/gitterHQ) wanted to use it in [Gitter](https://gitter.im/), so they very kindly rewrote it and here we are.
 
 
 ## Usage
@@ -38,14 +38,17 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 ### Code Example
 
     emojify.setConfig({
-        emojify_tag_type: 'img',
-        emoticons_enabled: true,
-        people_enabled: true,
-        nature_enabled: true,
-        objects_enabled: true,
-        places_enabled: true,
-        symbols_enabled: true,
-        only_crawl_id: 'messages_container'  #only do this when you want to restrict where emojify.js applies.
+    
+        emojify_tag_type : 'div',           // Only run emojify.js on this element
+        only_crawl_id    : null,            // Use to restrict where emojify.js applies
+        img_dir          : 'images/emoji',  // Directory for emoji images
+        ignored_tags     : {                // Ignore the following tags
+            'SCRIPT'  : 1,
+            'TEXTAREA': 1,
+            'A'       : 1,
+            'PRE'     : 1,
+            'CODE'    : 1
+        }
     });
     emojify.run();
 
@@ -54,6 +57,6 @@ This module depends on LESS, or at least requires you to compile the LESS source
 
 
 ## License
-Copyright 2012 Hassan Khan
+Copyright 2014 Hassan Khan
 
 Licensed under the MIT License
