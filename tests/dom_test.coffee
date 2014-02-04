@@ -35,22 +35,22 @@ describe 'emojify on DOM nodes', ->
       emojify.run(@el)
       assert.equal "it'd", @el.innerHTML
 
-    it 'end of string:)', ->
+    it 'end of string:) does not emojify', ->
       @el.innerHTML = "end of string:)"
       emojify.run(@el)
       assert.equal "end of string:)", @el.innerHTML
 
-    it 'end of string with space :)', ->
+    it 'end of string with space :) emojifies', ->
       @el.innerHTML = "end of string with space :)"
       emojify.run(@el)
       assert.equal 'end of string with space <img title=":blush:" class="emoji" src="images/emoji/blush.png" align="absmiddle"></img>', @el.innerHTML
 
-    it ':)start of string without space', ->
+    it ':)start of string without space does not emojify', ->
       @el.innerHTML = ":)start of string without space"
       emojify.run(@el)
       assert.equal ":)start of string without space", @el.innerHTML
 
-    it ':) start of string with space', ->
+    it ':) start of string with space emojifies', ->
       @el.innerHTML = ":) start of string with space"
       emojify.run(@el)
       assert.equal '<img title=":blush:" class="emoji" src="images/emoji/blush.png" align="absmiddle"></img> start of string with space', @el.innerHTML

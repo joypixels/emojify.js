@@ -49,22 +49,22 @@ describe 'emojify used with flat strings', ->
       result = emojify.run(el)
       assert.equal el, result
 
-    it ":)start of string without space", ->
+    it ":)start of string without space does not emojify", ->
       el = ":)start of string without space"
       result = emojify.run(el)
       assert.equal el, result
 
-    it ":) start of string with space", ->
+    it ":) start of string with space emojifies", ->
       el = ":) start of string with space"
       result = emojify.run(el)
       assert.equal '<img title=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /> start of string with space', result
 
-    it "end of string without space:)", ->
+    it "end of string without space:) does not emojify", ->
       el = "end of string without space:)"
       result = emojify.run(el)
       assert.equal el, result
 
-    it "end of string with space :)", ->
+    it "end of string with space :) emojifies", ->
       el = "end of string with space :)"
       result = emojify.run(el)
       assert.equal 'end of string with space <img title=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result
