@@ -36,7 +36,7 @@
      /* :-$  */ relaxed: /:-?\$/g,
      /* :-x  */ mask: /:-x/gi,
      /* <3   */ heart: /<3|&lt;3/g,
-     /* </3  */ broken_heart: /<\/3/g,
+     /* </3  */ broken_heart: /<\/3|&lt;\/3/g,
      /* :+1: */ thumbsup: /:\+1:/g,
      /* :-1: */ thumbsdown: /:\-1:/g
             };
