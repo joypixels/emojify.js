@@ -106,14 +106,19 @@
             }
 
             function emojifyString (htmlString) {
-                var match, emojiName, img;
+                var match, emojiName, emojiRegex, img, parsed = {};
 
                 while (match = emojiMegaRe.exec(htmlString)) {
                     if(emojiName = emojiValidator(match)) {
-                        // use &58; instead of `:` character so we don't have an infinite replacement loop
-                        img = "<img title='&58;" + emojiName + "&58;' class='emoji' src='" + defaultConfig.img_dir + '/' + emojiName + ".png' align='absmiddle' />";
-                        htmlString = htmlString.replace(match[0], img);
+                        parsed[match[0]] = emojiName;
                     }
+                }
+
+                for (match in parsed) {
+                    emojiName = parsed[match]
+                    emojiRegex = new RegExp(match.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&"), "gi");
+                    img = "<img title=':" + emojiName + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + emojiName + ".png' align='absmiddle' />";
+                    htmlString = htmlString.replace(emojiRegex, img);
                 }
 
                 return htmlString;
