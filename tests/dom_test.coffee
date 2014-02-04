@@ -30,6 +30,31 @@ describe 'emojify on DOM nodes', ->
       assert.equal '<img title=":railway_car:" class="emoji" src="images/emoji/railway_car.png" align="absmiddle"></img><img title=":railway_car:" class="emoji" src="images/emoji/railway_car.png" align="absmiddle"></img>', @el.innerHTML
 
   describe 'isolated cases', ->
+    it "it'd", ->
+      @el.innerHTML = "it'd"
+      emojify.run(@el)
+      assert.equal "it'd", @el.innerHTML
+
+    it 'end of string:)', ->
+      @el.innerHTML = "end of string:)"
+      emojify.run(@el)
+      assert.equal "end of string:)", @el.innerHTML
+
+    it 'end of string with space :)', ->
+      @el.innerHTML = "end of string with space :)"
+      emojify.run(@el)
+      assert.equal 'end of string with space <img title=":blush:" class="emoji" src="images/emoji/blush.png" align="absmiddle"></img>', @el.innerHTML
+
+    it ':)start of string without space', ->
+      @el.innerHTML = ":)start of string without space"
+      emojify.run(@el)
+      assert.equal ":)start of string without space", @el.innerHTML
+
+    it ':) start of string with space', ->
+      @el.innerHTML = ":) start of string with space"
+      emojify.run(@el)
+      assert.equal '<img title=":blush:" class="emoji" src="images/emoji/blush.png" align="absmiddle"></img> start of string with space', @el.innerHTML
+
     it ':)', ->
       @el.innerHTML = ":)"
       emojify.run(@el)

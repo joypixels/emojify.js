@@ -139,20 +139,25 @@
                     return emojiName;
                 }
 
+                function hasWhitespaceAfter() {
+                    return isWhitespace(input.charAt(m.length + index));
+                }
+
+                function hasWhitespaceBefore() {
+                    return isWhitespace(input.charAt(index - 1))
+                }
+
+                /* Is the entire string? */
+                if(input.trim() == m.trim()) { return success(); }
+
                 /* Any smiley thats 3 chars long is probably a smiley */
                 if(m.length > 2) { return success(); }
 
-                /* At the beginning? */
-                if(index === 0) { return success(); }
+                /* Has a whitespace before it? */
+                if(index >= 1 && hasWhitespaceBefore()) { return success(); }
 
-                /* At the end? */
-                if(input.length === m.length + index) { return success(); }
-
-                /* Has a whitespace before? */
-                if(isWhitespace(input.charAt(index - 1))) { return success(); }
-
-                /* Has a whitespace after? */
-                if(isWhitespace(input.charAt(m.length + index))) { return success(); }
+                /* At the start of the string and has whitespace after it */
+                if(index === 0 && hasWhitespaceAfter()) { return success(); }
 
                 /* Has a > before? */
                 if(input.charAt(index - 1) === ">") { return success(); }
