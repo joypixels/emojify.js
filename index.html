@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Emojify.js by hassankhan</title>
+    <title>emojify.js by hassankhan</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link rel="stylesheet" href="stylesheets/emojify.min.css">
     <link rel="icon" type="image/png" href="smile.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -17,7 +16,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>emojify.js 0.7</h1>
+        <h1>emojify.js 0.9</h1>
         <p>A Javascript module to convert Emoji keywords to images</p>
         <p>The emoji keywords are as described by <a href="http://www.emoji-cheat-sheet.com">emoji-cheat-sheet.com</a>.</p>
 
@@ -40,42 +39,30 @@
 
 <p>Add the required lines to the <code>&lt;head&gt;</code> part of your HTML code:</p>
 
-<pre><code>&lt;link rel="stylesheet" type="text/css" href="emojify.css"&gt;
-&lt;script src="emojify.js"&gt;&lt;/script&gt;
-</code></pre>
+<pre><code>&lt;script src="emojify.js"&gt;&lt;/script&gt;</code></pre>
 
 <p>Now type in an emoji keyword in your HTML, for example <code class="no-emojify">:smile:</code>, and run emojify using <code>emojify.run()</code>.
 To exclude tags from being emojified, add <code>no-emojify</code> to their <code>class</code> attributes.</p>
 
-<h3>Configuration</h3>
+<p>You can optionally pass an element to <code>emojify.run()</code> to restrict the emojifying to that object only:</p>
+<pre><code>emojify.run(document.getElementById('my-element'))</code></pre>
+
+<h3>Configuration and Code Example</h3>
 
 <p>To set configuration options, use <code>emojify.setConfig()</code> and a JSON object as a parameter with the following attributes:</p>
 
-<ul>
-<li>
-<code>emojify_tag_type</code>: Set to <code>&lt;div&gt;</code> by default. Sets the element the emojify.js uses to replace emoji keywords</li>
-<li>
-<code>emoticons_enabled</code>: Set to <code>true</code> by default. Enables detection of emoticon keywords.</li>
-<li>
-<code>people_enabled</code>: Set to <code>false</code> by default. Enables detection of emoji people keywords.</li>
-<li>
-<code>nature_enabled</code>: Set to <code>false</code> by default. Enables detection of emoji nature keywords.</li>
-<li>
-<code>objects_enabled</code>: Set to <code>false</code> by default. Enables detection of emoji objects keywords.</li>
-<li>
-<code>places_enabled</code>: Set to <code>false</code> by default. Enables detection of emoji places keywords.</li>
-<li>
-<code>symbols_enabled</code>: Set to <code>false</code> by default. Enables detection of emoji symbols keywords.</li>
-</ul><h3>Code Example</h3>
-
 <pre><code>emojify.setConfig({
-    emojify_tag_type: 'img',
-    emoticons_enabled: true,
-    people_enabled: true,
-    nature_enabled: true,
-    objects_enabled: true,
-    places_enabled: true,
-    symbols_enabled: true
+
+    emojify_tag_type : 'div',           // Only run emojify.js on this element
+    only_crawl_id    : null,            // Use to restrict where emojify.js applies
+    img_dir          : 'images/emoji',  // Directory for emoji images
+    ignored_tags     : {                // Ignore the following tags
+        'SCRIPT'  : 1,
+        'TEXTAREA': 1,
+        'A'       : 1,
+        'PRE'     : 1,
+        'CODE'    : 1
+    }
 });
 emojify.run();
 </code></pre>
