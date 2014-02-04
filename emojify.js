@@ -105,42 +105,63 @@
                 }
             }
 
-            function run(el) {
-                function emojiValidator(match) {
-                    /* Validator */
-                    var emojiName = getEmojiNameForMatch(match);
-                    if(!emojiName) { return; }
+            function emojifyString (htmlString) {
+                var match, emojiName, img;
 
-                    var m = match[0];
-                    var index = match.index;
-                    var input = match.input;
-
-                    function success() {
-                        lastEmojiTerminatedAt = m.length + index;
-                        return true;
+                while (match = emojiMegaRe.exec(htmlString)) {
+                    if(emojiName = emojiValidator(match)) {
+                        // use &58; instead of `:` character so we don't have an infinite replacement loop
+                        img = "<img title='&58;" + emojiName + "&58;' class='emoji' src='" + defaultConfig.img_dir + '/' + emojiName + ".png' align='absmiddle' />";
+                        htmlString = htmlString.replace(match[0], img);
                     }
-
-                    /* Any smiley thats 3 chars long is probably a smiley */
-                    if(m.length > 2) { return success(); }
-
-                    /* At the beginning? */
-                    if(index === 0) { return success(); }
-
-                    /* At the end? */
-                    if(input.length === m.length + index) { return success(); }
-
-                    /* Has a whitespace before? */
-                    if(isWhitespace(input.charAt(index - 1))) { return success(); }
-
-                    /* Has a whitespace after? */
-                    if(isWhitespace(input.charAt(m.length + index))) { return success(); }
-
-                    /* Has an emoji before? */
-                    if(lastEmojiTerminatedAt === index) { return success(); }
-
-                    return false;
                 }
 
+                return htmlString;
+            }
+
+            function emojiValidator(match) {
+                /* Validator */
+                var lastEmojiTerminatedAt = -1;
+                var emojiName = getEmojiNameForMatch(match);
+                if(!emojiName) { return; }
+
+                var m = match[0];
+                var index = match.index;
+                var input = match.input;
+
+                function success() {
+                    lastEmojiTerminatedAt = m.length + index;
+                    return emojiName;
+                }
+
+                /* Any smiley thats 3 chars long is probably a smiley */
+                if(m.length > 2) { return success(); }
+
+                /* At the beginning? */
+                if(index === 0) { return success(); }
+
+                /* At the end? */
+                if(input.length === m.length + index) { return success(); }
+
+                /* Has a whitespace before? */
+                if(isWhitespace(input.charAt(index - 1))) { return success(); }
+
+                /* Has a whitespace after? */
+                if(isWhitespace(input.charAt(m.length + index))) { return success(); }
+
+                /* Has a > before? */
+                if(input.charAt(index - 1) === ">") { return success(); }
+
+                /* Has a < after? */
+                if(input.charAt(m.length + index) === "<") { return success(); }
+
+                /* Has an emoji before? */
+                if(lastEmojiTerminatedAt === index) { return success(); }
+
+                return false;
+            }
+
+            function run(el) {
                 // Check if an element was not passed.
                 if(typeof el === 'undefined'){
                     // Check if an element was configured. If not, default to the body.
@@ -149,9 +170,9 @@
                     } else {
                         el = document.body;
                     }
+                } else if (typeof el === 'string') {
+                    return emojifyString(el);
                 }
-
-                var lastEmojiTerminatedAt = -1;
 
                 var ignoredTags = defaultConfig.ignored_tags;
 
