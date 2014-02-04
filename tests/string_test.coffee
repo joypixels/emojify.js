@@ -39,6 +39,11 @@ describe 'emojify used with flat strings', ->
       result = emojify.run(el)
       assert.equal '<div><img title=\':neckbeard:\' class=\'emoji\' src=\'images/emoji/neckbeard.png\' align=\'absmiddle\' /></div>', result
 
+    it 'inserts a <3 heart', ->
+      el = "inserts a <3 heart"
+      result = emojify.run(el)
+      assert.equal 'inserts a <img title=\':heart:\' class=\'emoji\' src=\'images/emoji/heart.png\' align=\'absmiddle\' /> heart', result
+
     it "I thought it'd run forever", ->
       el = "I thought it'd run forever"
       result = emojify.run(el)
