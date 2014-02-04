@@ -34,13 +34,21 @@
 
 <h2>Rationale</h2>
 
-<p>I wanted <a href="http://hassankhan.me">my blog</a> to display smileys nicely, decided to use Emojis because they look nice.</p>
+<p>I wanted <a href="http://hassankhan.me">my blog</a> to display smileys nicely, decided to use Emojis because they look nice. <a href="https://github.com/gitterHQ">GitterHQ</a> wanted to use it in <a href="https://gitter.im/">Gitter</a>, so they very kindly rewrote it and here we are.</p>
 
 <h2>Usage</h2>
 
 <p>Add the required lines to the <code>&lt;head&gt;</code> part of your HTML code:</p>
 
 <pre><code>&lt;script src="emojify.js"&gt;&lt;/script&gt;</code></pre>
+
+<p>You <strong>might</strong> also want to add the following to your CSS somewhere:</p>
+<pre><code>.emoji {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    margin-bottom: -0.25em;
+}</code></pre>
 
 <p>Now type in an emoji keyword in your HTML, for example <code class="no-emojify">:smile:</code>, and run emojify using <code>emojify.run()</code>.
 To exclude tags from being emojified, add <code>no-emojify</code> to their <code>class</code> attributes.</p>
@@ -990,13 +998,16 @@ emojify.run();
       :shipit:
 </p>
 
-<h2>Dependencies</h2>
+<h2>Contributors</h2>
 
-<p>This module depends on LESS, or at least requires you to compile the LESS source to CSS.</p>
+<ul>
+      <li><a href="https://github.com/suprememoocow">suprememoocow</a></li>
+      <li><a href="https://github.com/qq99">qq99</a></li>
+</ul>
 
 <h2>License</h2>
 
-<p>Copyright 2012 Hassan Khan</p>
+<p>Copyright 2014 Hassan Khan</p>
 
 <p>Licensed under the MIT License</p>
       </section>
@@ -1008,15 +1019,7 @@ emojify.run();
     <script src="javascripts/scale.fix.js"></script>
     <script src="javascripts/emojify.min.js"></script>
     <script>
-      emojify.setConfig({
-            emoticons_enabled: true,
-            people_enabled: true,
-            nature_enabled: true,
-            objects_enabled: true,
-            places_enabled: true,
-            symbols_enabled: true
-      });
-      emojify.run();
-</script>
+        emojify.run();
+    </script>
   </body>
 </html>
