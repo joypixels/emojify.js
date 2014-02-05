@@ -49,6 +49,16 @@ describe 'emojify used with flat strings', ->
       result = emojify.run(el)
       assert.equal 'inserts a <img title=\':heart:\' class=\'emoji\' src=\'images/emoji/heart.png\' align=\'absmiddle\' /> heart', result
 
+    it "works on :'(", ->
+      el = "aww :'( aw :’("
+      result = emojify.run(el)
+      assert.equal 'aww <img title=\':sob:\' class=\'emoji\' src=\'images/emoji/sob.png\' align=\'absmiddle\' /> aw <img title=\':sob:\' class=\'emoji\' src=\'images/emoji/sob.png\' align=\'absmiddle\' />', result
+
+    it "works on HTML escaped :'(", ->
+      el = "aww :&#x27;( aw"
+      result = emojify.run(el)
+      assert.equal 'aww <img title=\':sob:\' class=\'emoji\' src=\'images/emoji/sob.png\' align=\'absmiddle\' /> aw', result
+
     it "I thought it'd run forever", ->
       el = "I thought it'd run forever"
       result = emojify.run(el)

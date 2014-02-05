@@ -27,7 +27,7 @@
      /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
      /* :-[  */ rage: /:-?[\[@]/g,
      /* :-(  */ disappointed: /:-?\(/g,
-     /* :'-( */ sob: /:['’]-?\(/g,
+     /* :'-( */ sob: /:['’]-?\(|:&#x27;\(/g,
      /* :-*  */ kissing_heart: /:-?\*/g,
      /* ;-)  */ wink: /;-?\)/g,
      /* :-/  */ pensive: /:-?\//g,
