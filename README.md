@@ -37,7 +37,7 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 ### Code Example
 
     emojify.setConfig({
-    
+
         emojify_tag_type : 'div',           // Only run emojify.js on this element
         only_crawl_id    : null,            // Use to restrict where emojify.js applies
         img_dir          : 'images/emoji',  // Directory for emoji images
@@ -54,6 +54,10 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 ## Dependencies
 This module depends on LESS, or at least requires you to compile the LESS source to CSS.
 
+
+## Updating the emoji
+From time to time, the emoji at [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com) will be updated. Running the
+`update.sh` script will update the project with the latest emoji. Don't forget to run grunt after running the update script.
 
 ## License
 Copyright 2014 Hassan Khan
