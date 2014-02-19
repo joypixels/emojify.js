@@ -7,6 +7,8 @@
             // Get DOM as local variable for simplicity's sake
             var document = global.window.document;
 
+            var isIE = global.window.ActiveXObject || "ActiveXObject" in global.window;
+
             /**
              * NB!
              * The namedEmojiString variable is updated automatically by the
@@ -198,7 +200,7 @@
 
                 var ignoredTags = defaultConfig.ignored_tags;
 
-                var treeWalker = document.createTreeWalker(
+                var nodeIterator = document.createNodeIterator(
                     el,
                     NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
                     {
@@ -216,8 +218,9 @@
                     );
 
                 var nodeList = [];
-                while(treeWalker.nextNode()) {
-                    nodeList.push(treeWalker.currentNode);
+                var node;
+                while(node = nodeIterator.nextNode()) {
+                    nodeList.push(node);
                 }
 
                 nodeList.forEach(function(node) {
