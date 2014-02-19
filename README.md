@@ -1,4 +1,4 @@
-emojify.js v0.9.0
+emojify.js v0.9.1
 ==========
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
