@@ -1,6 +1,5 @@
     /* jshint unused:true, browser:true, strict:true */
     (function (global) {
-        "use strict";
 
         var emojify = (function () {
 
@@ -262,5 +261,15 @@
         })();
 
         global.emojify = emojify;
+
+
+        if (typeof define === 'function' && define.amd) {
+          define([], function() {
+            return emojify;
+          });
+        }
+
+        return emojify;
+
 
     })(this);
