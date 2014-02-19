@@ -1,0 +1,21 @@
+{
+  "framework": "jasmine",
+  "before_tests": "browserify tests/tests.coffee -o tests.browserified.js -t coffeeify",
+  "src_files": [
+    "emojify.js",
+    "tests/**/*.coffee",
+    "tests/**/*.js"
+  ],
+  "serve_files": [
+    "emojify.js",
+    "vendor/sinon/lib/sinon.js",
+    "vendor/sinon/lib/sinon/match.js",
+    "vendor/sinon/lib/sinon/call.js",
+    "vendor/sinon/lib/sinon/spy.js",
+    "vendor/sinon/lib/sinon/mock.js",
+    "vendor/sinon/lib/sinon/stub.js",
+    "vendor/chai/chai.js",
+    "tests/setup.js",
+    "tests.browserified.js"
+  ]
+}
