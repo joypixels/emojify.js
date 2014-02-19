@@ -116,70 +116,73 @@
                 }
             }
 
-            function emojifyString (htmlString) {
-                var match, emojiName, emojiRegex, img, parsed = {};
-
-                while (match = emojiMegaRe.exec(htmlString)) {
-                    if(emojiName = emojiValidator(match)) {
-                        parsed[match[0]] = emojiName;
-                    }
-                }
-
-                for (match in parsed) {
-                    emojiName = parsed[match]
-                    emojiRegex = new RegExp(match.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&"), "gi");
-                    img = "<img title=':" + emojiName + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + emojiName + ".png' align='absmiddle' />";
-                    htmlString = htmlString.replace(emojiRegex, img);
-                }
-
-                return htmlString;
+            function defaultReplacer(emoji, name) {
+                return "<img title=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
             }
 
-            function emojiValidator(match) {
-                /* Validator */
-                var lastEmojiTerminatedAt = -1;
-                var emojiName = getEmojiNameForMatch(match);
-                if(!emojiName) { return; }
+            function Validator() {
+                this.lastEmojiTerminatedAt = -1;
+            }
 
-                var m = match[0];
-                var index = match.index;
-                var input = match.input;
+            Validator.prototype = {
+                validate: function(match, index, input) {
+                    var self = this;
 
-                function success() {
-                    lastEmojiTerminatedAt = m.length + index;
-                    return emojiName;
+                    /* Validator */
+                    var emojiName = getEmojiNameForMatch(match);
+                    if(!emojiName) { return; }
+
+                    var m = match[0];
+                    var length = m.length;
+                    // var index = match.index;
+                    // var input = match.input;
+
+                    function success() {
+                        self.lastEmojiTerminatedAt = length + index;
+                        return emojiName;
+                    }
+
+                    /* Any smiley thats 3 chars long is probably a smiley */
+                    if(m.length > 2) { return success(); }
+
+                    /* At the beginning? */
+                    if(index === 0) { return success(); }
+
+                    /* At the end? */
+                    if(input.length === m.length + index) { return success(); }
+
+                    /* Has a whitespace before? */
+                    if(isWhitespace(input.charAt(index - 1))) { return success(); }
+
+                    /* Has a whitespace after? */
+                    if(isWhitespace(input.charAt(m.length + index))) { return success(); }
+
+                    /* Has an emoji before? */
+                    if(this.lastEmojiTerminatedAt === index) { return success(); }
+
+                    return;
                 }
+            };
 
-                function hasWhitespaceAfter() {
-                    return isWhitespace(input.charAt(m.length + index));
-                }
+            function emojifyString (htmlString, replacer) {
+                if(!htmlString) { return htmlString; }
+                if(!replacer) { replacer = defaultReplacer; }
 
-                function hasWhitespaceBefore() {
-                    return isWhitespace(input.charAt(index - 1))
-                }
+                var validator = new Validator();
 
-                /* Is the entire string? */
-                if(input.trim() == m.trim()) { return success(); }
+                return htmlString.replace(emojiMegaRe, function() {
+                    var matches = Array.prototype.slice.call(arguments, 0, -2);
+                    var index = arguments[arguments.length - 2];
+                    var input = arguments[arguments.length - 1];
+                    var emojiName = validator.validate(matches, index, input);
+                    if(emojiName) {
+                        return replacer(arguments[0], emojiName);
+                    }
 
-                /* Any smiley thats 3 chars long is probably a smiley */
-                if(m.length > 2) { return success(); }
+                    /* Did not validate, return the original value */
+                    return arguments[0];
+                });
 
-                /* Has a whitespace before it? */
-                if(index >= 1 && hasWhitespaceBefore()) { return success(); }
-
-                /* At the start of the string and has whitespace after it */
-                if(index === 0 && hasWhitespaceAfter()) { return success(); }
-
-                /* Has a > before? */
-                if(input.charAt(index - 1) === ">") { return success(); }
-
-                /* Has a < after? */
-                if(input.charAt(m.length + index) === "<") { return success(); }
-
-                /* Has an emoji before? */
-                if(lastEmojiTerminatedAt === index) { return success(); }
-
-                return false;
             }
 
             function run(el) {
@@ -191,8 +194,6 @@
                     } else {
                         el = document.body;
                     }
-                } else if (typeof el === 'string') {
-                    return emojifyString(el);
                 }
 
                 var ignoredTags = defaultConfig.ignored_tags;
@@ -218,14 +219,18 @@
                 while(treeWalker.nextNode()) {
                     nodeList.push(treeWalker.currentNode);
                 }
+
                 nodeList.forEach(function(node) {
                     var match;
                     var matches = [];
+                    var validator = new Validator();
+
                     while (match = emojiMegaRe.exec(node.data)) {
-                        if(emojiValidator(match)) {
+                        if(validator.validate(match, match.index, match.input)) {
                             matches.push(match);
                         }
                     }
+
                     for (var i = matches.length; i-- > 0;) {
                         /* Replace the text with the emoji */
                         var emojiName = getEmojiNameForMatch(matches[i]);
@@ -245,6 +250,8 @@
                         }
                     });
                 },
+
+                replace: emojifyString,
 
                 // Main method
                 run: run
