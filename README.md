@@ -1,4 +1,4 @@
-emojify.js v0.9.1
+emojify.js v0.9.1 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js)
 ==========
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
@@ -50,10 +50,6 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
         }
     });
     emojify.run();
-
-## Dependencies
-This module depends on LESS, or at least requires you to compile the LESS source to CSS.
-
 
 ## Updating the emoji
 From time to time, the emoji at [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com) will be updated. Running the
