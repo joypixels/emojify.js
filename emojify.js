@@ -1,11 +1,12 @@
     /* jshint unused:true, browser:true, strict:true */
     (function (global) {
-        "use strict";
 
         var emojify = (function () {
 
             // Get DOM as local variable for simplicity's sake
             var document = global.window.document;
+
+            var isIE = global.window.ActiveXObject || "ActiveXObject" in global.window;
 
             /**
              * NB!
@@ -38,7 +39,7 @@
      /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
      /* :-[  */ rage: /:-?[\[@]/g,
      /* :-(  */ disappointed: /:-?\(/g,
-     /* :'-( */ sob: /:['’]-?\(/g,
+     /* :'-( */ sob: /:['’]-?\(|:&#x27;\(/g,
      /* :-*  */ kissing_heart: /:-?\*/g,
      /* ;-)  */ wink: /;-?\)/g,
      /* :-/  */ pensive: /:-?\//g,
@@ -46,8 +47,8 @@
      /* :-|  */ flushed: /:-?\|/g,
      /* :-$  */ relaxed: /:-?\$/g,
      /* :-x  */ mask: /:-x/gi,
-     /* <3   */ heart: /<3/g,
-     /* </3  */ broken_heart: /<\/3/g,
+     /* <3   */ heart: /<3|&lt;3/g,
+     /* </3  */ broken_heart: /<\/3|&lt;&#x2F;3/g,
      /* :+1: */ thumbsup: /:\+1:/g,
      /* :-1: */ thumbsdown: /:\-1:/g
             };
@@ -116,19 +117,30 @@
                 }
             }
 
-            function run(el) {
-                function emojiValidator(match) {
+            function defaultReplacer(emoji, name) {
+                return "<img title=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
+            }
+
+            function Validator() {
+                this.lastEmojiTerminatedAt = -1;
+            }
+
+            Validator.prototype = {
+                validate: function(match, index, input) {
+                    var self = this;
+
                     /* Validator */
                     var emojiName = getEmojiNameForMatch(match);
                     if(!emojiName) { return; }
 
                     var m = match[0];
-                    var index = match.index;
-                    var input = match.input;
+                    var length = m.length;
+                    // var index = match.index;
+                    // var input = match.input;
 
                     function success() {
-                        lastEmojiTerminatedAt = m.length + index;
-                        return true;
+                        self.lastEmojiTerminatedAt = length + index;
+                        return emojiName;
                     }
 
                     /* Any smiley thats 3 chars long is probably a smiley */
@@ -147,11 +159,34 @@
                     if(isWhitespace(input.charAt(m.length + index))) { return success(); }
 
                     /* Has an emoji before? */
-                    if(lastEmojiTerminatedAt === index) { return success(); }
+                    if(this.lastEmojiTerminatedAt === index) { return success(); }
 
-                    return false;
+                    return;
                 }
+            };
 
+            function emojifyString (htmlString, replacer) {
+                if(!htmlString) { return htmlString; }
+                if(!replacer) { replacer = defaultReplacer; }
+
+                var validator = new Validator();
+
+                return htmlString.replace(emojiMegaRe, function() {
+                    var matches = Array.prototype.slice.call(arguments, 0, -2);
+                    var index = arguments[arguments.length - 2];
+                    var input = arguments[arguments.length - 1];
+                    var emojiName = validator.validate(matches, index, input);
+                    if(emojiName) {
+                        return replacer(arguments[0], emojiName);
+                    }
+
+                    /* Did not validate, return the original value */
+                    return arguments[0];
+                });
+
+            }
+
+            function run(el) {
                 // Check if an element was not passed.
                 if(typeof el === 'undefined'){
                     // Check if an element was configured. If not, default to the body.
@@ -162,39 +197,40 @@
                     }
                 }
 
-                var lastEmojiTerminatedAt = -1;
-
                 var ignoredTags = defaultConfig.ignored_tags;
 
-                var treeWalker = document.createTreeWalker(
+                var nodeIterator = document.createNodeIterator(
                     el,
                     NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
-                    {
-                        acceptNode: function(node) {
-                            if(node.nodeType !== 1) { return NodeFilter.FILTER_ACCEPT; }
+                    function(node) {
+                        if(node.nodeType !== 1) { return NodeFilter.FILTER_ACCEPT; }
 
-                            if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
-                                return NodeFilter.FILTER_REJECT;
-                            }
-
-                            return NodeFilter.FILTER_SKIP;
+                        if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
+                            return NodeFilter.FILTER_REJECT;
                         }
+
+                        return NodeFilter.FILTER_SKIP;
                     },
                     false
                     );
 
                 var nodeList = [];
-                while(treeWalker.nextNode()) {
-                    nodeList.push(treeWalker.currentNode);
+                var node;
+                while(node = nodeIterator.nextNode()) {
+                    nodeList.push(node);
                 }
+
                 nodeList.forEach(function(node) {
                     var match;
                     var matches = [];
+                    var validator = new Validator();
+
                     while (match = emojiMegaRe.exec(node.data)) {
-                        if(emojiValidator(match)) {
+                        if(validator.validate(match, match.index, match.input)) {
                             matches.push(match);
                         }
                     }
+
                     for (var i = matches.length; i-- > 0;) {
                         /* Replace the text with the emoji */
                         var emojiName = getEmojiNameForMatch(matches[i]);
@@ -215,11 +251,23 @@
                     });
                 },
 
+                replace: emojifyString,
+
                 // Main method
                 run: run
             };
         })();
 
         global.emojify = emojify;
+
+
+        if (typeof define === 'function' && define.amd) {
+          define([], function() {
+            return emojify;
+          });
+        }
+
+        return emojify;
+
 
     })(this);

@@ -1,2 +1,4 @@
 node_modules
 css
+vendor
+tests.browserified.js
