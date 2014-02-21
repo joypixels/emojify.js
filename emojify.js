@@ -200,19 +200,17 @@
             var nodeIterator = document.createTreeWalker(
                 el,
                 NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
-                {
-                    acceptNode: function(node) {
-                        if(node.nodeType !== 1) {
-                            /* Text Node? Good! */
-                            return NodeFilter.FILTER_ACCEPT;
-                        }
-
-                        if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
-                            return NodeFilter.FILTER_REJECT;
-                        }
-
-                        return NodeFilter.FILTER_SKIP;
+                function(node) {
+                    if(node.nodeType !== 1) {
+                        /* Text Node? Good! */
+                        return NodeFilter.FILTER_ACCEPT;
                     }
+
+                    if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_SKIP;
                 },
                 false);
 
