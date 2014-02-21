@@ -6,8 +6,6 @@
             // Get DOM as local variable for simplicity's sake
             var document = global.window.document;
 
-            var isIE = global.window.ActiveXObject || "ActiveXObject" in global.window;
-
             /**
              * NB!
              * The namedEmojiString variable is updated automatically by the
@@ -242,7 +240,7 @@
             return {
                 // Sane defaults
                 defaultConfig: defaultConfig,
-
+                emojiNames: namedEmoji,
                 setConfig: function (newConfig) {
                     Object.keys(defaultConfig).forEach(function(f) {
                         if(f in newConfig) {
