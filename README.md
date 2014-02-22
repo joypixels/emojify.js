@@ -1,6 +1,8 @@
 emojify.js v0.9.1 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js)
 ==========
 
+[![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
+
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
 
 The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
