@@ -1,12 +1,10 @@
     /* jshint unused:true, browser:true, strict:true */
+    /* global define:false */
     (function (global) {
 
         var emojify = (function () {
-
             // Get DOM as local variable for simplicity's sake
             var document = global.window.document;
-
-            var isIE = global.window.ActiveXObject || "ActiveXObject" in global.window;
 
             /**
              * NB!
@@ -199,11 +197,14 @@
 
                 var ignoredTags = defaultConfig.ignored_tags;
 
-                var nodeIterator = document.createNodeIterator(
+                var nodeIterator = document.createTreeWalker(
                     el,
                     NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
                     function(node) {
-                        if(node.nodeType !== 1) { return NodeFilter.FILTER_ACCEPT; }
+                        if(node.nodeType !== 1) {
+                            /* Text Node? Good! */
+                            return NodeFilter.FILTER_ACCEPT;
+                        }
 
                         if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
                             return NodeFilter.FILTER_REJECT;
@@ -211,12 +212,11 @@
 
                         return NodeFilter.FILTER_SKIP;
                     },
-                    false
-                    );
+                    false);
 
                 var nodeList = [];
                 var node;
-                while(node = nodeIterator.nextNode()) {
+                while((node = nodeIterator.nextNode()) !== null) {
                     nodeList.push(node);
                 }
 
@@ -225,7 +225,7 @@
                     var matches = [];
                     var validator = new Validator();
 
-                    while (match = emojiMegaRe.exec(node.data)) {
+                    while ((match = emojiMegaRe.exec(node.data)) !== null) {
                         if(validator.validate(match, match.index, match.input)) {
                             matches.push(match);
                         }
@@ -242,7 +242,7 @@
             return {
                 // Sane defaults
                 defaultConfig: defaultConfig,
-
+                emojiNames: namedEmoji,
                 setConfig: function (newConfig) {
                     Object.keys(defaultConfig).forEach(function(f) {
                         if(f in newConfig) {
