@@ -1,9 +1,9 @@
-emojify.js v0.9.1 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hassankhan/emojify.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+emojify.js v0.9.1 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hassankhan/emojify.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
 ==========
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
-<img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"> 
+<a href="http://bower.io/search/?q=emojify.js"><img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"></a>
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
 
