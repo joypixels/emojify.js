@@ -79,7 +79,8 @@
                     'A': 1,
                     'PRE': 1,
                     'CODE': 1
-                }
+                },
+                emoticons_enabled: true
             };
 
             /* Returns true if the given char is whitespace */
@@ -108,9 +109,11 @@
                     if(namedMatchHash[named]) { return named; }
                     return;
                 }
-                for(var i = 3; i < match.length - 1; i++) {
-                    if(match[i]) {
-                        return emoticonsProcessed[i - 2][1];
+                if (defaultConfig.emoticons_enabled) {
+                    for(var i = 3; i < match.length - 1; i++) {
+                        if(match[i]) {
+                            return emoticonsProcessed[i - 2][1];
+                        }
                     }
                 }
             }
