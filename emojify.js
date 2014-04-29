@@ -91,6 +91,7 @@
             function insertEmojicon(node, match, emojiName) {
                 var emojiImg = document.createElement('img');
                 emojiImg.setAttribute('title', ':' + emojiName + ':');
+                emojiImg.setAttribute('alt', ':' + emojiName + ':');
                 emojiImg.setAttribute('class', 'emoji');
                 emojiImg.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
                 emojiImg.setAttribute('align', 'absmiddle');
@@ -116,7 +117,7 @@
             }
 
             function defaultReplacer(emoji, name) {
-                return "<img title=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
+                return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
             }
 
             function Validator() {
