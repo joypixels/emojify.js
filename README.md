@@ -62,6 +62,5 @@ From time to time, the emoji at [emoji-cheat-sheet.com](http://www.emoji-cheat-s
 `update.sh` script will update the project with the latest emoji. Don't forget to run grunt after running the update script.
 
 ## License
-Copyright 2014 Hassan Khan
 
-Licensed under the MIT License
+http://hassankhan.mit-license.org/
