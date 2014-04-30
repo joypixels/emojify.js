@@ -27,6 +27,8 @@ To exclude tags from being emojified, add ``no-emojify`` to their ``class`` attr
 
 You can optionally pass an object to ``emojify.run()`` to restrict the **emojification** to that object only: ``emojify.run(document.getElementById('my-element'))``
 
+You can also use ``emojify.replace()`` method to emojify a string directly:
+
 ### Configuration
 To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with the following attributes:
 * ``emojify_tag_type``: Set to `<div>` by default. Sets the element the emojify.js uses to replace emoji keywords
