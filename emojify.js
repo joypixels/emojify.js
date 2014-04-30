@@ -1,5 +1,7 @@
     (function (global) {
 
+        'use strict';
+
         var emojify = (function () {
             // Get DOM as local variable for simplicity's sake
             var document = global.window.document;
