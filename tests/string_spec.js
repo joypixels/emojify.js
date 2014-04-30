@@ -1,6 +1,3 @@
-/* jshint unused:true, browser:true,  strict:true */
-/* global JS:false, emojify:false */
-
 JS.Test.describe('emojify used with flat strings', function() {
     'use strict';
 
@@ -93,5 +90,6 @@ JS.Test.describe('emojify used with flat strings', function() {
             var result = emojify.replace(text);
             this.assertEqual('end of string with space <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result);
         });
+
     });
 });

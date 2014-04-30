@@ -1,5 +1,3 @@
-    /* jshint unused:true, browser:true, strict:true */
-    /* global define:false */
     (function (global) {
 
         var emojify = (function () {

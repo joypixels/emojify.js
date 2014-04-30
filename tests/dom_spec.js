@@ -1,7 +1,3 @@
-/* jshint unused:true, browser:true,  strict:true */
-/* global JS:false, emojify:false */
-
-
 function assertEmoji(test, rootEl, emojiTitles) {
     var emojis = rootEl.querySelectorAll('.emoji');
     test.assertEqual(emojiTitles.length, emojis.length);
@@ -108,14 +104,14 @@ JS.Test.describe('emojify on DOM nodes', function() {
 
     this.describe('ignore cases', function() {
 
-        this.it('dont emojifiy inside pre tags', function() {
+        this.it('dont emojify inside pre tags', function() {
             var result;
             this.el.innerHTML = "<pre>:)</pre>";
             result = emojify.run(this.el);
             assertEmoji(this, this.el, []);
         });
 
-        this.it('dont emojifiy inside code tags', function() {
+        this.it('dont emojify inside code tags', function() {
             var result;
             this.el.innerHTML = "<code>:)</code>";
             result = emojify.run(this.el);
