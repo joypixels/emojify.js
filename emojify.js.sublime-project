@@ -3,7 +3,7 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "/Applications/MAMP/htdocs/emojify.js"
+			"path": "."
 		}
 	]
 }
