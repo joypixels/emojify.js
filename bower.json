@@ -1,0 +1,22 @@
+{
+  "name": "emojify.js",
+  "main": "emojify.js",
+  "version": "0.9.1",
+  "homepage": "https://github.com/hassankhan/emojify.js",
+  "authors": [
+    "Hassan Khan (hassankhan)"
+  ],
+  "description": "A Javascript module to convert Emoji keywords to images http://hassankhan.github.io/emojify.js/",
+  "keywords": [
+    "emoji"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/vendor/",
+    "test",
+    "tests"
+  ]
+}
