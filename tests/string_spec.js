@@ -25,6 +25,12 @@ JS.Test.describe('emojify used with flat strings', function() {
             var result = emojify.replace(text);
             this.assertEqual(' <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /> ', result);
         });
+
+        this.it('does not insert emoji into the middle of words', function () {
+            var text = "a link for you https://hacks.mozilla.org/2014/06/introducing-the-web-audio-editor-in-firefox-developer-tools/"; // `x-d` appears and might be matched in this string
+            var result = emojify.replace(text);
+            this.assertEqual(text, result);
+        });
     });
 
     this.describe('with multiple emoji beside each other', function() {

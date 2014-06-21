@@ -142,9 +142,6 @@
                         return emojiName;
                     }
 
-                    /* Any smiley thats 3 chars long is probably a smiley */
-                    if(m.length > 2) { return success(); }
-
                     /* At the beginning? */
                     if(index === 0) { return success(); }
 
@@ -175,6 +172,7 @@
                     var index = arguments[arguments.length - 2];
                     var input = arguments[arguments.length - 1];
                     var emojiName = validator.validate(matches, index, input);
+
                     if(emojiName) {
                         return replacer(arguments[0], emojiName);
                     }
