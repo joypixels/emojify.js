@@ -1,4 +1,4 @@
-emojify.js v0.9.1 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hassankhan/emojify.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
+emojify.js v0.9.2 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hassankhan/emojify.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge") [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
 ==========
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)

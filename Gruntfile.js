@@ -10,7 +10,6 @@ module.exports = function (grunt) {
             ' */'
         },
         jshint : {
-            jshintrc     : '.jshintrc',
             files        : ['emojify.js']
         },
         uglify : {
@@ -31,7 +30,7 @@ module.exports = function (grunt) {
     grunt.registerTask(
         'default',
         [
-            // 'jshint',
+            'jshint',
             'uglify'
         ]
     );
