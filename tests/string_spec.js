@@ -31,6 +31,16 @@ JS.Test.describe('emojify used with flat strings', function() {
             var result = emojify.replace(text);
             this.assertEqual(text, result);
         });
+
+        this.it('does not insert emoji at the end of a word, unless it is at the end', function () {
+            var text = "hey:)";
+            var result = emojify.replace(text);
+            this.assert(text !== result);
+
+            text = "hey:) there";
+            result = emojify.replace(text);
+            this.assertEqual(text, result);
+        });
     });
 
     this.describe('with multiple emoji beside each other', function() {
