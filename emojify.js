@@ -148,14 +148,15 @@
                     /* At the end? */
                     if(input.length === m.length + index) { return success(); }
 
+                    var hasEmojiBefore = this.lastEmojiTerminatedAt === index;
+                    if (hasEmojiBefore) { return success();}
+
                     /* Has a whitespace before? */
                     if(isWhitespace(input.charAt(index - 1))) { return success(); }
 
+                    var hasWhitespaceAfter = isWhitespace(input.charAt(m.length + index));
                     /* Has a whitespace after? */
-                    if(isWhitespace(input.charAt(m.length + index))) { return success(); }
-
-                    /* Has an emoji before? */
-                    if(this.lastEmojiTerminatedAt === index) { return success(); }
+                    if(hasWhitespaceAfter && hasEmojiBefore) { return success(); }
 
                     return;
                 }
