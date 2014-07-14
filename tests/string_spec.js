@@ -31,6 +31,16 @@ JS.Test.describe('emojify used with flat strings', function() {
             var result = emojify.replace(text);
             this.assertEqual(text, result);
         });
+
+        this.it('does not insert emoji at the end of a word, unless it is at the end', function () {
+            var text = "hey:)";
+            var result = emojify.replace(text);
+            this.assert(text !== result);
+
+            text = "hey:) there";
+            result = emojify.replace(text);
+            this.assertEqual(text, result);
+        });
     });
 
     this.describe('with multiple emoji beside each other', function() {
@@ -95,6 +105,12 @@ JS.Test.describe('emojify used with flat strings', function() {
             var text = "end of string with space :)";
             var result = emojify.replace(text);
             this.assertEqual('end of string with space <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result);
+        });
+
+        this.it("doesn't emojify words ending in `'d`", function () {
+            var text = "I&#x27;d better not see emoji in this string; that'd suck";
+            var result = emojify.replace(text);
+            this.assertEqual("I&#x27;d better not see emoji in this string; that'd suck", result);
         });
 
     });
