@@ -41,6 +41,21 @@ JS.Test.describe('emojify used with flat strings', function() {
             result = emojify.replace(text);
             this.assertEqual(text, result);
         });
+
+        this.it('does not insert emoji at the end of a word, no exception if sloppy emoji parsing at line ends is disabled', function () {
+            emojify.setConfig({sloppier_emoticons_at_line_end: false});
+
+            var text = "hey:)";
+            var result = emojify.replace(text)
+            this.assertEqual(text, result)
+
+            // OK, if it's really only the emoticon we don't object
+            text = ":)"
+            result = emojify.replace(text)
+            this.assert(text !== result);
+
+            emojify.setConfig({sloppier_emoticons_at_line_end: true});
+        });
     });
 
     this.describe('with multiple emoji beside each other', function() {
