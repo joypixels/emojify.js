@@ -79,7 +79,11 @@
                     'A': 1,
                     'PRE': 1,
                     'CODE': 1
-                }
+                },
+		/* Usually we require emoticons to have a whitespace before them.
+		 * Sometimes, at the end of a line, we want to render emoticons
+		 * even though the whitespace is missing:)*/
+		sloppier_emoticons_at_line_end: true
             };
 
             /* Returns true if the given char is whitespace */
@@ -146,7 +150,7 @@
                     if(index === 0) { return success(); }
 
                     /* At the end? */
-                    if(input.length === m.length + index) { return success(); }
+                    if(defaultConfig.sloppier_emoticons_at_line_end && (input.length === m.length + index)) { return success(); }
 
                     var hasEmojiBefore = this.lastEmojiTerminatedAt === index;
                     if (hasEmojiBefore) { return success();}
