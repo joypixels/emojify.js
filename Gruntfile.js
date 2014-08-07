@@ -34,4 +34,26 @@ module.exports = function (grunt) {
             'uglify'
         ]
     );
+
+    grunt.registerTask('buildCSS', 'Generate CSS for emojis in /images', function() {
+        var fs = require('fs'),
+            path = require('path'),
+            util = require('util'),
+            done = this.async(),
+            emojiPath = './images/emoji/',
+            emojiCSS = fs.createWriteStream('emojify.css', {'flags': 'w'}),
+            buildSelector = function(imageName, encodedImage) {
+                return util.format('.emjoi-%s {\n  background:\n    url(data:image/png;base64,%s)\n    no-repeat\n    left-center;\n}\n',
+                                   imageName, encodedImage);
+            };
+
+        fs.readdir(emojiPath, function (err, files) {
+            files.map(function(file) {
+                fs.readFile(path.join(emojiPath, file), function(err, data){
+                    var base64Image = new Buffer(data, 'binary').toString('base64');
+                    emojiCSS.write(buildSelector(file.slice(0, -4), base64Image));
+                });
+            });
+        });
+    });
 };
