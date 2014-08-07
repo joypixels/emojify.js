@@ -70,7 +70,7 @@
             var emojiMegaRe = new RegExp(mega, "gi");
 
             var defaultConfig = {
-                emojify_tag_type: 'div',
+                emojify_tag_type: null,
                 only_crawl_id: null,
                 img_dir: 'images/emoji',
                 ignored_tags: {
@@ -89,16 +89,22 @@
 
             /* Given a match in a node, replace the text with an image */
             function insertEmojicon(node, match, emojiName) {
-                var emojiImg = document.createElement('img');
-                emojiImg.setAttribute('title', ':' + emojiName + ':');
-                emojiImg.setAttribute('alt', ':' + emojiName + ':');
-                emojiImg.setAttribute('class', 'emoji');
-                emojiImg.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
-                emojiImg.setAttribute('align', 'absmiddle');
+                var emojiEl = document.createElement(defaultConfig.emojify_tag_type || 'img');
+
+                if (defaultConfig.emojify_tag_type) {
+                    emojiEl.setAttribute('class', 'emoji emoji-' + emojiName);
+                } else {
+                    emojiEl.setAttribute('class', 'emoji');
+                    emojiEl.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
+                }
+
+                emojiEl.setAttribute('title', ':' + emojiName + ':');
+                emojiEl.setAttribute('alt', ':' + emojiName + ':');
+                emojiEl.setAttribute('align', 'absmiddle');
                 node.splitText(match.index);
                 node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-                emojiImg.appendChild(node.splitText(match.index));
-                node.parentNode.insertBefore(emojiImg, node.nextSibling);
+                emojiEl.appendChild(node.splitText(match.index));
+                node.parentNode.insertBefore(emojiEl, node.nextSibling);
             }
 
             /* Given an regex match, return the name of the matching emoji */
