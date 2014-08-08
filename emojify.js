@@ -89,22 +89,22 @@
 
             /* Given a match in a node, replace the text with an image */
             function insertEmojicon(node, match, emojiName) {
-                var emojiEl = document.createElement(defaultConfig.emojify_tag_type || 'img');
+                var emojiElement = document.createElement(defaultConfig.emojify_tag_type || 'img');
 
                 if (defaultConfig.emojify_tag_type) {
-                    emojiEl.setAttribute('class', 'emoji emoji-' + emojiName);
+                    emojiElement.setAttribute('class', 'emoji emoji-' + emojiName);
                 } else {
-                    emojiEl.setAttribute('class', 'emoji');
-                    emojiEl.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
+                    emojiElement.setAttribute('class', 'emoji');
+                    emojiElement.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
                 }
 
-                emojiEl.setAttribute('title', ':' + emojiName + ':');
-                emojiEl.setAttribute('alt', ':' + emojiName + ':');
-                emojiEl.setAttribute('align', 'absmiddle');
+                emojiElement.setAttribute('title', ':' + emojiName + ':');
+                emojiElement.setAttribute('alt', ':' + emojiName + ':');
+                emojiElement.setAttribute('align', 'absmiddle');
                 node.splitText(match.index);
                 node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-                emojiEl.appendChild(node.splitText(match.index));
-                node.parentNode.insertBefore(emojiEl, node.nextSibling);
+                emojiElement.appendChild(node.splitText(match.index));
+                node.parentNode.insertBefore(emojiElement, node.nextSibling);
             }
 
             /* Given an regex match, return the name of the matching emoji */
