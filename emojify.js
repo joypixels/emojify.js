@@ -123,7 +123,11 @@
             }
 
             function defaultReplacer(emoji, name) {
-                return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
+                if (defaultConfig.emojify_tag_type) {
+                    return "<" +  defaultConfig.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + defaultConfig.emojify_tag_type+ ">";
+                } else {
+                    return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
+                }
             }
 
             function Validator() {
