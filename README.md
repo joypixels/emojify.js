@@ -31,7 +31,7 @@ You can also use ``emojify.replace()`` method to emojify a string directly:
 
 ### Configuration
 To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with the following attributes:
-* ``emojify_tag_type``: Set to `<div>` by default. Sets the element the emojify.js uses to replace emoji keywords
+* ``emojify_tag_type``: Set to `null` by default. When set, emojify uses this `emojify_tag_type` element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`
 * ``only_crawl_id``: Set to `null` by default. Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to ``run()``, `document.body` is used.
 * ``img_dir`` defines the path to the emoji images.
 * ``ignored_tags`` should be a list of elements that you don't want emojified.

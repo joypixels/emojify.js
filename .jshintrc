@@ -19,7 +19,7 @@
 
     // Custom Globals
     "globals"       : {         // additional predefined global variables
-        "define"    : "false".
+        "define"    : "false",
         "JS"        : "false",
         "emojify"   : "false"
     }
