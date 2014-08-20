@@ -34,15 +34,16 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 * ``emojify_tag_type``: Set to `null` by default. When set, emojify uses this `emojify_tag_type` element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`
 * ``only_crawl_id``: Set to `null` by default. Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to ``run()``, `document.body` is used.
 * ``img_dir`` defines the path to the emoji images.
+* ``ignore_emoticons`` Set to `false` by default. If `true`, only convert :emoji: and ignore emoticons like :-) and ;D.
 * ``ignored_tags`` should be a list of elements that you don't want emojified.
 
 ### Code Example
 
     emojify.setConfig({
-
         emojify_tag_type : 'div',           // Only run emojify.js on this element
         only_crawl_id    : null,            // Use to restrict where emojify.js applies
         img_dir          : 'images/emoji',  // Directory for emoji images
+        ignore_emoticons : false            // If true, only convert :emoji: and ignore :-)
         ignored_tags     : {                // Ignore the following tags
             'SCRIPT'  : 1,
             'TEXTAREA': 1,

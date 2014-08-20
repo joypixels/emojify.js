@@ -26,53 +26,68 @@
                 return memo;
             }, {});
 
-            /* List of emoticons used in the regular expression */
-            var emoticons = {
-     /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
-     /* :-)  */ blush: /:-?\)/g,
-     /* :-o  */ scream: /:-o/gi,
-     /* :-]  */ smirk: /[:;]-?]/g,
-     /* :-D  */ smiley: /[:;]-?d/gi,
-     /* X-D  */ stuck_out_tongue_closed_eyes: /x-d/gi,
-     /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
-     /* :-[  */ rage: /:-?[\[@]/g,
-     /* :-(  */ disappointed: /:-?\(/g,
-     /* :'-( */ sob: /:['’]-?\(|:&#x27;\(/g,
-     /* :-*  */ kissing_heart: /:-?\*/g,
-     /* ;-)  */ wink: /;-?\)/g,
-     /* :-/  */ pensive: /:-?\//g,
-     /* :-s  */ confounded: /:-?s/gi,
-     /* :-|  */ flushed: /:-?\|/g,
-     /* :-$  */ relaxed: /:-?\$/g,
-     /* :-x  */ mask: /:-x/gi,
-     /* <3   */ heart: /<3|&lt;3/g,
-     /* </3  */ broken_heart: /<\/3|&lt;&#x2F;3/g,
-     /* :+1: */ thumbsup: /:\+1:/g,
-     /* :-1: */ thumbsdown: /:\-1:/g
-            };
+            var emoticonsProcessed;
+            var emojiMegaRe;
 
+            function initEmoticonsProcessed() {
+                /* List of emoticons used in the regular expression */
+                var emoticons = {
+         /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
+         /* :-)  */ blush: /:-?\)/g,
+         /* :-o  */ scream: /:-o/gi,
+         /* :-]  */ smirk: /[:;]-?]/g,
+         /* :-D  */ smiley: /[:;]-?d/gi,
+         /* X-D  */ stuck_out_tongue_closed_eyes: /x-d/gi,
+         /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
+         /* :-[  */ rage: /:-?[\[@]/g,
+         /* :-(  */ disappointed: /:-?\(/g,
+         /* :'-( */ sob: /:['’]-?\(|:&#x27;\(/g,
+         /* :-*  */ kissing_heart: /:-?\*/g,
+         /* ;-)  */ wink: /;-?\)/g,
+         /* :-/  */ pensive: /:-?\//g,
+         /* :-s  */ confounded: /:-?s/gi,
+         /* :-|  */ flushed: /:-?\|/g,
+         /* :-$  */ relaxed: /:-?\$/g,
+         /* :-x  */ mask: /:-x/gi,
+         /* <3   */ heart: /<3|&lt;3/g,
+         /* </3  */ broken_heart: /<\/3|&lt;&#x2F;3/g,
+         /* :+1: */ thumbsup: /:\+1:/g,
+         /* :-1: */ thumbsdown: /:\-1:/g
+                };
 
-            var emoticonsProcessed = Object.keys(emoticons).map(function(key) {
-                return [emoticons[key], key];
-            });
+                if (defaultConfig.ignore_emoticons) {
+                  emoticons = {
+         /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
+         /* :+1: */ thumbsup: /:\+1:/g,
+         /* :-1: */ thumbsdown: /:\-1:/g
+                  };
+                }
 
-            /* The source for our mega-regex */
-            var mega = emoticonsProcessed
-                    .map(function(v) {
-                        var re = v[0];
-                        var val = re.source || re;
-                        val = val.replace(/(^|[^\[])\^/g, '$1');
-                        return "(" + val + ")";
-                    })
-                    .join('|');
+                return Object.keys(emoticons).map(function(key) {
+                    return [emoticons[key], key];
+                });
+            }
 
-            /* The regex used to find emoji */
-            var emojiMegaRe = new RegExp(mega, "gi");
+            function initMegaRe() {
+                /* The source for our mega-regex */
+                var mega = emoticonsProcessed
+                        .map(function(v) {
+                            var re = v[0];
+                            var val = re.source || re;
+                            val = val.replace(/(^|[^\[])\^/g, '$1');
+                            return "(" + val + ")";
+                        })
+                        .join('|');
+
+                /* The regex used to find emoji */
+                return new RegExp(mega, "gi");
+            }
 
             var defaultConfig = {
                 emojify_tag_type: null,
                 only_crawl_id: null,
                 img_dir: 'images/emoji',
+                ignore_emoticons: false,
                 ignored_tags: {
                     'SCRIPT': 1,
                     'TEXTAREA': 1,
@@ -176,6 +191,9 @@
                 if(!htmlString) { return htmlString; }
                 if(!replacer) { replacer = defaultReplacer; }
 
+                emoticonsProcessed = initEmoticonsProcessed();
+                emojiMegaRe = initMegaRe();
+
                 var validator = new Validator();
 
                 return htmlString.replace(emojiMegaRe, function() {
@@ -195,6 +213,9 @@
             }
 
             function run(el) {
+                emoticonsProcessed = initEmoticonsProcessed();
+                emojiMegaRe = initMegaRe();
+
                 // Check if an element was not passed.
                 if(typeof el === 'undefined'){
                     // Check if an element was configured. If not, default to the body.
