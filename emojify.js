@@ -1,10 +1,22 @@
-    (function (global) {
-
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        // AMD. Register as an anonymous module.
+        define([], factory);
+    } else if (typeof exports === 'object') {
+        // Node. Does not work with strict CommonJS, but
+        // only CommonJS-like environments that support module.exports,
+        // like Node.
+        module.exports = factory();
+    } else {
+        // Browser globals (root is window)
+        root.emojify = factory();
+  }
+}(this, function () {
         'use strict';
 
         var emojify = (function () {
             // Get DOM as local variable for simplicity's sake
-            var document = global.window.document;
+            var document = window.document;
 
             /**
              * NB!
@@ -268,16 +280,5 @@
             };
         })();
 
-        global.emojify = emojify;
-
-
-        if (typeof define === 'function' && define.amd) {
-          define([], function() {
-            return emojify;
-          });
-        }
-
         return emojify;
-
-
-    })(this);
+}));
