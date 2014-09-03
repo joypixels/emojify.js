@@ -1,4 +1,4 @@
-emojify.js v0.9.3 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
+emojify.js v0.9.4 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
 ==========
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
