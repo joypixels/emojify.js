@@ -1,9 +1,14 @@
-emojify.js v0.9.4 [![Build Status](https://travis-ci.org/hassankhan/emojify.js.png)](https://travis-ci.org/hassankhan/emojify.js) [![Gitter chat](https://badges.gitter.im/hassankhan/emojify.js.png)](https://gitter.im/hassankhan/emojify.js)
+emojify.js v0.9.4
+
+[![Master branch build status][ico-build]][travis]
+[![NPM version][ico-npm]][package-npm]
+[![Bower version][ico-bower]][package-bower]
+[![MIT Licensed][ico-license]][license]
+[![Gitter chat][ico-gitter]][gitter]
+
 ==========
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
-
-<a href="http://bower.io/search/?q=emojify.js"><img src="http://benschwarz.github.io/bower-badges/badge@2x.png" width="130" height="30"></a>
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
 
@@ -58,6 +63,13 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
 From time to time, the emoji at [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com) will be updated. Running the
 `update.sh` script will update the project with the latest emoji. Don't forget to run grunt after running the update script.
 
-## License
-
-http://hassankhan.mit-license.org/
+[travis]: https://travis-ci.org/hassankhan/emojify.js
+[package-bower]: http://bower.io/search/?q=emojify.js
+[package-npm]: https://www.npmjs.org/package/emojify.js
+[ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat
+[ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat
+[ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat
+[ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat
+[ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.png
+[license]: http://hassankhan.mit-license.org/
+[gitter]: https://gitter.im/hassankhan/emojify.js
