@@ -1,4 +1,4 @@
-emojify.js v0.9.4
+#emojify.js v0.9.4
 
 [![Master branch build status][ico-build]][travis]
 [![NPM version][ico-npm]][package-npm]
