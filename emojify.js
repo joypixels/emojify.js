@@ -16,7 +16,7 @@
 
         var emojify = (function () {
             // Get DOM as local variable for simplicity's sake
-            var document = window.document;
+            var document = typeof window !== 'undefined' && window.document;
 
             /**
              * NB!
