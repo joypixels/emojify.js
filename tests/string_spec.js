@@ -5,25 +5,25 @@ JS.Test.describe('emojify used with flat strings', function() {
         this.it('works with no spacing around :)', function() {
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
         });
 
         this.it('works with spacing before :)', function() {
             var text = " :)";
             var result = emojify.replace(text);
-            this.assertEqual(' <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result);
+            this.assertEqual(' <img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
         });
 
         this.it('works with spacing after :)', function() {
             var text = ":) ";
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /> ', result);
+            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' /> ', result);
         });
 
         this.it('works with spacing before and after :)', function() {
             var text = " :) ";
             var result = emojify.replace(text);
-            this.assertEqual(' <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /> ', result);
+            this.assertEqual(' <img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' /> ', result);
         });
 
         this.it('does not insert emoji into the middle of words', function () {
@@ -54,7 +54,7 @@ JS.Test.describe('emojify used with flat strings', function() {
         this.it('works with multiple :) style', function() {
             var text = ":):P";
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /><img title=\':stuck_out_tongue_winking_eye:\' alt=\':stuck_out_tongue_winking_eye:\' class=\'emoji\' src=\'images/emoji/stuck_out_tongue_winking_eye.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' /><img title=\':stuck_out_tongue_winking_eye:\' alt=\':stuck_out_tongue_winking_eye:\' class=\'emoji\' src=\'images/emoji/stuck_out_tongue_winking_eye.png\' align=\'absmiddle\' />', result);
         });
     });
 
@@ -98,13 +98,13 @@ JS.Test.describe('emojify used with flat strings', function() {
         this.it(":) start of string with space emojifies", function() {
             var text = ":) start of string with space";
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /> start of string with space', result);
+            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' /> start of string with space', result);
         });
 
         this.it("end of string with space :) emojifies", function() {
             var text = "end of string with space :)";
             var result = emojify.replace(text);
-            this.assertEqual('end of string with space <img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('end of string with space <img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
         });
 
         this.it("doesn't emojify words ending in `'d`", function () {
