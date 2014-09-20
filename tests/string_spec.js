@@ -113,6 +113,12 @@ JS.Test.describe('emojify used with flat strings', function() {
             this.assertEqual("I&#x27;d better not see emoji in this string; that'd suck", result);
         });
 
+        this.it('works when the emoji is the only thing in an HTML element', function() {
+            var text = "<p>:)</p>";
+            var result = emojify.replace(text);
+            this.assertEqual('<p>><img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /></p>', result);
+        });
+
     });
 
     this.describe('with ignore_emoticons option enabled', function () {
