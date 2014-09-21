@@ -17,25 +17,25 @@ JS.Test.describe('emojify on DOM nodes', function() {
         this.it('works with no spacing around :)', function() {
             this.el.innerHTML = ":)";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
 
         this.it('works with spacing before :)', function() {
             this.el.innerHTML = " :)";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
 
         this.it('works with spacing after :)', function() {
             this.el.innerHTML = ":) ";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
 
         this.it('works with spacing before and after :)', function() {
             this.el.innerHTML = " :) ";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
     });
 
@@ -58,13 +58,13 @@ JS.Test.describe('emojify on DOM nodes', function() {
         this.it('end of string with space :) emojifies', function() {
             this.el.innerHTML = "end of string with space :)";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
 
         this.it(':) start of string with space emojifies', function() {
             this.el.innerHTML = ":) start of string with space";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:']);
+            assertEmoji(this, this.el, [':smile:']);
         });
 
         this.it(':)', function() {
@@ -72,7 +72,7 @@ JS.Test.describe('emojify on DOM nodes', function() {
             emojify.run(this.el);
             var emojis = this.el.querySelectorAll('.emoji');
             this.assertEqual(1, emojis.length);
-            this.assertEqual(':blush:', emojis[0].title);
+            this.assertEqual(':smile:', emojis[0].title);
         });
 
         this.it(':D', function() {
@@ -97,7 +97,7 @@ JS.Test.describe('emojify on DOM nodes', function() {
             var result;
             this.el.innerHTML = ":):):)";
             result = emojify.run(this.el);
-            assertEmoji(this, this.el, [':blush:',':blush:',':blush:']);
+            assertEmoji(this, this.el, [':smile:',':smile:',':smile:']);
         });
 
     });
