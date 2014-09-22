@@ -56,6 +56,12 @@ JS.Test.describe('emojify used with flat strings', function() {
             var result = emojify.replace(text);
             this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' /><img title=\':stuck_out_tongue_winking_eye:\' alt=\':stuck_out_tongue_winking_eye:\' class=\'emoji\' src=\'images/emoji/stuck_out_tongue_winking_eye.png\' align=\'absmiddle\' />', result);
         });
+
+        this.it('works with multiple :D style', function() {
+            var text = ":D:D";
+            var result = emojify.replace(text);
+            this.assertEqual('<img title=\':smiley:\' alt=\':smiley:\' class=\'emoji\' src=\'images/emoji/smiley.png\' align=\'absmiddle\' /><img title=\':smiley:\' alt=\':smiley:\' class=\'emoji\' src=\'images/emoji/smiley.png\' align=\'absmiddle\' />', result);
+        });
     });
 
     this.describe('isolated cases', function() {
