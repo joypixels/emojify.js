@@ -27,6 +27,14 @@ module.exports = function (grunt) {
                 src: 'emojify.css',
                 dest: 'emojify.min.css'
           }
+        },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['tests/node/*.js']
+            }
         }
     });
 
@@ -63,8 +71,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-mocha-test');
 
-
+    grunt.registerTask('test-node', 'mochaTest');
     grunt.registerTask(
         'default',
         [
