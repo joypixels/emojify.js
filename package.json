@@ -21,10 +21,11 @@
     "url": "https://github.com/hassankhan/emojify.js/issues"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "grunt": "^0.4.5",
     "grunt-contrib-cssmin": "^0.10.0",
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-uglify": "~0.2.4",
+    "grunt-datauri": "^0.4.0",
     "jstest": "~1.0.4",
     "q": "^1.0.1",
     "grunt-mocha-test": "~0.12.0",
