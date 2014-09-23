@@ -4,7 +4,7 @@
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "emojify.js",
   "scripts": {
-    "test": "phantomjs phantom.js"
+    "test": "grunt test-node && phantomjs phantom.js"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,9 @@
     "grunt-contrib-uglify": "~0.2.4",
     "grunt-datauri": "^0.4.0",
     "jstest": "~1.0.4",
-    "q": "^1.0.1"
+    "q": "^1.0.1",
+    "grunt-mocha-test": "~0.12.0",
+    "chai": "~1.9.1"
   },
   "testling": {
     "html": "tests/browser.html",
@@ -41,5 +43,6 @@
       "ipad/6..latest",
       "android-browser/latest"
     ]
-  }
+  },
+  "dependencies": {}
 }

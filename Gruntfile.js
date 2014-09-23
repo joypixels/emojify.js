@@ -40,15 +40,24 @@ module.exports = function (grunt) {
                     'emojify-emoticons.css': 'images/emoji/{blush,scream,smirk,smiley,stuck_out_tongue_closed_eyes,stuck_out_tongue_winking_eye,rage,disappointed,sob,kissing_heart,wink,pensive,confounded,flushed,relaxed,mask,heart,broken_heart}.png'
                 }
             }
+        },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['tests/node/*.js']
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-datauri');
 
-
+    grunt.registerTask('test-node', 'mochaTest');
     grunt.registerTask(
         'default',
         [
