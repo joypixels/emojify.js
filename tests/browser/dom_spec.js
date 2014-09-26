@@ -78,7 +78,7 @@ JS.Test.describe('emojify on DOM nodes', function() {
         this.it(':D', function() {
             this.el.innerHTML = ":D";
             emojify.run(this.el);
-            assertEmoji(this, this.el, [':smiley:']);
+            assertEmoji(this, this.el, [':grinning:']);
         });
 
         this.it(':P', function() {
