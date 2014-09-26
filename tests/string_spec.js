@@ -113,8 +113,14 @@ JS.Test.describe('emojify used with flat strings', function() {
             this.assertEqual("I&#x27;d better not see emoji in this string; that'd suck", result);
         });
 
-        this.it('works when the emoji is the only thing in an HTML element', function() {
+        this.it('works when a two-character emoji is the only thing in an HTML element', function() {
             var text = "<p>:)</p>";
+            var result = emojify.replace(text);
+            this.assertEqual('<p>><img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /></p>', result);
+        });
+
+        this.it('works when a named emoji is the only thing in an HTML element', function() {
+            var text = "<p>:smile:</p>";
             var result = emojify.replace(text);
             this.assertEqual('<p>><img title=\':blush:\' alt=\':blush:\' class=\'emoji\' src=\'images/emoji/blush.png\' align=\'absmiddle\' /></p>', result);
         });
