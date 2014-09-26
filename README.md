@@ -58,10 +58,10 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
         }
     });
     emojify.run();
+    
+## Contributing
 
-## Updating the emoji
-From time to time, the emoji at [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com) will be updated. Running the
-`update.sh` script will update the project with the latest emoji. Don't forget to run grunt after running the update script.
+See our [CONTRIBUTING.md](CONTRIBUTING.md).
 
 [travis]: https://travis-ci.org/hassankhan/emojify.js
 [package-bower]: http://bower.io/search/?q=emojify.js

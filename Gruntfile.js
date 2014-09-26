@@ -24,53 +24,46 @@ module.exports = function (grunt) {
         },
         cssmin: {
             minify: {
-                src: 'emojify.css',
-                dest: 'emojify.min.css'
-          }
+                files: {
+                    'emojify.min.css': 'emojify.css',
+                    'emojify-emoticons.min.css': 'emojify-emoticons.css',
+                }
+            }
+        },
+        datauri: {
+            production: {
+                options: {
+                    classPrefix: 'emoji-'
+                },
+                files: {
+                    'emojify.css': 'images/emoji/*.png',
+                    'emojify-emoticons.css': 'images/emoji/{blush,scream,smirk,smiley,stuck_out_tongue_closed_eyes,stuck_out_tongue_winking_eye,rage,disappointed,sob,kissing_heart,wink,pensive,confounded,flushed,relaxed,mask,heart,broken_heart}.png'
+                }
+            }
+        },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec'
+                },
+                src: ['tests/node/*.js']
+            }
         }
-    });
-
-    grunt.registerTask('buildCSS', 'Generate CSS for emojis in /images', function() {
-        var fs = require('fs'),
-            path = require('path'),
-            util = require('util'),
-            q = require('q'),
-            done = this.async(),
-            emojiPath = './images/emoji/',
-            emojiCSS = fs.createWriteStream('emojify.css', {'flags': 'w'}),
-            buildSelector = function(imageName, encodedImage) {
-                return util.format('.emoji-%s {\n  background:\n    url(data:image/png;base64,%s) no-repeat right top;}\n',
-                                   imageName, encodedImage);
-            };
-
-        fs.readdir(emojiPath, function (err, files) {
-            q.all(files.map(function(file) {
-                var deferred = q.defer();
-                fs.readFile(path.join(emojiPath, file), function(err, data){
-                    var base64Image = new Buffer(data, 'binary').toString('base64');
-                    emojiCSS.write(buildSelector(file.slice(0, -4), base64Image), 'utf8', function() {
-                        deferred.resolve();
-                    });
-                });
-                return deferred.promise;
-            })).then(function() {
-                emojiCSS.close();
-                done();
-            });
-        });
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-mocha-test');
+    grunt.loadNpmTasks('grunt-datauri');
 
-
+    grunt.registerTask('test-node', 'mochaTest');
     grunt.registerTask(
         'default',
         [
             'jshint',
             'uglify',
-            'buildCSS',
+            'datauri',
             'cssmin'
         ]
     );

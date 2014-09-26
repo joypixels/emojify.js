@@ -16,7 +16,7 @@
 
         var emojify = (function () {
             // Get DOM as local variable for simplicity's sake
-            var document = window.document;
+            var document = typeof window !== 'undefined' && window.document;
 
             /**
              * NB!
@@ -45,7 +45,7 @@
                 /* List of emoticons used in the regular expression */
                 var emoticons = {
          /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
-         /* :-)  */ blush: /:-?\)/g,
+         /* :-)  */ smile: /:-?\)/g,
          /* :-o  */ scream: /:-o/gi,
          /* :-]  */ smirk: /[:;]-?]/g,
          /* :-D  */ smiley: /[:;]-?d/gi,

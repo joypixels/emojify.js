@@ -6,6 +6,10 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>emojify.js</title>
   <script src="emojify.js"></script>
+  <link href="emojify-emoticons.css" rel="stylesheet" type="text/css">
+  <style>
+    .emoji { width: 1.5em; height: 1.5em; display: inline-block; margin-bottom: -.25em; background-size: 1.5em; }
+  </style>
 </head>
 
 <body>
@@ -973,6 +977,7 @@
   </div>
 </body>
 <script>
+      emojify.setConfig({emojify_tag_type:'div'});
       emojify.run();
 </script>
 </html>
