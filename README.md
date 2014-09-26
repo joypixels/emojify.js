@@ -5,9 +5,6 @@
 [![Bower version][ico-bower]][package-bower]
 [![MIT Licensed][ico-license]][license]
 [![Gitter chat][ico-gitter]][gitter]
-
-==========
-
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
