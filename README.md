@@ -4,6 +4,7 @@
 [![Bower version][ico-bower]][package-bower]
 [![MIT Licensed][ico-license]][license]
 [![Gitter chat][ico-gitter]][gitter]
+
 ---
 Master: [![Master branch build status][ico-build]][travis]
 Develop: [![Develop branch build status][ico-build]][travis]
