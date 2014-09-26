@@ -1,6 +1,8 @@
 Contributing
 ===
 
+This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching-model/), and as such has ``master`` and ``develop`` branches.
+
 ## Prerequisites
 
 1. Install the appropriate [EditorConfig](http://editorconfig.org) plugin for your IDE / editor. This helps keep the code style consistent.
@@ -26,5 +28,5 @@ Note: The build script will generate new `*.min.{css,js}` files. If, for example
 
 If you have rights to publish to npm, do the following first:
 
-- Run `update.sh`. This will update the project with the latest emoji from [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com). 
+- Run `update.sh`. This will update the project with the latest emoji from [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 - Run `grunt`

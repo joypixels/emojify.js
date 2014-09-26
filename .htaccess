@@ -5,4 +5,3 @@ AddOutputFilterByType DEFLATE text/html text/event-stream text/xml text/css text
 # <FilesMatch ".(js|css)$">
 #     Header set Cache-Control "max-age=604800, public"
 # </FilesMatch>
-

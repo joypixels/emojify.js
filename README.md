@@ -58,7 +58,7 @@ To set configuration options, use `emojify.setConfig()` and a JSON object as a p
         }
     });
     emojify.run();
-    
+
 ## Contributing
 
 See our [CONTRIBUTING.md](CONTRIBUTING.md).
