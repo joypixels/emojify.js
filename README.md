@@ -1,4 +1,4 @@
-#emojify.js v0.9.4
+#emojify.js
 
 [![NPM version][ico-npm]][package-npm]
 [![Bower version][ico-bower]][package-bower]
