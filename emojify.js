@@ -48,7 +48,7 @@
          /* :-)  */ smile: /:-?\)/g,
          /* :-o  */ scream: /:-o/gi,
          /* :-]  */ smirk: /[:;]-?]/g,
-         /* :-D  */ smiley: /[:;]-?d/gi,
+         /* :-D  */ grinning: /[:;]-?d/gi,
          /* X-D  */ stuck_out_tongue_closed_eyes: /x-d/gi,
          /* ;-p  */ stuck_out_tongue_winking_eye: /[:;]-?p/gi,
          /* :-[  */ rage: /:-?[\[@]/g,
