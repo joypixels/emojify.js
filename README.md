@@ -1,10 +1,12 @@
 #emojify.js v0.9.4
 
-[![Master branch build status][ico-build]][travis]
 [![NPM version][ico-npm]][package-npm]
 [![Bower version][ico-bower]][package-bower]
 [![MIT Licensed][ico-license]][license]
 [![Gitter chat][ico-gitter]][gitter]
+---
+Master: [![Master branch build status][ico-build]][travis]
+Develop: [![Develop branch build status][ico-build]][travis]
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
@@ -64,6 +66,7 @@ See our [CONTRIBUTING.md](CONTRIBUTING.md).
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
 [ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat
+[ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat
 [ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat
