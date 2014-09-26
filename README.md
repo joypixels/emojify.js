@@ -7,7 +7,7 @@
 
 ---
 Master: [![Master branch build status][ico-build]][travis]
-Develop: [![Develop branch build status][ico-build]][travis]
+Develop: [![Develop branch build status][ico-build-dev]][travis]
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
 A Javascript module to convert emoji keywords to images. Used by [Gitter](https://gitter.im/)
