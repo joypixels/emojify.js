@@ -27,6 +27,7 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 - Available on a CDN **(gasp)**
 - Converts emoticons like `:) :( :'(`
 - Allows customisation of processed emoji
+- Includes a [sample `.htaccess` file](.htaccess) for caching Javascript and CSS
 - Switchable emoji sets **(SOON!)**
 
 ## Installation
