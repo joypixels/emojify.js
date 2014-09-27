@@ -96,11 +96,11 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 [travis]: https://travis-ci.org/hassankhan/emojify.js
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
-[ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat
-[ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat
-[ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat
-[ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat
-[ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat
+[ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat-square
+[ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat-square
+[ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat-square
+[ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
+[ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
 [ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.png
 [license]: http://hassankhan.mit-license.org/
 [gitter]: https://gitter.im/hassankhan/emojify.js
