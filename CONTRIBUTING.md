@@ -13,7 +13,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 ## Running the tests
 
 - All tests: `npm test`
-- Just the browser ones: `phantomjs phantom.js`
+- Just the browser ones: `phantomjs tests/phantom.js`
 - Just the Node ones: `grunt test-node`
 
 ## Before creating the pull-request
