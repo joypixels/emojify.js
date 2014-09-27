@@ -10,7 +10,10 @@ module.exports = function (grunt) {
             ' */'
         },
         jshint : {
-            files        : ['emojify.js']
+            files: [ 'emojify.js' ],
+            options: {
+                jshintrc: '.jshintrc'
+            }
         },
         uglify : {
             options : {

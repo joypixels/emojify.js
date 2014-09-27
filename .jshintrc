@@ -13,14 +13,11 @@
     "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
     "trailing"      : true,     // true: Prohibit trailing whitespaces
 
+    // Predefined stuff
+    "predef"        : ["define", "module"],
+
     // Environments
     "browser"       : true,     // Web Browser (window, document, etc)
-    "jquery"        : false,    // jQuery
+    "node"          : true      // Node.js
 
-    // Custom Globals
-    "globals"       : {         // additional predefined global variables
-        "define"    : "false",
-        "JS"        : "false",
-        "emojify"   : "false"
-    }
 }

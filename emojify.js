@@ -1,4 +1,6 @@
 (function (root, factory) {
+    'use strict';
+
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define([], factory);
@@ -10,7 +12,7 @@
     } else {
         // Browser globals (root is window)
         root.emojify = factory();
-  }
+    }
 }(this, function () {
         'use strict';
 
@@ -68,11 +70,11 @@
                 };
 
                 if (defaultConfig.ignore_emoticons) {
-                  emoticons = {
-         /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
-         /* :+1: */ thumbsup: /:\+1:/g,
-         /* :-1: */ thumbsdown: /:\-1:/g
-                  };
+                    emoticons = {
+             /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
+             /* :+1: */ thumbsup: /:\+1:/g,
+             /* :-1: */ thumbsdown: /:\-1:/g
+                    };
                 }
 
                 return Object.keys(emoticons).map(function(key) {
@@ -118,7 +120,7 @@
             function insertEmojicon(node, match, emojiName) {
                 var emojiElement = document.createElement(defaultConfig.emojify_tag_type || 'img');
 
-                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type != 'img') {
+                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
                     emojiElement.setAttribute('class', 'emoji emoji-' + emojiName);
                 } else {
                     emojiElement.setAttribute('class', 'emoji');
@@ -150,7 +152,7 @@
             }
 
             function defaultReplacer(emoji, name) {
-                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type != 'img') {
+                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
                     return "<" +  defaultConfig.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + defaultConfig.emojify_tag_type+ ">";
                 } else {
                     return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
@@ -302,4 +304,5 @@
         })();
 
         return emojify;
-}));
+    }
+));
