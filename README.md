@@ -7,9 +7,9 @@
 
 ---
 
-|Master|Develop|
-|-|-|
-|[![Master branch build status][ico-build]][travis]|[![Develop branch build status][ico-build-dev]][travis]|
+Master | Develop
+--- | ---
+[![Master branch build status][ico-build]][travis] | [![Develop branch build status][ico-build-dev]][travis]
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
@@ -48,13 +48,13 @@ Then add this to your Javascript code:
 
 To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with any of the following attributes:
 
-|Option|Default|Description|
-|-|-|-|
-|`emojify_tag_type`|`null`|When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`|
-|`only_crawl_id`|`null`|Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to `run()`, `document.body` is used|
-|`img_dir`|`'images/emoji'`|Defines the path to the emoji images|
-|`ignore_emoticons`|`false`|If `true`, only convert emoji like `:smile:` and ignore emoticons like `:)`|
-|`ignored_tags`|`{'SCRIPT': 1,'TEXTAREA': 1,'A': 1,'PRE': 1,'CODE': 1}`|A list of elements that you don't want emojified|
+Option | Default | Description
+--- | --- | ---
+`emojify_tag_type` | `null` | When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`
+`only_crawl_id` | `null` | Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to `run()`, `document.body` is used
+`img_dir` | `'images/emoji'` | Defines the path to the emoji images
+`ignore_emoticons` | `false` | If `true`, only convert emoji like `:smile:` and ignore emoticons like `:)`
+`ignored_tags` | `{'SCRIPT': 1,'TEXTAREA': 1,'A': 1,'PRE': 1,'CODE': 1}` | A list of elements that you don't want emojified
 
 For example:
 
