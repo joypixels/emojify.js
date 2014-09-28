@@ -47,11 +47,12 @@ Then add this to your Javascript code:
 
 ## Usage
 
-### `setConfig()`
+### setConfig([object])
 
-**This works in the browser and on Node**
+*This works in the browser and on Node*
 
-To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with any of the following attributes:
+#### Parameters
+- `object` - Optional JSON object with any of the following attributes:
 
 Option | Default | Description
 --- | --- | ---
@@ -61,37 +62,42 @@ Option | Default | Description
 `ignore_emoticons` | `false` | If `true`, only convert emoji like `:smile:` and ignore emoticons like `:)`
 `ignored_tags` | `{'SCRIPT': 1,'TEXTAREA': 1,'A': 1,'PRE': 1,'CODE': 1}` | A list of elements that you don't want emojified
 
-For example:
-
+#### Usage
 ```js
 emojify.setConfig({emojify_tag_type : 'div'});
 ```
 
-### `run()`
+### run([element])
 
-**This only works in the browser**
+*This only works in the browser*
 
-You can optionally pass an object to `emojify.run()` to restrict the emojification to that object only.
+#### Parameters
+- `element` - Optional HTML element to restrict the emojification to.
 
+#### Usage
 ```js
 emojify.run();
 // OR
-emojify.run( document.getElementById( 'my-element' ) )
+emojify.run(document.getElementById('my-element'))
 ```
 
-### `replace()`
+### replace(string, [callback])
 
-**This works in the browser and on Node**
+*This works in the browser and on Node*
 
-You can also use `emojify.replace()` to replace emoji/emoticon keywords in plain Javascript strings:
+#### Parameters
+- `string` - String to emojify
+- `callback` - Optional callback function to output emoji with
+
+#### Usage
+
+By default, emojify.js uses the internal function `defaultReplacer()` to replace emoji. You can override this behaviour by supplying your own callback function.
+
+Your callback function will receive two parameters, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
 
 ```js
 emojify.replace('I am happy :)');
-```
-
-By default, emojify.js uses the internal function `defaultReplacer()` to replace emoji. You can override this behaviour by supplying your own "replacer" callback function:
-
-```js
+// OR
 replacer = function(emoji, name) {
     // Customise output here
     return emojifiedString;
@@ -99,8 +105,6 @@ replacer = function(emoji, name) {
 
 emojify.replace('I am happy :)', replacer);
 ```
-
-Your callback function will receive two parameters, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
 
 ### Excluding elements from being processed
 
