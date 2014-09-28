@@ -32,7 +32,7 @@
     "chai": "~1.9.1"
   },
   "testling": {
-    "html": "tests/browser.html",
+    "html": "tests/browser/browser.html",
     "browsers": [
       "ie/8..latest",
       "chrome/23..latest",
