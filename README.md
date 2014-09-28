@@ -32,16 +32,16 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 ## Installation
 
-### Using CDNJS **[SOON]**
+### Via CDNJS **[SOON]**
 
 Add this to the rest of your stylesheet imports:
 Then add this to your Javascript code:
 
-### Using Bower
+### Via Bower
 
 `bower install emojify.js#~1.0 --save`
 
-### Using NPM
+### Via NPM
 
 `npm install emojify.js#~1.0  --save`
 
@@ -64,9 +64,9 @@ emojify.setConfig({emojify_tag_type : 'div'});
 emojify.run();
 ```
 
-You can optionally pass an object to `emojify.run()` to restrict the **emojification** to that object only: `emojify.run(document.getElementById('my-element'))`
+You can optionally pass an object to `emojify.run()` to restrict the **emojification** to that object only: `emojify.run(document.getElementById('my-element'))`.
 
-You can also use `emojify.replace()` to replace emoji/emoticon keywords in plain Javascript strings:
+If you are running emojify.js from Node, you won't be able to use `emojify.run()`. This is because the `run()` method uses DOM manipulation to emojify strings. In this case, you should use `emojify.replace()` instead. You can also use `emojify.replace()` to replace emoji/emoticon keywords in plain Javascript strings:
 
 ```js
 emojify.replace('I am happy :)');
