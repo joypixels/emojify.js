@@ -45,7 +45,7 @@ Then add this to your Javascript code:
 
 `npm install emojify.js#~1.0  --save`
 
-## Usage
+## Using emojify.js
 
 ### setConfig([object])
 
