@@ -1,6 +1,6 @@
 # emojify.js
 
-[![NPM version][ico-npm]][package-npm]
+[![npm version][ico-npm]][package-npm]
 [![Bower version][ico-bower]][package-bower]
 [![MIT Licensed][ico-license]][license]
 [![Gitter chat][ico-gitter]][gitter]
@@ -32,7 +32,7 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 ## Installation
 
-### Via CDNJS **[SOON]**
+### Via cdnjs **[SOON]**
 
 Add this to the rest of your stylesheet imports:
 Then add this to your Javascript code:
@@ -41,11 +41,11 @@ Then add this to your Javascript code:
 
 `bower install emojify.js#~1.0 --save`
 
-### Via NPM
+### Via npm
 
 `npm install emojify.js#~1.0  --save`
 
-## Using emojify.js
+## API
 
 ### setConfig([object])
 
@@ -67,6 +67,8 @@ Option | Default | Description
 emojify.setConfig({emojify_tag_type : 'div'});
 ```
 
+---
+
 ### run([element])
 
 *This only works in the browser*
@@ -80,6 +82,8 @@ emojify.run();
 // OR
 emojify.run(document.getElementById('my-element'))
 ```
+
+---
 
 ### replace(string, [callback])
 
