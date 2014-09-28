@@ -85,8 +85,6 @@ emojify.replace('I am happy :)', replacer);
 
 Your callback function will receive two parameters, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
 
-The context in which your replacer function is run will have the config available. So you can access properties such as `img_dir` at `this.config.img_dir`.
-
 ### Excluding elements from being processed
 
 To exclude tags from being emojified, add `no-emojify` to their `class` attributes.
