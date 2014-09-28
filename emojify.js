@@ -153,7 +153,7 @@
 
             function defaultReplacer(emoji, name) {
                 /*jshint validthis: true */
-                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
+                if (this.config.emojify_tag_type && this.config.emojify_tag_type !== 'img') {
                     return "<" +  this.config.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + this.config.emojify_tag_type+ ">";
                 } else {
                     return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + this.config.img_dir + '/' + name + ".png' align='absmiddle' />";
