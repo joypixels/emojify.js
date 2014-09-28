@@ -45,7 +45,11 @@ Then add this to your Javascript code:
 
 `npm install emojify.js#~1.0  --save`
 
-## Setup and customisation
+## Usage
+
+### `setConfig()`
+
+**This works in the browser and on Node**
 
 To set configuration options, use `emojify.setConfig()` and a JSON object as a parameter with any of the following attributes:
 
@@ -61,12 +65,25 @@ For example:
 
 ```js
 emojify.setConfig({emojify_tag_type : 'div'});
-emojify.run();
 ```
 
-You can optionally pass an object to `emojify.run()` to restrict the **emojification** to that object only: `emojify.run(document.getElementById('my-element'))`.
+### `run()`
 
-If you are running emojify.js from Node, you won't be able to use `emojify.run()`. This is because the `run()` method uses DOM manipulation to emojify strings. In this case, you should use `emojify.replace()` instead. You can also use `emojify.replace()` to replace emoji/emoticon keywords in plain Javascript strings:
+**This only works in the browser**
+
+You can optionally pass an object to `emojify.run()` to restrict the emojification to that object only.
+
+```js
+emojify.run();
+// OR
+emojify.run( document.getElementById( 'my-element' ) )
+```
+
+### `replace()`
+
+**This works in the browser and on Node**
+
+You can also use `emojify.replace()` to replace emoji/emoticon keywords in plain Javascript strings:
 
 ```js
 emojify.replace('I am happy :)');
