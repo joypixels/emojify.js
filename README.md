@@ -99,6 +99,8 @@ By default, emojify.js uses the internal function `defaultReplacer()` to replace
 
 Your callback function will receive two parameters, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
 
+The context in which your replacer function is run will have the config available. So you can access properties such as `img_dir` at `this.config.img_dir`.
+
 ```js
 emojify.replace('I am happy :)');
 // OR

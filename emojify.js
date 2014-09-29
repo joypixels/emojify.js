@@ -152,10 +152,11 @@
             }
 
             function defaultReplacer(emoji, name) {
-                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
-                    return "<" +  defaultConfig.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + defaultConfig.emojify_tag_type+ ">";
+                /*jshint validthis: true */
+                if (this.config.emojify_tag_type && this.config.emojify_tag_type !== 'img') {
+                    return "<" +  this.config.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + this.config.emojify_tag_type+ ">";
                 } else {
-                    return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + defaultConfig.img_dir + '/' + name + ".png' align='absmiddle' />";
+                    return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + this.config.img_dir + '/' + name + ".png' align='absmiddle' />";
                 }
             }
 
@@ -215,11 +216,13 @@
                     var index = arguments[arguments.length - 2];
                     var input = arguments[arguments.length - 1];
                     var emojiName = validator.validate(matches, index, input);
-
                     if(emojiName) {
-                        return replacer(arguments[0], emojiName);
+                        return replacer.apply({
+                                config: defaultConfig
+                            },
+                            [arguments[0], emojiName]
+                        );
                     }
-
                     /* Did not validate, return the original value */
                     return arguments[0];
                 });
