@@ -16,7 +16,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 - Just the browser ones: `phantomjs tests/phantom.js`
 - Just the Node ones: `grunt test-node`
 
-## Before creating the pull-request
+## Before creating a pull request
 
 Make sure you do the following:
 
@@ -24,7 +24,13 @@ Make sure you do the following:
 
 Note: The build script will generate new `*.min.{css,js}` files. If, for example, you only changed the JavaScript then don't bother committing `emojify.min.css`.
 
-## Publishing
+## Releasing & Publishing
+
+Before a release, generate a commit log:
+
+```
+git log --pretty=format:"- %s" >> log.md
+```
 
 If you have rights to publish to npm, do the following first:
 
