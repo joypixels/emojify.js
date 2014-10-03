@@ -113,7 +113,7 @@
 
             /* Returns true if the given char is whitespace */
             function isWhitespace(s) {
-                return s === ' ' || s === '\t' || s === '\r' || s === '\n' || s === '';
+                return s === ' ' || s === '\t' || s === '\r' || s === '\n' || s === '' || s === String.fromCharCode(160);
             }
 
             /* Given a match in a node, replace the text with an image */
