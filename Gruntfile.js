@@ -40,7 +40,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'emojify.css': 'images/emoji/*.png',
-                    'emojify-emoticons.css': 'images/emoji/{blush,scream,smirk,smiley,stuck_out_tongue_closed_eyes,stuck_out_tongue_winking_eye,rage,disappointed,sob,kissing_heart,wink,pensive,confounded,flushed,relaxed,mask,heart,broken_heart}.png'
+                    'emojify-emoticons.css': 'images/emoji/{smile,scream,smirk,grinning,stuck_out_tongue_closed_eyes,stuck_out_tongue_winking_eye,rage,frowning,sob,kissing_heart,wink,pensive,confounded,flushed,relaxed,mask,heart,broken_heart}.png'
                 }
             }
         },
