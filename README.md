@@ -13,7 +13,7 @@ Master | Develop
 
 [![Browser Results](https://ci.testling.com/hassankhan/emojify.js.png)](https://ci.testling.com/hassankhan/emojify.js)
 
-A swiss-army-knife for all emoji, in Javascript. Used by [Gitter](https://gitter.im/)
+A swiss-army-knife for all emoji, in Javascript. Used by [Gitter](https://gitter.im/) and [Mapbox](https://www.mapbox.com/blog/emoji-map-markers/).
 
 The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 
@@ -120,12 +120,16 @@ To exclude tags from being emojified, add `no-emojify` to their `class` attribut
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## License
+
+Please read [LICENSE.md](LICENSE.md)
+
 [travis]: https://travis-ci.org/hassankhan/emojify.js
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
 [ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat-square
 [ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat-square
-[ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat-square
+[ico-bower]: http://img.shields.io/badge/bower-0.9.5-blue.svg?style=flat-square
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
 [ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.png
