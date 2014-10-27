@@ -120,6 +120,10 @@ To exclude tags from being emojified, add `no-emojify` to their `class` attribut
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## License
+
+Please read [LICENSE.md](LICENSE.md)
+
 [travis]: https://travis-ci.org/hassankhan/emojify.js
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
