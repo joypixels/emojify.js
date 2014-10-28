@@ -32,6 +32,8 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 ## Installation
 
+Care about old browsers compatibility? Use https://github.com/es-shims/es5-shim
+
 ### Via cdnjs **[SOON]**
 
 Add this to the rest of your stylesheet imports:
