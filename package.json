@@ -21,6 +21,7 @@
     "url": "https://github.com/hassankhan/emojify.js/issues"
   },
   "devDependencies": {
+    "jsdom": "^1.0.3",
     "jstest": "~1.0.4",
     "q": "^1.0.1",
     "chai": "~1.9.1",
@@ -50,5 +51,7 @@
       "android-browser/latest"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "emojify-parser": "git://github.com/trevorah/emojify-parser"
+  }
 }
