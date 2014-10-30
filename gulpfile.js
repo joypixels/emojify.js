@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    path = require('path');
+    path = require('path'),
+    inquirer = require('inquirer');
 
 gulp.task('default', ['compile']);
 
@@ -70,4 +71,23 @@ gulp.task('test-node', function(){
         .pipe($.mocha({
             reporter: 'spec'
         }));
+});
+
+gulp.task('bump', function(done){
+    inquirer.prompt({
+        type: 'list',
+        name: 'bump',
+        message: 'What type of bump would you like to do?',
+        choices: ['patch', 'minor', 'major', "don't bump"]
+    }, function(result){
+        if(result.bump === "don't bump"){
+            done();
+            return;
+        }
+
+        gulp.src('./package.json')
+            .pipe($.bump({type: result.bump}))
+            .pipe(gulp.dest('./'))
+            .on('end', done);
+    });
 });
