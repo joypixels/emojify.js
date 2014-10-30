@@ -39,11 +39,11 @@ Then add this to your Javascript code:
 
 ### Via Bower
 
-`bower install emojify.js#~1.0 --save`
+`bower install emojify.js --save`
 
 ### Via npm
 
-`npm install emojify.js#~1.0  --save`
+`npm install emojify.js  --save`
 
 ## API
 
