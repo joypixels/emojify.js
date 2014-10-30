@@ -23,12 +23,13 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 - Fast
 - Awesome
-- Made from unicorn blood
-- Available on a CDN **(gasp)**
 - Converts emoticons like `:) :( :'(`
 - Allows customisation of processed emoji
+- Multiple modes; `img`, sprites and data-URI
+- Available on a CDN **(gasp)**
 - Includes a [sample `.htaccess` file](.htaccess) for caching Javascript and CSS
 - Switchable emoji sets **(SOON!)**
+- Made from unicorn blood
 
 ## Installation
 
@@ -58,7 +59,8 @@ Then add this to your Javascript code:
 
 Option | Default | Description
 --- | --- | ---
-`emojify_tag_type` | `null` | When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`
+`mode` | `img` | By default, emojify will output an `img` with a `src` attribute for each emoji found. But if `mode` is set to `sprite` or `data-uri`, then `span`s with classes are outputted. Don't forget to include the appropriate CSS for your choice though, see the `/dist` directory.
+`emojify_tag_type` | `null` | When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`. This takes precedence over the `mode` option. Note: if you're not using `img`s, `.emoji-+1` isn't a valid class, so `.emoji-plus1` is used instead.
 `only_crawl_id` | `null` | Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to `run()`, `document.body` is used
 `img_dir` | `'images/emoji'` | Defines the path to the emoji images
 `ignore_emoticons` | `false` | If `true`, only convert emoji like `:smile:` and ignore emoticons like `:)`
@@ -77,12 +79,21 @@ emojify.setConfig({emojify_tag_type : 'div'});
 
 #### Parameters
 - `element` - Optional HTML element to restrict the emojification to.
+- `replacer` - Optional Function to override emoji replacement behaviour with your own. The function will receive two arguments, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`. Your function must return a HTMLElement.
 
 #### Usage
 ```js
 emojify.run();
 // OR
 emojify.run(document.getElementById('my-element'))
+// OR
+emojify.run(null, function(emoji, emojiName){
+  var span = document.createElement('span');
+  span.className = 'emoji emoji-'  + emojiName;
+  span.innerHTML = emoji + ' replaced';
+  return span;
+});
+
 ```
 
 ---
@@ -99,7 +110,7 @@ emojify.run(document.getElementById('my-element'))
 
 By default, emojify.js uses the internal function `defaultReplacer()` to replace emoji. You can override this behaviour by supplying your own callback function.
 
-Your callback function will receive two parameters, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
+Your callback function will receive two arguments, the emoji pattern found (`emoji`), and the emoji name (`name`). In the case of emoticons, for example, `emoji = ':)'` and `name = 'smile'`.
 
 The context in which your replacer function is run will have the config available. So you can access properties such as `img_dir` at `this.config.img_dir`.
 
@@ -113,6 +124,8 @@ replacer = function(emoji, name) {
 
 emojify.replace('I am happy :)', replacer);
 ```
+
+
 
 ### Excluding elements from being processed
 

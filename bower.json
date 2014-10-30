@@ -1,6 +1,6 @@
 {
   "name": "emojify.js",
-  "main": "emojify.js",
+  "main": "dist/js/emojify.js",
   "version": "0.9.5",
   "homepage": "https://github.com/hassankhan/emojify.js",
   "authors": [

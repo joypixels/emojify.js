@@ -5,7 +5,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
         this.it('should default to img element', function() {
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
         this.it('null emojify_tag_type should be img element', function() {
@@ -14,7 +14,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
         this.it('img emojify_tag_type should be well formed', function() {
@@ -23,7 +23,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img title=\':smile:\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' align=\'absmiddle\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
         this.it('div emojify_tag_type should be well formed', function() {
@@ -32,7 +32,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<div title=\':smile:\' alt=\':smile:\' class=\'emoji emoji-smile\'> </div>', result);
+            this.assertEqual('<div class=\'emoji emoji-smile\' title=\':smile:\'></div>', result);
         });
     });
 
@@ -48,7 +48,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);
-            this.assertEqual('<img class="emoji" src="images/emoji/smile.png" title=":smile:" alt=":smile:" align="absmiddle"></img>', this.el.innerHTML);
+            this.assertEqual( 'img', this.el.children[0].tagName.toLowerCase() );
         });
 
         this.it('img emojify_tag_type should be img element', function() {
@@ -57,7 +57,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);
-            this.assertEqual('<img class="emoji" src="images/emoji/smile.png" title=":smile:" alt=":smile:" align="absmiddle"></img>', this.el.innerHTML);
+            this.assertEqual( 'img', this.el.children[0].tagName.toLowerCase() );
         });
 
         this.it('div emojify_tag_type should be well formed', function() {
@@ -66,7 +66,10 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);
-            this.assertEqual('<div class="emoji emoji-smile" title=":smile:" alt=":smile:" align="absmiddle"></div>', this.el.innerHTML);
+            var child = this.el.children[0];
+            this.assertEqual( 'div', child.tagName.toLowerCase() );
+            this.assertEqual( 'emoji emoji-smile', child.className );
+            this.assertEqual( ':smile:', child.title );
         });
 
     });

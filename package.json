@@ -2,7 +2,7 @@
   "name": "emojify.js",
   "version": "0.9.5",
   "description": "A Javascript module to convert emoji keywords to images.",
-  "main": "emojify.js",
+  "main": "dist/js/emojify.js",
   "scripts": {
     "test": "gulp test-node && phantomjs tests/phantom.js"
   },
@@ -35,7 +35,10 @@
     "gulp-minify-css": "~0.3.11",
     "gulp-image-data-uri": "~0.1.0",
     "gulp-filter": "~1.0.2",
-    "gulp-concat": "~2.4.1"
+    "gulp-concat": "~2.4.1",
+    "del": "~0.1.3",
+    "css-sprite": "~0.9.0",
+    "gulp-replace": "~0.5.0"
   },
   "testling": {
     "html": "tests/browser/browser.html",
