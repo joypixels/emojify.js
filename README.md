@@ -32,6 +32,8 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 ## Installation
 
+Care about old browsers compatibility? Use https://github.com/es-shims/es5-shim
+
 ### Via cdnjs **[SOON]**
 
 Add this to the rest of your stylesheet imports:
@@ -122,7 +124,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-Please read [LICENSE.md](LICENSE.md)
+Please read [LICENSE.md](LICENSE.md). For image attributions, please read [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 
 [travis]: https://travis-ci.org/hassankhan/emojify.js
 [package-bower]: http://bower.io/search/?q=emojify.js

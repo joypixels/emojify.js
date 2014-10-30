@@ -4,7 +4,7 @@
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "emojify.js",
   "scripts": {
-    "test": "grunt test-node && phantomjs tests/phantom.js"
+    "test": "gulp test-node && phantomjs tests/phantom.js"
   },
   "repository": {
     "type": "git",
@@ -21,15 +21,21 @@
     "url": "https://github.com/hassankhan/emojify.js/issues"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-cssmin": "^0.10.0",
-    "grunt-contrib-jshint": "~0.6.4",
-    "grunt-contrib-uglify": "~0.2.4",
-    "grunt-datauri": "^0.4.0",
     "jstest": "~1.0.4",
     "q": "^1.0.1",
-    "grunt-mocha-test": "~0.12.0",
-    "chai": "~1.9.1"
+    "chai": "~1.9.1",
+    "gulp": "~3.8.9",
+    "gulp-load-plugins": "~0.7.0",
+    "gulp-mocha": "~1.1.1",
+    "gulp-jshint": "~1.8.5",
+    "jshint-stylish": "~1.0.0",
+    "gulp-insert": "~0.4.0",
+    "gulp-uglify": "~1.0.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-minify-css": "~0.3.11",
+    "gulp-image-data-uri": "~0.1.0",
+    "gulp-filter": "~1.0.2",
+    "gulp-concat": "~2.4.1"
   },
   "testling": {
     "html": "tests/browser/browser.html",
