@@ -35,7 +35,8 @@
     "gulp-minify-css": "~0.3.11",
     "gulp-image-data-uri": "~0.1.0",
     "gulp-filter": "~1.0.2",
-    "gulp-concat": "~2.4.1"
+    "gulp-concat": "~2.4.1",
+    "del": "~0.1.3"
   },
   "testling": {
     "html": "tests/browser/browser.html",

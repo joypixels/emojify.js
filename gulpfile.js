@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    path = require('path');
+    path = require('path'),
+    del = require('del');
 
 var paths = {
     dist: {
@@ -80,4 +81,8 @@ gulp.task('test-node', function(){
         .pipe($.mocha({
             reporter: 'spec'
         }));
+});
+
+gulp.task('clean', function(done){
+    del(paths.dist.root, done);
 });
