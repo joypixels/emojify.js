@@ -10,16 +10,17 @@ var paths = {
 };
 paths.dist.scripts = path.join(paths.dist.root, 'js');
 paths.dist.styles = path.join(paths.dist.root, 'css');
+paths.dist.images = { root: path.join(paths.dist.root, 'images') };
+paths.dist.images.separate = path.join(paths.dist.images.root, 'separate');
 
 gulp.task('default', ['compile']);
 
-gulp.task('compile', ['script', 'styles']);
+gulp.task('compile', ['script', 'images-and-styles']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
 
-    gulp.src('./emojify.dev.js')
-        .pipe($.rename('emojify.js'))
+    gulp.src('./src/emojify.js')
         .pipe(gulp.dest(paths.dist.scripts))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
@@ -36,7 +37,7 @@ gulp.task('script', function(){
 });
 
 
-gulp.task('styles', function(){
+gulp.task('images-and-styles', function(){
     var emoticons = [
             'smile', 'scream', 'smirk', 'grinning', 'stuck_out_tongue_closed_eyes', 'stuck_out_tongue_winking_eye',
             'rage', 'frowning', 'sob', 'kissing_heart', 'wink', 'pensive', 'confounded', 'flushed', 'relaxed', 'mask',
@@ -50,7 +51,8 @@ gulp.task('styles', function(){
             }
         });
 
-    return gulp.src('./images/emoji/*.png')
+    return gulp.src('./src/images/emoji/*.png')
+        .pipe(gulp.dest(paths.dist.images.separate))
         .pipe($.imageDataUri({
             customClass: function(className){
                 return 'emoji-' + className
