@@ -2,7 +2,7 @@
   "name": "emojify.js",
   "version": "0.9.5",
   "description": "A Javascript module to convert emoji keywords to images.",
-  "main": "emojify.js",
+  "main": "dist/js/emojify.js",
   "scripts": {
     "test": "gulp test-node && phantomjs tests/phantom.js"
   },

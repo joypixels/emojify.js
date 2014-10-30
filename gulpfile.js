@@ -2,6 +2,14 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     path = require('path');
 
+var paths = {
+    dist: {
+        root: './dist'
+    }
+};
+paths.dist.scripts = path.join(paths.dist.root, 'js');
+paths.dist.styles = path.join(paths.dist.root, 'css');
+
 gulp.task('default', ['compile']);
 
 gulp.task('compile', ['script', 'styles']);
@@ -9,7 +17,9 @@ gulp.task('compile', ['script', 'styles']);
 gulp.task('script', function(){
     var pkg = require('./package.json');
 
-    gulp.src('./emojify.js')
+    gulp.src('./emojify.dev.js')
+        .pipe($.rename('emojify.js'))
+        .pipe(gulp.dest(paths.dist.scripts))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe($.insert.prepend('/*! ' + pkg.name + ' - v' + pkg.version + ' - \n' +
@@ -21,7 +31,7 @@ gulp.task('script', function(){
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.scripts));
 });
 
 
@@ -47,20 +57,20 @@ gulp.task('styles', function(){
         }))
         .pipe(emoticonFilter)
         .pipe($.concat('emojify-emoticons.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe(emoticonFilter.restore())
         .pipe($.concat('emojify.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.styles));
 });
 
 gulp.task('test', ['test-node']);
