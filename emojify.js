@@ -17,9 +17,6 @@
         'use strict';
 
         var emojify = (function () {
-            // Get DOM as local variable for simplicity's sake
-            var document = typeof window !== 'undefined' && window.document;
-
             /**
              * NB!
              * The namedEmojiString variable is updated automatically by the
@@ -230,7 +227,7 @@
             }
 
             function run(el, win) {
-                var win = win || window;
+                win = win || window;
 
                 var treeTraverse = function (parent, cb){
                     var child;
@@ -262,8 +259,12 @@
                 var ignoredTags = defaultConfig.ignored_tags;
 
                 treeTraverse(el, function(node){
-                    if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))) return false;
-                    if (node.nodeType === 1) return true;
+                    if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))){
+                        return false;
+                    }
+                    if (node.nodeType === 1) {
+                        return true;
+                    }
 
                     var match;
                     var matches = [];
