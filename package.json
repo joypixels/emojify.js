@@ -4,7 +4,7 @@
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "emojify.js",
   "scripts": {
-    "test": "gulp test-node && phantomjs tests/phantom.js"
+    "test": "gulp test-node && phantomjs tests/phantom.js && node tests/node/browser"
   },
   "repository": {
     "type": "git",
