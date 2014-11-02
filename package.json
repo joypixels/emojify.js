@@ -23,10 +23,8 @@
   "devDependencies": {
     "jstest": "~1.0.4",
     "q": "^1.0.1",
-    "chai": "~1.9.1",
     "gulp": "~3.8.9",
     "gulp-load-plugins": "~0.7.0",
-    "gulp-mocha": "~1.1.1",
     "gulp-jshint": "~1.8.5",
     "jshint-stylish": "~1.0.0",
     "gulp-insert": "~0.4.0",
