@@ -47,7 +47,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
                 emojify_tag_type: null
             });
             this.el.innerHTML = ":)";
-            emojify.run(this.el, window);
+            emojify.run(this.el);
 
             this.assertEqual('<img', this.el.innerHTML.substring(0, 4));
         });
@@ -57,7 +57,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
                 emojify_tag_type: 'img'
             });
             this.el.innerHTML = ":)";
-            emojify.run(this.el, window);
+            emojify.run(this.el);
             this.assertEqual('<img', this.el.innerHTML.substring(0, 4));
         });
 
@@ -66,7 +66,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
                 emojify_tag_type: 'div'
             });
             this.el.innerHTML = ":)";
-            emojify.run(this.el, window);
+            emojify.run(this.el);
             this.assertEqual('<div class="emoji emoji-smile" title=":smile:" alt=":smile:" align="absmiddle"></div>', this.el.innerHTML);
         });
 

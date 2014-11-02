@@ -94,10 +94,11 @@ Requires you to have jsdom installed:
 
 ```js
 var jsdom = require('jsdom') 
+
 jsdom.env({
     html: "<p><code>jhhh</code><em>:)</em></p>",
     done: function(errors, window) {
-        emojify.run(window.document.body, window)
+        emojify.run(window.document.body)
     }
 });
 ```

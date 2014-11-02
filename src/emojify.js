@@ -226,8 +226,22 @@
 
             }
 
-            function run(el, win) {
-                win = win || window;
+            function run(el) {
+
+                // Check if an element was not passed.
+                // This wil only work in the browser
+                if(typeof el === 'undefined'){
+                    // Check if an element was configured. If not, default to the body.
+                    if (defaultConfig.only_crawl_id) {
+                        el = document.getElementById(defaultConfig.only_crawl_id);
+                    } else {
+                        el = document.body;
+                    }
+                }
+
+                // Get the window object from the passed element.
+                var doc = el.ownerDocument,
+                    win = doc.defaultView || doc.parentWindow;
 
                 var treeTraverse = function (parent, cb){
                     var child;
@@ -261,22 +275,10 @@
                     }
                 };
 
-
                 emoticonsProcessed = initEmoticonsProcessed();
                 emojiMegaRe = initMegaRe();
 
-                // Check if an element was not passed.
-                if(typeof el === 'undefined'){
-                    // Check if an element was configured. If not, default to the body.
-                    if (defaultConfig.only_crawl_id) {
-                        el = win.document.getElementById(defaultConfig.only_crawl_id);
-                    } else {
-                        el = win.document.body;
-                    }
-                }
-
                 var ignoredTags = defaultConfig.ignored_tags;
-
 
                 if(typeof win.document.createTreeWalker !== 'undefined') {
                     var nodeIterator = win.document.createTreeWalker(
