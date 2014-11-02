@@ -14,7 +14,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 
 - All tests: `npm test`
 - Just the browser ones: `phantomjs tests/phantom.js`
-- Just the Node ones: `gulp test-node`
+- Just the Node ones: `node tests/node.js`
 
 ## Before creating a pull request
 
