@@ -6,3 +6,4 @@ tests.browserified.js
 # editors
 .idea
 *.iml
+*.sublime-project
