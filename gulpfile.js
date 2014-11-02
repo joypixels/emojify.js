@@ -1,17 +1,17 @@
-var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')(),
-    path = require('path'),
-    del = require('del'),
-    inquirer = require('inquirer');
+var gulp     = require('gulp'),
+    $        = require('gulp-load-plugins')(),
+    path     = require('path'),
+    del      = require('del'),
+    inquirer = require('inquirer'),
+    paths    = {
+        dist: {
+            root: './dist'
+        }
+    };
 
-var paths = {
-    dist: {
-        root: './dist'
-    }
-};
-paths.dist.scripts = path.join(paths.dist.root, 'js');
-paths.dist.styles = path.join(paths.dist.root, 'css');
-paths.dist.images = { root: path.join(paths.dist.root, 'images') };
+paths.dist.scripts         = path.join(paths.dist.root, 'js');
+paths.dist.styles          = path.join(paths.dist.root, 'css');
+paths.dist.images          = { root: path.join(paths.dist.root, 'images') };
 paths.dist.images.separate = path.join(paths.dist.images.root, 'separate');
 
 gulp.task('default', ['compile']);
@@ -102,7 +102,7 @@ gulp.task('bump', function(done){
             return;
         }
 
-        gulp.src('./package.json')
+        gulp.src(['./bower.json', './package.json'])
             .pipe($.bump({type: result.bump}))
             .pipe(gulp.dest('./'))
             .on('end', done);
