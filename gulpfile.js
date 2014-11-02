@@ -80,7 +80,7 @@ gulp.task('images-and-styles', function(){
 gulp.task('test', ['test-node']);
 
 gulp.task('test-node', function(){
-    return gulp.src('./tests/node/*.js')
+    return gulp.src('./tests/node/index.js')
         .pipe($.mocha({
             reporter: 'spec'
         }));

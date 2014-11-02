@@ -243,29 +243,7 @@
                     }
                 };
 
-                emoticonsProcessed = initEmoticonsProcessed();
-                emojiMegaRe = initMegaRe();
-
-                // Check if an element was not passed.
-                if(typeof el === 'undefined'){
-                    // Check if an element was configured. If not, default to the body.
-                    if (defaultConfig.only_crawl_id) {
-                        el = win.document.getElementById(defaultConfig.only_crawl_id);
-                    } else {
-                        el = win.document.body;
-                    }
-                }
-
-                var ignoredTags = defaultConfig.ignored_tags;
-
-                treeTraverse(el, function(node){
-                    if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))){
-                        return false;
-                    }
-                    if (node.nodeType === 1) {
-                        return true;
-                    }
-
+                var matchAndInsertEmoji = function(node) {
                     var match;
                     var matches = [];
                     var validator = new Validator();
@@ -281,8 +259,64 @@
                         var emojiName = getEmojiNameForMatch(matches[i]);
                         insertEmojicon(node, matches[i], emojiName, win);
                     }
-                    return true;
-                });
+                };
+
+
+                emoticonsProcessed = initEmoticonsProcessed();
+                emojiMegaRe = initMegaRe();
+
+                // Check if an element was not passed.
+                if(typeof el === 'undefined'){
+                    // Check if an element was configured. If not, default to the body.
+                    if (defaultConfig.only_crawl_id) {
+                        el = win.document.getElementById(defaultConfig.only_crawl_id);
+                    } else {
+                        el = win.document.body;
+                    }
+                }
+
+                var ignoredTags = defaultConfig.ignored_tags;
+
+
+                if(typeof win.document.createTreeWalker !== 'undefined') {
+                    var nodeIterator = win.document.createTreeWalker(
+                        el,
+                        win.NodeFilter.SHOW_TEXT | win.NodeFilter.SHOW_ELEMENT,
+                        function(node) {
+                            if(node.nodeType !== 1) {
+                                /* Text Node? Good! */
+                                return win.NodeFilter.FILTER_ACCEPT;
+                            }
+
+                            if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
+                                return win.NodeFilter.FILTER_REJECT;
+                            }
+
+                            return win.NodeFilter.FILTER_SKIP;
+                        },false
+                    );
+
+                    var node;
+                    while((node = nodeIterator.nextNode()) !== null) {
+                        matchAndInsertEmoji(node);
+                    }
+                }
+                else {
+                    treeTraverse(el, function(node){
+                        if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))){
+                            return false;
+                        }
+                        if (node.nodeType === 1) {
+                            return true;
+                        }
+
+                        matchAndInsertEmoji(node);
+
+                        return true;
+                    });
+                }
+
+
 
             }
 
