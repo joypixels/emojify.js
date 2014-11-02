@@ -3,9 +3,9 @@ var jsdom = require('jsdom');
 global.JS = require('jstest');
 global.emojify = require('../');
 
-require('./browser/dom_spec');
-require('./browser/emojify_tag_type_spec');
-require('./browser/string_spec');
+require('./spec/dom');
+require('./spec/emojify_tag_type');
+require('./spec/string');
 
 global.assertEmoji = function (test, rootEl, emojiTitles) {
     var emojis = rootEl.querySelectorAll('.emoji');

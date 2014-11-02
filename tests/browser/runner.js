@@ -1,15 +1,13 @@
 /* global JS:false */
 
-var run = function() {
-    JS.Test.autorun();
-};
-
 var ROOT = JS.ENV.ROOT || '../..';
 // JS.cache = false;
 
-JS.load(ROOT + '/src/emojify.js',
-        ROOT + '/tests/browser/string_spec.js',
-        ROOT + '/tests/browser/dom_spec.js',
-        ROOT + '/tests/browser/emojify_tag_type_spec.js',
-        // add files here as the project grows
-        run);
+JS.load(
+    ROOT + '/src/emojify.js',
+    ROOT + '/tests/spec/string.js',
+    ROOT + '/tests/spec/dom.js',
+    ROOT + '/tests/spec/emojify_tag_type.js',
+    // add files here as the project grows
+    JS.Test.autorun
+);
