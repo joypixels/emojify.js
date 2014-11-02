@@ -7,7 +7,7 @@ var chai = require('chai'),
 describe('emojify in a Node environment', function(){
 
     beforeEach(function(){
-        emojify = require('../../');
+        emojify = require('../../src/emojify.js');
     });
 
     describe('.replace', function(){

@@ -30,9 +30,9 @@ else
   git clone $REPO_SOURCE $REPO_DIR
 fi
 
-cp $REPO_DIR/public/graphics/emojis/*.png images/emoji
+cp $REPO_DIR/public/graphics/emojis/*.png src/images/emoji
 
-EMOJI="            \"$(ls images/emoji/*.png | cut -d/ -f3 | cut -d\. -f1 | tr \\n ,|sed 's/,$//')\";"
+EMOJI="            \"$(ls src/images/emoji/*.png | cut -d/ -f3 | cut -d\. -f1 | tr \\n ,|sed 's/,$//')\";"
 
 awk -v emoji="$EMOJI" '
     $0 ~ /##EMOJILISTSTART/ {skip=1; print; next}
