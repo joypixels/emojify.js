@@ -18,6 +18,8 @@ gulp.task('default', ['compile']);
 
 gulp.task('compile', ['script', 'images-and-styles']);
 
+gulp.task('release', ['test', 'bump', 'compile']);
+
 gulp.task('script', function(){
     var pkg = require('./package.json');
 
