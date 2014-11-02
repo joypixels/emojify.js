@@ -1,15 +1,27 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
-    path = require('path');
+    path = require('path'),
+    del = require('del');
+
+var paths = {
+    dist: {
+        root: './dist'
+    }
+};
+paths.dist.scripts = path.join(paths.dist.root, 'js');
+paths.dist.styles = path.join(paths.dist.root, 'css');
+paths.dist.images = { root: path.join(paths.dist.root, 'images') };
+paths.dist.images.separate = path.join(paths.dist.images.root, 'separate');
 
 gulp.task('default', ['compile']);
 
-gulp.task('compile', ['script', 'styles']);
+gulp.task('compile', ['script', 'images-and-styles']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
 
-    gulp.src('./emojify.js')
+    gulp.src('./src/emojify.js')
+        .pipe(gulp.dest(paths.dist.scripts))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe($.insert.prepend('/*! ' + pkg.name + ' - v' + pkg.version + ' - \n' +
@@ -21,11 +33,11 @@ gulp.task('script', function(){
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.scripts));
 });
 
 
-gulp.task('styles', function(){
+gulp.task('images-and-styles', function(){
     var emoticons = [
             'smile', 'scream', 'smirk', 'grinning', 'stuck_out_tongue_closed_eyes', 'stuck_out_tongue_winking_eye',
             'rage', 'frowning', 'sob', 'kissing_heart', 'wink', 'pensive', 'confounded', 'flushed', 'relaxed', 'mask',
@@ -39,7 +51,8 @@ gulp.task('styles', function(){
             }
         });
 
-    return gulp.src('./images/emoji/*.png')
+    return gulp.src('./src/images/emoji/*.png')
+        .pipe(gulp.dest(paths.dist.images.separate))
         .pipe($.imageDataUri({
             customClass: function(className){
                 return 'emoji-' + className
@@ -47,20 +60,20 @@ gulp.task('styles', function(){
         }))
         .pipe(emoticonFilter)
         .pipe($.concat('emojify-emoticons.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe(emoticonFilter.restore())
         .pipe($.concat('emojify.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.styles));
 });
 
 gulp.task('test', ['test-node']);
@@ -70,4 +83,8 @@ gulp.task('test-node', function(){
         .pipe($.mocha({
             reporter: 'spec'
         }));
+});
+
+gulp.task('clean', function(done){
+    del(paths.dist.root, done);
 });
