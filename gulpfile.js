@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     path = require('path'),
-    del = require('del');
+    del = require('del'),
+    inquirer = require('inquirer');
 
 var paths = {
     dist: {
@@ -87,4 +88,23 @@ gulp.task('test-node', function(){
 
 gulp.task('clean', function(done){
     del(paths.dist.root, done);
+});
+
+gulp.task('bump', function(done){
+    inquirer.prompt({
+        type: 'list',
+        name: 'bump',
+        message: 'What type of bump would you like to do?',
+        choices: ['patch', 'minor', 'major', "don't bump"]
+    }, function(result){
+        if(result.bump === "don't bump"){
+            done();
+            return;
+        }
+
+        gulp.src('./package.json')
+            .pipe($.bump({type: result.bump}))
+            .pipe(gulp.dest('./'))
+            .on('end', done);
+    });
 });
