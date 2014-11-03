@@ -119,3 +119,5 @@ JS.Test.describe('emojify on DOM nodes', function() {
         });
     });
 });
+
+

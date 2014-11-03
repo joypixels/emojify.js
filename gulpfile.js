@@ -79,15 +79,6 @@ gulp.task('images-and-styles', function(){
         .pipe(gulp.dest(paths.dist.styles));
 });
 
-gulp.task('test', ['test-node']);
-
-gulp.task('test-node', function(){
-    return gulp.src('./tests/node/*.js')
-        .pipe($.mocha({
-            reporter: 'spec'
-        }));
-});
-
 gulp.task('clean', function(done){
     del(paths.dist.root, done);
 });

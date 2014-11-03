@@ -17,9 +17,6 @@
         'use strict';
 
         var emojify = (function () {
-            // Get DOM as local variable for simplicity's sake
-            var document = typeof window !== 'undefined' && window.document;
-
             /**
              * NB!
              * The namedEmojiString variable is updated automatically by the
@@ -117,8 +114,8 @@
             }
 
             /* Given a match in a node, replace the text with an image */
-            function insertEmojicon(node, match, emojiName) {
-                var emojiElement = document.createElement(defaultConfig.emojify_tag_type || 'img');
+            function insertEmojicon(node, match, emojiName, win) {
+                var emojiElement = win.document.createElement(defaultConfig.emojify_tag_type || 'img');
 
                 if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
                     emojiElement.setAttribute('class', 'emoji emoji-' + emojiName);
@@ -230,10 +227,9 @@
             }
 
             function run(el) {
-                emoticonsProcessed = initEmoticonsProcessed();
-                emojiMegaRe = initMegaRe();
 
                 // Check if an element was not passed.
+                // This wil only work in the browser
                 if(typeof el === 'undefined'){
                     // Check if an element was configured. If not, default to the body.
                     if (defaultConfig.only_crawl_id) {
@@ -243,32 +239,25 @@
                     }
                 }
 
-                var ignoredTags = defaultConfig.ignored_tags;
+                // Get the window object from the passed element.
+                var doc = el.ownerDocument,
+                    win = doc.defaultView || doc.parentWindow;
 
-                var nodeIterator = document.createTreeWalker(
-                    el,
-                    NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT,
-                    function(node) {
-                        if(node.nodeType !== 1) {
-                            /* Text Node? Good! */
-                            return NodeFilter.FILTER_ACCEPT;
+                var treeTraverse = function (parent, cb){
+                    var child;
+
+                    if (parent.hasChildNodes()) {
+                        child = parent.firstChild;
+                        while(child){
+                            if(cb(child)) {
+                                treeTraverse(child, cb);
+                            }
+                            child = child.nextSibling;
                         }
+                    }
+                };
 
-                        if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
-                            return NodeFilter.FILTER_REJECT;
-                        }
-
-                        return NodeFilter.FILTER_SKIP;
-                    },
-                    false);
-
-                var nodeList = [];
-                var node;
-                while((node = nodeIterator.nextNode()) !== null) {
-                    nodeList.push(node);
-                }
-
-                nodeList.forEach(function(node) {
+                var matchAndInsertEmoji = function(node) {
                     var match;
                     var matches = [];
                     var validator = new Validator();
@@ -282,9 +271,55 @@
                     for (var i = matches.length; i-- > 0;) {
                         /* Replace the text with the emoji */
                         var emojiName = getEmojiNameForMatch(matches[i]);
-                        insertEmojicon(node, matches[i], emojiName);
+                        insertEmojicon(node, matches[i], emojiName, win);
                     }
-                });
+                };
+
+                emoticonsProcessed = initEmoticonsProcessed();
+                emojiMegaRe = initMegaRe();
+
+                var ignoredTags = defaultConfig.ignored_tags;
+
+                if(typeof win.document.createTreeWalker !== 'undefined') {
+                    var nodeIterator = win.document.createTreeWalker(
+                        el,
+                        win.NodeFilter.SHOW_TEXT | win.NodeFilter.SHOW_ELEMENT,
+                        function(node) {
+                            if(node.nodeType !== 1) {
+                                /* Text Node? Good! */
+                                return win.NodeFilter.FILTER_ACCEPT;
+                            }
+
+                            if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
+                                return win.NodeFilter.FILTER_REJECT;
+                            }
+
+                            return win.NodeFilter.FILTER_SKIP;
+                        },false
+                    );
+
+                    var node;
+                    while((node = nodeIterator.nextNode()) !== null) {
+                        matchAndInsertEmoji(node);
+                    }
+                }
+                else {
+                    treeTraverse(el, function(node){
+                        if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))){
+                            return false;
+                        }
+                        if (node.nodeType === 1) {
+                            return true;
+                        }
+
+                        matchAndInsertEmoji(node);
+
+                        return true;
+                    });
+                }
+
+
+
             }
 
             return {

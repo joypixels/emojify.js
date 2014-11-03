@@ -73,18 +73,35 @@ emojify.setConfig({emojify_tag_type : 'div'});
 
 ### run([element])
 
-*This only works in the browser*
+*This works in the browser and on Node*
 
 #### Parameters
 - `element` - Optional HTML element to restrict the emojification to.
+- `window` - Optional window object in which the element exists. Is required when used with node.
 
 #### Usage
+
+##### Browser
 ```js
 emojify.run();
 // OR
 emojify.run(document.getElementById('my-element'))
 ```
 
+##### Node.js
+Requires you to have jsdom installed:
+`npm i jsdom --save`
+
+```js
+var jsdom = require('jsdom') 
+
+jsdom.env({
+    html: "<p><code>jhhh</code><em>:)</em></p>",
+    done: function(errors, window) {
+        emojify.run(window.document.body)
+    }
+});
+```
 ---
 
 ### replace(string, [callback])
