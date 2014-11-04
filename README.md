@@ -128,6 +128,6 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 [ico-bower]: http://img.shields.io/badge/bower-0.9.4-blue.svg?style=flat-square
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
-[ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.png
+[ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.svg
 [license]: http://hassankhan.mit-license.org/
 [gitter]: https://gitter.im/hassankhan/emojify.js
