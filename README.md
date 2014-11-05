@@ -34,10 +34,17 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 Care about old browsers compatibility? Use https://github.com/es-shims/es5-shim
 
-### Via cdnjs **[SOON]**
+### Via cdnjs
+
+emojify.js is now available on cdnjs - https://cdnjs.com/libraries/emojify.js
 
 Add this to the rest of your stylesheet imports:
+
+`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />`
+
 Then add this to your Javascript code:
+
+`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>`
 
 ### Via Bower
 
