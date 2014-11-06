@@ -9,9 +9,9 @@ describe('emojify', function() {
 
             var el = window.document.getElementById('cat');
 
-            emojify(el, { document: window.document });
+            emojify(el);
 
-            assert.equal(el.outerHTML, '<span id="cat">hello <img class="emoji" src="/cat.png" title=":cat:" alt=":cat:" align="absmiddle"></span>');
+            assert.equal(el.outerHTML, '<span id="cat">hello <img class="emoji" src="/cat.png" title=":cat:" alt=":cat:"></span>');
             done();
         });
     });
