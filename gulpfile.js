@@ -21,10 +21,11 @@ paths.dist.images = { root: path.join(paths.dist.root, 'images') };
 paths.dist.images.separate = path.join(paths.dist.images.root, 'basic');
 paths.dist.images.sprites = path.join(paths.dist.images.root, 'sprites');
 
-
 gulp.task('default', ['compile']);
 
 gulp.task('compile', ['script', 'images-and-styles']);
+
+gulp.task('release', ['test', 'bump', 'compile']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
@@ -90,6 +91,11 @@ gulp.task('images-and-styles', ['copy-styles', 'data-uri'], function(){
         .pipe(emoticonCssFilter)
         .pipe($.replace('.emoji-+1', '.emoji-plus1'))
         .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe($.minifyCss())
+        .pipe($.rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
         .pipe(emoticonCssFilter.restore())
         .pipe(emoticonPngFilter)
         .pipe(gulp.dest(paths.dist.images.sprites))
@@ -110,6 +116,11 @@ gulp.task('images-and-styles', ['copy-styles', 'data-uri'], function(){
         }))
         .pipe(cssFilter)
         .pipe($.replace('.emoji-+1', '.emoji-plus1'))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe($.minifyCss())
+        .pipe($.rename({
+             suffix: '.min'
+        }))
         .pipe(gulp.dest(paths.dist.styles.sprites))
         .pipe(cssFilter.restore())
         .pipe($.filter('**.png'))
@@ -156,15 +167,6 @@ gulp.task('copy-styles', function(){
             suffix: '.min'
         }))
         .pipe(gulp.dest(paths.dist.styles.basic));
-});
-
-gulp.task('test', ['test-node']);
-
-gulp.task('test-node', function(){
-    return gulp.src('./tests/node/*.js')
-        .pipe($.mocha({
-            reporter: 'spec'
-        }));
 });
 
 gulp.task('clean', function(done){
