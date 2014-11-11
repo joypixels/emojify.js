@@ -2,16 +2,31 @@ var gulp = require('gulp'),
     $ = require('gulp-load-plugins')(),
     path = require('path'),
     minimatch = require('minimatch'),
-    through2 = require('through2');
+    through2 = require('through2'),
+    del      = require('del'),
+    inquirer = require('inquirer'),
+    paths    = {
+        dist: {
+            root: './dist'
+        }
+    };
+
+paths.dist.scripts         = path.join(paths.dist.root, 'js');
+paths.dist.styles          = path.join(paths.dist.root, 'css');
+paths.dist.images          = { root: path.join(paths.dist.root, 'images') };
+paths.dist.images.separate = path.join(paths.dist.images.root, 'separate');
 
 gulp.task('default', ['compile']);
 
-gulp.task('compile', ['script', 'styles']);
+gulp.task('compile', ['script', 'images-and-styles']);
+
+gulp.task('release', ['bump', 'compile']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
 
-    gulp.src('./emojify.js')
+    gulp.src('./src/emojify.js')
+        .pipe(gulp.dest(paths.dist.scripts))
         .pipe($.jshint())
         .pipe($.jshint.reporter('jshint-stylish'))
         .pipe($.insert.prepend('/*! ' + pkg.name + ' - v' + pkg.version + ' - \n' +
@@ -23,11 +38,11 @@ gulp.task('script', function(){
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.scripts));
 });
 
 
-gulp.task('styles', function(){
+gulp.task('images-and-styles', function(){
     var emoticons = [
             'smile', 'scream', 'smirk', 'grinning', 'stuck_out_tongue_closed_eyes', 'stuck_out_tongue_winking_eye',
             'rage', 'frowning', 'sob', 'kissing_heart', 'wink', 'pensive', 'confounded', 'flushed', 'relaxed', 'mask',
@@ -41,7 +56,8 @@ gulp.task('styles', function(){
             }
         });
 
-    return gulp.src('./images/emoji/*.png')
+    return gulp.src('./src/images/emoji/*.png')
+        .pipe(gulp.dest(paths.dist.images.separate))
         .pipe($.imageDataUri({
             customClass: function(className){
                 return 'emoji-' + className
@@ -49,29 +65,43 @@ gulp.task('styles', function(){
         }))
         .pipe(emoticonFilter)
         .pipe($.concat('emojify-emoticons.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe(emoticonFilter.restore())
         .pipe($.concat('emojify.css'))
-        .pipe(gulp.dest('./'))
+        .pipe(gulp.dest(paths.dist.styles))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest(paths.dist.styles));
 });
 
-gulp.task('test', ['test-node']);
+gulp.task('clean', function(done){
+    del(paths.dist.root, done);
+});
 
-gulp.task('test-node', function(){
-    return gulp.src('./tests/node/*.js')
-        .pipe($.mocha({
-            reporter: 'spec'
-        }));
+gulp.task('bump', function(done){
+    inquirer.prompt({
+        type: 'list',
+        name: 'bump',
+        message: 'What type of bump would you like to do?',
+        choices: ['patch', 'minor', 'major', "don't bump"]
+    }, function(result){
+        if(result.bump === "don't bump"){
+            done();
+            return;
+        }
+
+        gulp.src(['./bower.json', './package.json'])
+            .pipe($.bump({type: result.bump}))
+            .pipe(gulp.dest('./'))
+            .on('end', done);
+    });
 });
 
 gulp.task('update', function(done){
@@ -83,15 +113,15 @@ gulp.task('update', function(done){
             return minimatch(file.path, '**/public/graphics/emojis/*.png');
         }))
         .pipe($.rename({ dirname: './' }))
-        .pipe(gulp.dest('./images/emoji'))
+        .pipe(gulp.dest('./src/images/emoji'))
         .pipe(through2({ objectMode: true }, function(file, enc, cb){
             emoji += ',' + path.basename(file.path, path.extname(file.path));
             this.push(file);
             cb();
         }, function(){
-            gulp.src('./emojify.js')
+            gulp.src('./src/emojify.js')
                 .pipe($.replace(/(\/\*##EMOJILIST\*\/).+$/m, '$1"' + emoji.substr(1) + '";'))
-                .pipe(gulp.dest('./'))
+                .pipe(gulp.dest('./src'))
                 .on('end', done);
         }));
 });

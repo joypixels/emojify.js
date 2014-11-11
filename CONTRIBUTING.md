@@ -14,7 +14,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 
 - All tests: `npm test`
 - Just the browser ones: `phantomjs tests/phantom.js`
-- Just the Node ones: `gulp test-node`
+- Just the Node ones: `node tests/node.js`
 
 ## Before creating a pull request
 
@@ -36,4 +36,5 @@ If you have rights to publish to npm, do the following first:
 
 - Run `gulp update`. This will update the project with the latest emoji from [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 - Run `gulp`
+- Run `gulp bump`
 - Run `npm publish`

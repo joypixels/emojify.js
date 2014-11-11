@@ -34,10 +34,17 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 
 Care about old browsers compatibility? Use https://github.com/es-shims/es5-shim
 
-### Via cdnjs **[SOON]**
+### Via cdnjs
+
+emojify.js is now available on cdnjs - https://cdnjs.com/libraries/emojify.js
 
 Add this to the rest of your stylesheet imports:
+
+`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />`
+
 Then add this to your Javascript code:
+
+`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>`
 
 ### Via Bower
 
@@ -73,18 +80,35 @@ emojify.setConfig({emojify_tag_type : 'div'});
 
 ### run([element])
 
-*This only works in the browser*
+*This works in the browser and on Node*
 
 #### Parameters
 - `element` - Optional HTML element to restrict the emojification to.
+- `window` - Optional window object in which the element exists. Is required when used with node.
 
 #### Usage
+
+##### Browser
 ```js
 emojify.run();
 // OR
 emojify.run(document.getElementById('my-element'))
 ```
 
+##### Node.js
+Requires you to have jsdom installed:
+`npm i jsdom --save`
+
+```js
+var jsdom = require('jsdom') 
+
+jsdom.env({
+    html: "<p><code>jhhh</code><em>:)</em></p>",
+    done: function(errors, window) {
+        emojify.run(window.document.body)
+    }
+});
+```
 ---
 
 ### replace(string, [callback])
@@ -131,9 +155,10 @@ Please read [LICENSE.md](LICENSE.md). For image attributions, please read [LICEN
 [package-npm]: https://www.npmjs.org/package/emojify.js
 [ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat-square
 [ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat-square
-[ico-bower]: http://img.shields.io/badge/bower-0.9.5-blue.svg?style=flat-square
+[ico-bower]: http://img.shields.io/bower/v/emojify.js.svg?style=flat-square
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
-[ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.png
+[ico-gitter]: https://badges.gitter.im/hassankhan/emojify.js.svg
 [license]: http://hassankhan.mit-license.org/
 [gitter]: https://gitter.im/hassankhan/emojify.js
+

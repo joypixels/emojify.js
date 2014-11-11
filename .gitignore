@@ -1,5 +1,4 @@
 node_modules
-css
 vendor
 tests.browserified.js
 
@@ -7,3 +6,4 @@ tests.browserified.js
 # editors
 .idea
 *.iml
+*.sublime-project
