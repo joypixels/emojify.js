@@ -80,7 +80,7 @@ emojify.setConfig({emojify_tag_type : 'div'});
 
 ---
 
-### run([element])
+### run([element], [replacer])
 
 *This works in the browser and Node*
 
