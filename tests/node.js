@@ -1,7 +1,7 @@
 var jsdom = require('jsdom');
 
 global.JS = require('jstest');
-global.emojify = require('../');
+global.emojify = require('../src/emojify.js');
 
 require('./spec/dom');
 require('./spec/emojify_tag_type');

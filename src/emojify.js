@@ -105,7 +105,8 @@
                     'A': 1,
                     'PRE': 1,
                     'CODE': 1
-                }
+                },
+                mode: 'img'
             };
 
             /* Returns true if the given char is whitespace */
@@ -113,24 +114,47 @@
                 return s === ' ' || s === '\t' || s === '\r' || s === '\n' || s === '' || s === String.fromCharCode(160);
             }
 
-            /* Given a match in a node, replace the text with an image */
-            function insertEmojicon(node, match, emojiName, win) {
-                var emojiElement = win.document.createElement(defaultConfig.emojify_tag_type || 'img');
+            var modeToElementTagType = {
+                'img': 'img',
+                'sprite': 'span',
+                'data-uri': 'span'
+            };
 
-                if (defaultConfig.emojify_tag_type && defaultConfig.emojify_tag_type !== 'img') {
-                    emojiElement.setAttribute('class', 'emoji emoji-' + emojiName);
-                } else {
-                    emojiElement.setAttribute('class', 'emoji');
-                    emojiElement.setAttribute('src', defaultConfig.img_dir + '/' + emojiName + '.png');
+            /* Given a match in a node, replace the text with an image */
+            function insertEmojicon(args) {
+                var emojiElement = null;
+
+
+                if(args.replacer){
+                    emojiElement = args.replacer.apply({
+                            config: defaultConfig
+                        },
+                        [':' + args.emojiName + ':', args.emojiName]
+                    );
+                }
+                else {
+                    var elementType = defaultConfig.emojify_tag_type || modeToElementTagType[defaultConfig.mode];
+                    emojiElement = args.win.document.createElement(elementType);
+
+                    if (elementType !== 'img') {
+                        emojiElement.setAttribute('class', 'emoji emoji-' + args.emojiName);
+                    } else {
+                        emojiElement.setAttribute('align', 'absmiddle');
+                        emojiElement.setAttribute('alt', ':' + args.emojiName + ':');
+                        emojiElement.setAttribute('class', 'emoji');
+                        emojiElement.setAttribute('src', defaultConfig.img_dir + '/' + args.emojiName + '.png');
+                    }
+
+                    emojiElement.setAttribute('title', ':' + args.emojiName + ':');
                 }
 
-                emojiElement.setAttribute('title', ':' + emojiName + ':');
-                emojiElement.setAttribute('alt', ':' + emojiName + ':');
-                emojiElement.setAttribute('align', 'absmiddle');
-                node.splitText(match.index);
-                node.nextSibling.nodeValue = node.nextSibling.nodeValue.substr(match[0].length, node.nextSibling.nodeValue.length);
-                emojiElement.appendChild(node.splitText(match.index));
-                node.parentNode.insertBefore(emojiElement, node.nextSibling);
+                args.node.splitText(args.match.index);
+                args.node.nextSibling.nodeValue = args.node.nextSibling.nodeValue.substr(
+                    args.match[0].length,
+                    args.node.nextSibling.nodeValue.length
+                );
+                emojiElement.appendChild(args.node.splitText(args.match.index));
+                args.node.parentNode.insertBefore(emojiElement, args.node.nextSibling);
             }
 
             /* Given an regex match, return the name of the matching emoji */
@@ -150,10 +174,11 @@
 
             function defaultReplacer(emoji, name) {
                 /*jshint validthis: true */
-                if (this.config.emojify_tag_type && this.config.emojify_tag_type !== 'img') {
-                    return "<" +  this.config.emojify_tag_type +" title=':" + name + ":' alt=':" + name + ":' class='emoji emoji-" + name + "'> </" + this.config.emojify_tag_type+ ">";
+                var elementType = this.config.emojify_tag_type || modeToElementTagType[this.config.mode];
+                if (elementType !== 'img') {
+                    return "<" +  elementType +" class='emoji emoji-" + name + "' title=':" + name + ":'></" + elementType+ ">";
                 } else {
-                    return "<img title=':" + name + ":' alt=':" + name + ":' class='emoji' src='" + this.config.img_dir + '/' + name + ".png' align='absmiddle' />";
+                    return "<img align='absmiddle' alt=':" + name + ":' class='emoji' src='" + this.config.img_dir + '/' + name + ".png' title=':" + name + ":' />";
                 }
             }
 
@@ -225,8 +250,7 @@
                 });
 
             }
-
-            function run(el) {
+            function run(el, replacer) {
 
                 // Check if an element was not passed.
                 // This wil only work in the browser
@@ -271,14 +295,21 @@
                     for (var i = matches.length; i-- > 0;) {
                         /* Replace the text with the emoji */
                         var emojiName = getEmojiNameForMatch(matches[i]);
-                        insertEmojicon(node, matches[i], emojiName, win);
+                        insertEmojicon({
+                            node: node,
+                            match: matches[i],
+                            emojiName: emojiName,
+                            replacer: replacer,
+                            win: win
+                        });
                     }
                 };
 
                 emoticonsProcessed = initEmoticonsProcessed();
                 emojiMegaRe = initMegaRe();
 
-                var ignoredTags = defaultConfig.ignored_tags;
+                var ignoredTags = defaultConfig.ignored_tags,
+                    nodes = [];
 
                 if(typeof win.document.createTreeWalker !== 'undefined') {
                     var nodeIterator = win.document.createTreeWalker(
@@ -299,8 +330,9 @@
                     );
 
                     var node;
+
                     while((node = nodeIterator.nextNode()) !== null) {
-                        matchAndInsertEmoji(node);
+                        nodes.push(node);
                     }
                 }
                 else {
@@ -312,14 +344,12 @@
                             return true;
                         }
 
-                        matchAndInsertEmoji(node);
-
+                        nodes.push(node);
                         return true;
                     });
                 }
 
-
-
+                nodes.forEach(matchAndInsertEmoji);
             }
 
             return {
