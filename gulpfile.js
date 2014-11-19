@@ -1,9 +1,10 @@
 var gulp = require('gulp'),
-    $ = require('gulp-load-plugins')({
-        pattern: ['gulp-*', 'gulp.*']
-    }),
+    $ = require('gulp-load-plugins')(),
     path = require('path'),
-    del = require('del'),
+    minimatch = require('minimatch'),
+    through2 = require('through2'),
+    del      = require('del'),
+    inquirer = require('inquirer'),
     sprite = require('css-sprite').stream;
 
 
@@ -25,7 +26,7 @@ gulp.task('default', ['compile']);
 
 gulp.task('compile', ['script', 'images-and-styles']);
 
-gulp.task('release', ['test', 'bump', 'compile']);
+gulp.task('release', ['bump', 'compile']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
@@ -171,4 +172,46 @@ gulp.task('copy-styles', function(){
 
 gulp.task('clean', function(done){
     del(paths.dist.root, done);
+});
+
+
+gulp.task('bump', function(done){
+    inquirer.prompt({
+        type: 'list',
+        name: 'bump',
+        message: 'What type of bump would you like to do?',
+        choices: ['patch', 'minor', 'major', "don't bump"]
+    }, function(result){
+        if(result.bump === "don't bump"){
+            done();
+            return;
+        }
+
+        gulp.src(['./bower.json', './package.json'])
+            .pipe($.bump({type: result.bump}))
+            .pipe(gulp.dest('./'))
+            .on('end', done);
+    });
+});
+
+gulp.task('update', function(done){
+    var emoji = '';
+
+    $.download('https://github.com/arvida/emoji-cheat-sheet.com/archive/master.zip')
+        .pipe($.unzip())
+        .pipe($.filter(function(file){
+            return minimatch(file.path, '**/public/graphics/emojis/*.png');
+        }))
+        .pipe($.rename({ dirname: './' }))
+        .pipe(gulp.dest('./src/images/emoji'))
+        .pipe(through2({ objectMode: true }, function(file, enc, cb){
+            emoji += ',' + path.basename(file.path, path.extname(file.path));
+            this.push(file);
+            cb();
+        }, function(){
+            gulp.src('./src/emojify.js')
+                .pipe($.replace(/(\/\*##EMOJILIST\*\/).+$/m, '$1"' + emoji.substr(1) + '";'))
+                .pipe(gulp.dest('./src'))
+                .on('end', done);
+        }));
 });
