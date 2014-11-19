@@ -5,16 +5,22 @@ var gulp = require('gulp'),
     through2 = require('through2'),
     del      = require('del'),
     inquirer = require('inquirer'),
-    paths    = {
-        dist: {
-            root: './dist'
-        }
-    };
+    sprite = require('css-sprite').stream;
 
-paths.dist.scripts         = path.join(paths.dist.root, 'js');
-paths.dist.styles          = path.join(paths.dist.root, 'css');
-paths.dist.images          = { root: path.join(paths.dist.root, 'images') };
-paths.dist.images.separate = path.join(paths.dist.images.root, 'separate');
+
+var paths = {
+    dist: {
+        root: './dist'
+    }
+};
+paths.dist.scripts = path.join(paths.dist.root, 'js');
+paths.dist.styles = { root: path.join(paths.dist.root, 'css') };
+paths.dist.styles.dataURI = path.join(paths.dist.styles.root, 'data-uri');
+paths.dist.styles.sprites = path.join(paths.dist.styles.root, 'sprites');
+paths.dist.styles.basic = path.join(paths.dist.styles.root, 'basic');
+paths.dist.images = { root: path.join(paths.dist.root, 'images') };
+paths.dist.images.separate = path.join(paths.dist.images.root, 'basic');
+paths.dist.images.sprites = path.join(paths.dist.images.root, 'sprites');
 
 gulp.task('default', ['compile']);
 
@@ -41,23 +47,91 @@ gulp.task('script', function(){
         .pipe(gulp.dest(paths.dist.scripts));
 });
 
-
-gulp.task('images-and-styles', function(){
+var getEmoticonFilter = function(){
     var emoticons = [
-            'smile', 'scream', 'smirk', 'grinning', 'stuck_out_tongue_closed_eyes', 'stuck_out_tongue_winking_eye',
-            'rage', 'frowning', 'sob', 'kissing_heart', 'wink', 'pensive', 'confounded', 'flushed', 'relaxed', 'mask',
-            'heart', 'broken_heart'
-        ],
-        emoticonFilter = $.filter(function(file){
-            var index = emoticons.indexOf(path.basename(file.path, path.extname(file.path)));
-            if(index > -1){
-                emoticons.splice(index, 1);
-                return true;
-            }
-        });
+        'smile', 'scream', 'smirk', 'grinning', 'stuck_out_tongue_closed_eyes', 'stuck_out_tongue_winking_eye',
+        'rage', 'frowning', 'sob', 'kissing_heart', 'wink', 'pensive', 'confounded', 'flushed', 'relaxed', 'mask',
+        'heart', 'broken_heart'
+    ];
+
+    return $.filter(function(file){
+        var index = emoticons.indexOf(path.basename(file.path, path.extname(file.path)));
+        if(index > -1){
+            emoticons.splice(index, 1);
+            return true;
+        }
+    })
+};
+
+gulp.task('images-and-styles', ['copy-styles', 'data-uri'], function(){
+
+
+    var emoticonFilter = getEmoticonFilter(),
+        cssFilter = $.filter('**.css'),
+        emoticonCssFilter = $.filter('**.css'),
+        emoticonPngFilter = $.filter('**.png');
 
     return gulp.src('./src/images/emoji/*.png')
+
+        // copy images over as they are
+
         .pipe(gulp.dest(paths.dist.images.separate))
+
+        // generate emoticon sprites
+
+        .pipe(emoticonFilter)
+        .pipe(sprite({
+            name: 'emojify-emoticons',
+            style: 'emojify-emoticons.css',
+            prefix: 'emoji',
+            cssPath: '../../images/sprites',
+            orientation: 'binary-tree',
+            retina: true,
+            template: './build/sprites.mustache'
+        }))
+        .pipe(emoticonCssFilter)
+        .pipe($.replace('.emoji-+1', '.emoji-plus1'))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe($.minifyCss())
+        .pipe($.rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe(emoticonCssFilter.restore())
+        .pipe(emoticonPngFilter)
+        .pipe(gulp.dest(paths.dist.images.sprites))
+        .pipe(emoticonPngFilter.restore())
+        .pipe($.filter('!**sprites**')) //exclude generated spritesheets
+        .pipe(emoticonFilter.restore())
+
+        // generate all sprites
+
+        .pipe(sprite({
+            name: 'emojify',
+            style: 'emojify.css',
+            prefix: 'emoji',
+            cssPath: '../../images/sprites',
+            orientation: 'binary-tree',
+            retina: true,
+            template: './build/sprites.mustache'
+        }))
+        .pipe(cssFilter)
+        .pipe($.replace('.emoji-+1', '.emoji-plus1'))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe($.minifyCss())
+        .pipe($.rename({
+             suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.dist.styles.sprites))
+        .pipe(cssFilter.restore())
+        .pipe($.filter('**.png'))
+        .pipe(gulp.dest(paths.dist.images.sprites));
+});
+
+gulp.task('data-uri', function(){
+    var emoticonFilter = getEmoticonFilter();
+
+    return gulp.src('./src/images/emoji/*.png')
         .pipe($.imageDataUri({
             customClass: function(className){
                 return 'emoji-' + className
@@ -65,25 +139,41 @@ gulp.task('images-and-styles', function(){
         }))
         .pipe(emoticonFilter)
         .pipe($.concat('emojify-emoticons.css'))
-        .pipe(gulp.dest(paths.dist.styles))
+        .pipe($.replace('.emoji-+1', '.emoji-plus1'))
+        .pipe(gulp.dest(paths.dist.styles.dataURI))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(paths.dist.styles))
+        .pipe(gulp.dest(paths.dist.styles.dataURI))
         .pipe(emoticonFilter.restore())
+
+        // generate all data-URIs
+
         .pipe($.concat('emojify.css'))
-        .pipe(gulp.dest(paths.dist.styles))
+        .pipe($.replace('.emoji-+1', '.emoji-plus1'))
+        .pipe(gulp.dest(paths.dist.styles.dataURI))
         .pipe($.minifyCss())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(paths.dist.styles));
+        .pipe(gulp.dest(paths.dist.styles.dataURI));
+});
+
+gulp.task('copy-styles', function(){
+    gulp.src('./src/css/basic/*.css')
+        .pipe(gulp.dest(paths.dist.styles.basic))
+        .pipe($.minifyCss())
+        .pipe($.rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.dist.styles.basic));
 });
 
 gulp.task('clean', function(done){
     del(paths.dist.root, done);
 });
+
 
 gulp.task('bump', function(done){
     inquirer.prompt({

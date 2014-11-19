@@ -13,6 +13,14 @@ JS.Test.describe('emojify on DOM nodes', function() {
         this.el = document.createElement("DIV");
     });
 
+    this.after(function() {
+        // restore defaults
+        emojify.setConfig({
+            emojify_tag_type: 'img',
+            img_dir: 'images/emoji'
+        })
+    });
+
     this.describe('with variations of spacing around 2char smileys', function() {
         this.it('works with no spacing around :)', function() {
             this.el.innerHTML = ":)";
@@ -116,6 +124,41 @@ JS.Test.describe('emojify on DOM nodes', function() {
             this.el.innerHTML = "<code>:)</code>";
             result = emojify.run(this.el);
             assertEmoji(this, this.el, []);
+        });
+    });
+
+    this.describe('with custom replacer', function() {
+
+        this.it('should use custom replacer', function() {
+            var result;
+            this.el.innerHTML = "<p>:)</p>";
+            result = emojify.run(this.el, function(emoji, emojiName){
+                var span = document.createElement('span');
+                span.className = 'emoji emoji-'  + emojiName;
+                span.innerHTML = emoji;
+                return span;
+            });
+            var emojis = this.el.querySelectorAll('.emoji');
+            this.assertEqual(1, emojis.length);
+            this.assertEqual('<span class="emoji emoji-smile">:smile:</span>', emojis[0].outerHTML);
+        });
+
+        this.it('ignores some other options when custom replacer is given', function() {
+            var result;
+            this.el.innerHTML = "<p>:)</p>";
+            emojify.setConfig({
+                emojify_tag_type: 'div',
+                img_dir: 'blah'
+            });
+            result = emojify.run(this.el, function(emoji, emojiName){
+                var span = document.createElement('span');
+                span.className = 'emoji emoji-'  + emojiName;
+                span.innerHTML = emoji;
+                return span;
+            });
+            var emojis = this.el.querySelectorAll('.emoji');
+            this.assertEqual(1, emojis.length);
+            this.assertEqual('<span class="emoji emoji-smile">:smile:</span>', emojis[0].outerHTML);
         });
     });
 });

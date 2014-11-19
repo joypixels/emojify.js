@@ -8,6 +8,7 @@ JS.load(
     ROOT + '/tests/spec/string.js',
     ROOT + '/tests/spec/dom.js',
     ROOT + '/tests/spec/emojify_tag_type.js',
+    ROOT + '/tests/spec/modes.js',
     // add files here as the project grows
     JS.Test.autorun
 );
