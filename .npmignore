@@ -1,5 +1,5 @@
 *
-!dist
+!dist/*
 !README.md
 !LICENSE.md
 !LICENSE-IMAGES.md
