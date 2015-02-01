@@ -149,12 +149,6 @@ replacer = function(emoji, name) {
 emojify.replace('I am happy :)', replacer);
 ```
 
-
-
-### Excluding elements from being processed
-
-To exclude tags from being emojified, add `no-emojify` to their `class` attributes.
-
 ## Contributing changes
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md).
