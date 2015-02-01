@@ -5,7 +5,7 @@
 
     @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
         .emoji {
-            background-image: url('../../images/sprites/emojify-x2.png');
+            background-image: url('../../images/sprites/emojify@2x.png');
             background-size: 1121px 1078px;
         }
     }
@@ -4048,7 +4048,7 @@
         height: 32px;
     }
 
-    .emoji-plus1 {
+    .emoji-\+1 {
         background-position: -853px -933px;
         width: 32px;
         height: 32px;
