@@ -63,20 +63,22 @@ Then add this to your Javascript code:
 *This works in the browser and on Node*
 
 #### Parameters
+
 - `object` - Optional JSON object with any of the following attributes:
 
 Option | Default | Description
 --- | --- | ---
+`blacklist.elements` | `['script', 'textarea', 'a', 'pre', 'code']` | An array of elements you don't want emojified
+`blacklist.classes` | `['no-emojify']` | An array of classes you don't want emojified
 `mode` | `img` | By default, emojify will output an `img` with a `src` attribute for each emoji found. But if `mode` is set to `sprite` or `data-uri`, then `span`s with classes are outputted. Don't forget to include the appropriate CSS for your choice though, see the `/dist` directory.
-`emojify_tag_type` | `null` | When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`. This takes precedence over the `mode` option. Note: if you're not using `img`s, `.emoji-+1` isn't a valid class, so `.emoji-plus1` is used instead.
-`only_crawl_id` | `null` | Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to `run()`, `document.body` is used
+`tag_type` | `null` | When set, emojify uses this element with the class `emoji emoji-#{emojiname}` instead of an `img` with a `src` attribute.  Example valid values: `div`, `span`. This takes precedence over the `mode` option. Note: if you're not using `img`s, `.emoji-+1` isn't a valid class, so `.emoji-plus1` is used instead.
+`only_crawl_id` | `null` | **[DEPRECATED]** Restricts searching for emojis to a specified element & it's children. If null, and no object is passed to `run()`, `document.body` is used
 `img_dir` | `'images/emoji'` | Defines the path to the emoji images
 `ignore_emoticons` | `false` | If `true`, only convert emoji like `:smile:` and ignore emoticons like `:)`
-`ignored_tags` | `{'SCRIPT': 1,'TEXTAREA': 1,'A': 1,'PRE': 1,'CODE': 1}` | A list of elements that you don't want emojified
 
 #### Usage
 ```js
-emojify.setConfig({emojify_tag_type : 'div'});
+emojify.setConfig({tag_type : 'div'});
 ```
 
 ---
@@ -109,7 +111,7 @@ Requires you to have jsdom installed:
 `npm i jsdom --save`
 
 ```js
-var jsdom = require('jsdom') 
+var jsdom = require('jsdom')
 
 jsdom.env({
     html: "<p><code>jhhh</code><em>:)</em></p>",
@@ -146,12 +148,6 @@ replacer = function(emoji, name) {
 
 emojify.replace('I am happy :)', replacer);
 ```
-
-
-
-### Excluding elements from being processed
-
-To exclude tags from being emojified, add `no-emojify` to their `class` attributes.
 
 ## Contributing changes
 

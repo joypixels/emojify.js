@@ -16,7 +16,7 @@ JS.Test.describe('emojify on DOM nodes', function() {
     this.after(function() {
         // restore defaults
         emojify.setConfig({
-            emojify_tag_type: 'img',
+            tag_type: 'img',
             img_dir: 'images/emoji'
         })
     });
@@ -147,7 +147,7 @@ JS.Test.describe('emojify on DOM nodes', function() {
             var result;
             this.el.innerHTML = "<p>:)</p>";
             emojify.setConfig({
-                emojify_tag_type: 'div',
+                tag_type: 'div',
                 img_dir: 'blah'
             });
             result = emojify.run(this.el, function(emoji, emojiName){

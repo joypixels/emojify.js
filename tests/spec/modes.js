@@ -47,7 +47,7 @@ JS.Test.describe('emojify in different modes', function() {
                 var text = ':)';
                 this.el.innerHTML = text;
                 emojify.setConfig({
-                    emojify_tag_type: 'blah',
+                    tag_type: 'blah',
                     mode: 'sprite'
                 });
                 emojify.run( this.el );
@@ -60,7 +60,7 @@ JS.Test.describe('emojify in different modes', function() {
                 var text = ':)';
 
                 emojify.setConfig({
-                    emojify_tag_type: null,
+                    tag_type: null,
                     mode: 'sprite'
                 });
                 var result = emojify.replace(text);
@@ -81,7 +81,7 @@ JS.Test.describe('emojify in different modes', function() {
             this.it('should still accept a custom tag type', function() {
                 var text = ':)';
                 emojify.setConfig({
-                    emojify_tag_type: 'blah',
+                    tag_type: 'blah',
                     mode: 'sprite'
                 });
                 var result = emojify.replace(text);
@@ -96,7 +96,7 @@ JS.Test.describe('emojify in different modes', function() {
                 var text = ':)';
                 this.el.innerHTML = text;
                 emojify.setConfig({
-                    emojify_tag_type: null,
+                    tag_type: null,
                     mode: 'data-uri'
                 });
                 emojify.run( this.el );
@@ -124,7 +124,7 @@ JS.Test.describe('emojify in different modes', function() {
                 var text = ':)';
                 this.el.innerHTML = text;
                 emojify.setConfig({
-                    emojify_tag_type: 'blah',
+                    tag_type: 'blah',
                     mode: 'data-uri'
                 });
                 emojify.run( this.el );
@@ -137,7 +137,7 @@ JS.Test.describe('emojify in different modes', function() {
                 var text = ':)';
 
                 emojify.setConfig({
-                    emojify_tag_type: null,
+                    tag_type: null,
                     mode: 'data-uri'
                 });
                 var result = emojify.replace(text);
@@ -159,7 +159,7 @@ JS.Test.describe('emojify in different modes', function() {
             this.it('should still accept a custom tag type', function() {
                 var text = ':)';
                 emojify.setConfig({
-                    emojify_tag_type: 'blah',
+                    tag_type: 'blah',
                     mode: 'data-uri'
                 });
                 var result = emojify.replace(text);
