@@ -20,7 +20,10 @@ jsdom.env({
     done: function(errors, win) {
         global.window = win;
         global.document = win.document;
-        JS.Test.autorun()
+        JS.Test.autorun(function(runner){
+            runner.setReporter(new JS.Test.Reporters.Spec())
+            runner.addReporter(new JS.Test.Reporters.ExitStatus())
+        })
     }
 })
 

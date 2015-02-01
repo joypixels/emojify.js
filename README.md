@@ -163,13 +163,13 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 Please read [LICENSE.md](LICENSE.md). For image attributions, please read [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 
 [travis]: https://travis-ci.org/hassankhan/emojify.js
-[appveyor]: https://ci.appveyor.com/project/adam-lynch/emojify-js
+[appveyor]: https://ci.appveyor.com/project/hassankhan/emojify-js
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
 [ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat-square
 [ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat-square
-[ico-windows-build]: https://ci.appveyor.com/api/projects/status/6umkf6gc7dq64c2g/branch/master?svg=true
-[ico-windows-build-dev]: https://ci.appveyor.com/api/projects/status/6umkf6gc7dq64c2g/branch/develop?svg=true
+[ico-windows-build]: https://ci.appveyor.com/api/projects/status/908bymld8nm3ykxm?svg=true
+[ico-windows-build-dev]: https://ci.appveyor.com/api/projects/status/908bymld8nm3ykxm/branch/develop?svg=true
 [ico-bower]: http://img.shields.io/bower/v/emojify.js.svg?style=flat-square
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
