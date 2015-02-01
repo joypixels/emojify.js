@@ -153,6 +153,11 @@ emojify.replace('I am happy :)', replacer);
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Credits
+
+- [All Contributors](https://github.com/hassankhan/emojify.js/contributors)
+- [Hassan Khan](https://github.com/hassankhan)
+
 ## License
 
 Please read [LICENSE.md](LICENSE.md). For image attributions, please read [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
