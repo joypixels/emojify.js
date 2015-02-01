@@ -1,0 +1,24 @@
+{{#sprite}}
+    {{class}} {
+        background-image: url('{{{escaped_image}}}');
+        display: inline-block;
+    }
+
+{{/sprite}}
+{{#retina}}
+    @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+        {{class}} {
+            background-image: url('{{{escaped_image}}}');
+            background-size: {{px.total_width}} {{px.total_height}};
+        }
+    }
+
+{{/retina}}
+{{#items}}
+    {{class}} {
+        background-position: {{px.offset_x}} {{px.offset_y}};
+        width: {{px.width}};
+        height: {{px.height}};
+    }
+
+{{/items}}
