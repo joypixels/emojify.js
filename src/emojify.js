@@ -92,17 +92,15 @@
             }
 
             var defaultConfig = {
+                blacklist: {
+                    'ids': [],
+                    'classes': ['no-emojify'],
+                    'elements': ['script', 'textarea', 'a', 'pre', 'code']
+                },
                 emojify_tag_type: null,
                 only_crawl_id: null,
                 img_dir: 'images/emoji',
                 ignore_emoticons: false,
-                ignored_tags: {
-                    'SCRIPT': 1,
-                    'TEXTAREA': 1,
-                    'A': 1,
-                    'PRE': 1,
-                    'CODE': 1
-                },
                 mode: 'img'
             };
 
@@ -250,7 +248,7 @@
             function run(el, replacer) {
 
                 // Check if an element was not passed.
-                // This wil only work in the browser
+                // This will only work in the browser
                 if(typeof el === 'undefined'){
                     // Check if an element was configured. If not, default to the body.
                     if (defaultConfig.only_crawl_id) {
@@ -305,8 +303,10 @@
                 emoticonsProcessed = initEmoticonsProcessed();
                 emojiMegaRe = initMegaRe();
 
-                var ignoredTags = defaultConfig.ignored_tags,
-                    nodes = [];
+                var nodes = [];
+
+                var elementsBlacklist = new RegExp(defaultConfig.blacklist.elements.join('|'), 'i'),
+                    classesBlacklist = new RegExp(defaultConfig.blacklist.classes.join('|'), 'i');
 
                 if(typeof win.document.createTreeWalker !== 'undefined') {
                     var nodeIterator = win.document.createTreeWalker(
@@ -318,12 +318,13 @@
                                 return win.NodeFilter.FILTER_ACCEPT;
                             }
 
-                            if(ignoredTags[node.tagName] || node.classList.contains('no-emojify')) {
+                            if(node.tagName.match(elementsBlacklist) || node.className.match(classesBlacklist)) {
                                 return win.NodeFilter.FILTER_REJECT;
                             }
 
                             return win.NodeFilter.FILTER_SKIP;
-                        },false
+                        },
+                        false
                     );
 
                     var node;
@@ -334,7 +335,10 @@
                 }
                 else {
                     treeTraverse(el, function(node){
-                        if(ignoredTags[node.tagName] || (typeof node.classList !== 'undefined' && node.classList.contains('no-emojify'))){
+                        if(
+                            (typeof node.tagName !== 'undefined' && node.tagName.match(elementsBlacklist))
+                            || (typeof node.className !== 'undefined' && node.className.match(classesBlacklist))
+                        ){
                             return false;
                         }
                         if (node.nodeType === 1) {
