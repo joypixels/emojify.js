@@ -8,27 +8,27 @@ JS.Test.describe('emojify with differing tag_types', function() {
             this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
-        this.it('null emojify_tag_type should be img element', function() {
+        this.it('null tag_type should be img element', function() {
             emojify.setConfig({
-                emojify_tag_type: null
+                tag_type: null
             });
             var text = ':)';
             var result = emojify.replace(text);
             this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
-        this.it('img emojify_tag_type should be well formed', function() {
+        this.it('img tag_type should be well formed', function() {
             emojify.setConfig({
-                emojify_tag_type: 'img'
+                tag_type: 'img'
             });
             var text = ':)';
             var result = emojify.replace(text);
             this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
         });
 
-        this.it('div emojify_tag_type should be well formed', function() {
+        this.it('div tag_type should be well formed', function() {
             emojify.setConfig({
-                emojify_tag_type: 'div'
+                tag_type: 'div'
             });
             var text = ':)';
             var result = emojify.replace(text);
@@ -42,9 +42,9 @@ JS.Test.describe('emojify with differing tag_types', function() {
             this.el = document.createElement("DIV");
         });
 
-        this.it('null emojify_tag_type should be img element', function() {
+        this.it('null tag_type should be img element', function() {
             emojify.setConfig({
-                emojify_tag_type: null
+                tag_type: null
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);
@@ -52,18 +52,18 @@ JS.Test.describe('emojify with differing tag_types', function() {
             this.assertEqual( 'img', this.el.children[0].tagName.toLowerCase() );
         });
 
-        this.it('img emojify_tag_type should be img element', function() {
+        this.it('img tag_type should be img element', function() {
             emojify.setConfig({
-                emojify_tag_type: 'img'
+                tag_type: 'img'
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);
             this.assertEqual( 'img', this.el.children[0].tagName.toLowerCase() );
         });
 
-        this.it('div emojify_tag_type should be well formed', function() {
+        this.it('div tag_type should be well formed', function() {
             emojify.setConfig({
-                emojify_tag_type: 'div'
+                tag_type: 'div'
             });
             this.el.innerHTML = ":)";
             emojify.run(this.el);

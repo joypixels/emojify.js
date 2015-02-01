@@ -4,7 +4,7 @@ global.JS = require('jstest');
 global.emojify = require('../src/emojify.js');
 
 require('./spec/dom');
-require('./spec/emojify_tag_type');
+require('./spec/tag_type');
 require('./spec/string');
 
 global.assertEmoji = function (test, rootEl, emojiTitles) {

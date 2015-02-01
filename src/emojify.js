@@ -97,7 +97,7 @@
                     'classes': ['no-emojify'],
                     'elements': ['script', 'textarea', 'a', 'pre', 'code']
                 },
-                emojify_tag_type: null,
+                tag_type: null,
                 only_crawl_id: null,
                 img_dir: 'images/emoji',
                 ignore_emoticons: false,
@@ -128,7 +128,7 @@
                     );
                 }
                 else {
-                    var elementType = defaultConfig.emojify_tag_type || modeToElementTagType[defaultConfig.mode];
+                    var elementType = defaultConfig.tag_type || modeToElementTagType[defaultConfig.mode];
                     emojiElement = args.win.document.createElement(elementType);
 
                     if (elementType !== 'img') {
@@ -169,7 +169,7 @@
 
             function defaultReplacer(emoji, name) {
                 /*jshint validthis: true */
-                var elementType = this.config.emojify_tag_type || modeToElementTagType[this.config.mode];
+                var elementType = this.config.tag_type || modeToElementTagType[this.config.mode];
                 if (elementType !== 'img') {
                     return "<" +  elementType +" class='emoji emoji-" + name + "' title=':" + name + ":'></" + elementType+ ">";
                 } else {
