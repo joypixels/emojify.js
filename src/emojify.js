@@ -336,8 +336,8 @@
                 else {
                     treeTraverse(el, function(node){
                         if(
-                            (typeof node.tagName !== 'undefined' && node.tagName.match(elementsBlacklist))
-                            || (typeof node.className !== 'undefined' && node.className.match(classesBlacklist))
+                            (typeof node.tagName !== 'undefined' && node.tagName.match(elementsBlacklist)) ||
+                            (typeof node.className !== 'undefined' && node.className.match(classesBlacklist))
                         ){
                             return false;
                         }
