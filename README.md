@@ -42,11 +42,11 @@ emojify.js is now available on cdnjs - https://cdnjs.com/libraries/emojify.js
 
 Add this to the rest of your stylesheet imports:
 
-`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0/emojify.min.css" />`
+`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" />`
 
 Then add this to your Javascript code:
 
-`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0/emojify.min.js"></script>`
+`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.js"></script>`
 
 ### Via Bower
 
@@ -153,18 +153,23 @@ emojify.replace('I am happy :)', replacer);
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Credits
+
+- [All Contributors](https://github.com/hassankhan/emojify.js/contributors)
+- [Hassan Khan](https://github.com/hassankhan)
+
 ## License
 
 Please read [LICENSE.md](LICENSE.md). For image attributions, please read [LICENSE-IMAGES.md](LICENSE-IMAGES.md)
 
 [travis]: https://travis-ci.org/hassankhan/emojify.js
-[appveyor]: https://ci.appveyor.com/project/adam-lynch/emojify-js
+[appveyor]: https://ci.appveyor.com/project/hassankhan/emojify-js
 [package-bower]: http://bower.io/search/?q=emojify.js
 [package-npm]: https://www.npmjs.org/package/emojify.js
 [ico-build]: http://img.shields.io/travis/hassankhan/emojify.js.svg?style=flat-square
 [ico-build-dev]: http://img.shields.io/travis/hassankhan/emojify.js/develop.svg?style=flat-square
-[ico-windows-build]: https://ci.appveyor.com/api/projects/status/6umkf6gc7dq64c2g/branch/master?svg=true
-[ico-windows-build-dev]: https://ci.appveyor.com/api/projects/status/6umkf6gc7dq64c2g/branch/develop?svg=true
+[ico-windows-build]: https://ci.appveyor.com/api/projects/status/908bymld8nm3ykxm?svg=true
+[ico-windows-build-dev]: https://ci.appveyor.com/api/projects/status/908bymld8nm3ykxm/branch/develop?svg=true
 [ico-bower]: http://img.shields.io/bower/v/emojify.js.svg?style=flat-square
 [ico-npm]: http://img.shields.io/npm/v/emojify.js.svg?style=flat-square
 [ico-license]: http://img.shields.io/npm/l/emojify.js.svg?style=flat-square
