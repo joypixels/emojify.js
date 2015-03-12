@@ -318,7 +318,7 @@
                                 return win.NodeFilter.FILTER_ACCEPT;
                             }
 
-                            if(node.tagName.match(elementsBlacklist) || node.className.match(classesBlacklist)) {
+                            if(node.tagName.match(elementsBlacklist) || node.tagName === "svg" || node.className.match(classesBlacklist)) {
                                 return win.NodeFilter.FILTER_REJECT;
                             }
 
