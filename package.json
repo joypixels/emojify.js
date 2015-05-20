@@ -1,6 +1,6 @@
 {
   "name": "emojify.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Javascript module to convert emoji keywords to images.",
   "main": "dist/js/emojify.js",
   "scripts": {
