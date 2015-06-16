@@ -84,7 +84,7 @@ gulp.task('images-and-styles', ['copy-styles', 'data-uri'], function(){
             name: 'emojify-emoticons',
             style: 'emojify-emoticons.css',
             prefix: 'emoji',
-            cssPath: '../../images/sprites',
+            cssPath: '../../images/sprites/',
             orientation: 'binary-tree',
             retina: true,
             template: './build/sprites.mustache'
@@ -110,7 +110,7 @@ gulp.task('images-and-styles', ['copy-styles', 'data-uri'], function(){
             name: 'emojify',
             style: 'emojify.css',
             prefix: 'emoji',
-            cssPath: '../../images/sprites',
+            cssPath: '../../images/sprites/',
             orientation: 'binary-tree',
             retina: true,
             template: './build/sprites.mustache'
@@ -196,6 +196,8 @@ gulp.task('bump', function(done){
 
 gulp.task('update', function(done){
     var emoji = '';
+
+    del('./src/images/emoji');
 
     $.download('https://github.com/arvida/emoji-cheat-sheet.com/archive/master.zip')
         .pipe($.unzip())
