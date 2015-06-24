@@ -1,13 +1,67 @@
     .emoji {
-        background-image: url('../../images/sprites/emojify-emoticons.png');
+        background-image: url('../../images/emojify-emoticons.png');
         display: inline-block;
     }
 
     @media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
         .emoji {
-            background-image: url('../../images/sprites/emojify-emoticons@2x.png');
-            background-size: 185px 148px;
+            background-image: url('../../images/emojify-emoticons@2x.png');
+            background-size: 180px 144px;
         }
+    }
+
+    .emoji-broken_heart {
+        background-position: -38px -2px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-confounded {
+        background-position: -110px -2px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-flushed {
+        background-position: -2px -38px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-frowning {
+        background-position: -38px -38px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-grinning {
+        background-position: -74px -2px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-heart {
+        background-position: -74px -38px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-kissing_heart {
+        background-position: -2px -74px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-mask {
+        background-position: -38px -74px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .emoji-pensive {
+        background-position: -74px -74px;
+        width: 32px;
+        height: 32px;
     }
 
     .emoji-rage {
@@ -16,104 +70,50 @@
         height: 32px;
     }
 
-    .emoji-broken_heart {
-        background-position: -39px -2px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-flushed {
-        background-position: -2px -39px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-frowning {
-        background-position: -39px -39px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-grinning {
-        background-position: -76px -2px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-heart {
-        background-position: -76px -39px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-kissing_heart {
-        background-position: -2px -76px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-mask {
-        background-position: -39px -76px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-pensive {
-        background-position: -76px -76px;
-        width: 32px;
-        height: 32px;
-    }
-
-    .emoji-confounded {
-        background-position: -113px -2px;
-        width: 32px;
-        height: 32px;
-    }
-
     .emoji-relaxed {
-        background-position: -113px -39px;
+        background-position: -110px -38px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-scream {
-        background-position: -113px -76px;
+        background-position: -110px -74px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-smile {
-        background-position: -2px -113px;
+        background-position: -2px -110px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-smirk {
-        background-position: -39px -113px;
+        background-position: -38px -110px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-sob {
-        background-position: -76px -113px;
+        background-position: -74px -110px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-stuck_out_tongue_closed_eyes {
-        background-position: -113px -113px;
+        background-position: -110px -110px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-stuck_out_tongue_winking_eye {
-        background-position: -150px -2px;
+        background-position: -146px -2px;
         width: 32px;
         height: 32px;
     }
 
     .emoji-wink {
-        background-position: -150px -39px;
+        background-position: -146px -38px;
         width: 32px;
         height: 32px;
     }
