@@ -26,7 +26,7 @@ gulp.task('default', ['compile']);
 
 gulp.task('compile', ['script', 'images-and-styles']);
 
-gulp.task('release', ['bump', 'compile']);
+gulp.task('release', ['update', 'compile', 'bump']);
 
 gulp.task('script', function(){
     var pkg = require('./package.json');
