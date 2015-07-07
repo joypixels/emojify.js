@@ -113,6 +113,12 @@ JS.Test.describe('emojify used with flat strings', function() {
             this.assertEqual("I&#x27;d better not see emoji in this string; that'd suck", result);
         });
 
+        this.it("interprets :o and :O", function () {
+            var text = ":o :O";
+            var result = emojify.replace(text);
+            this.assertEqual("<img align=\'absmiddle\' alt=\':open_mouth:\' class=\'emoji\' src=\'images/emoji/open_mouth.png\' title=\':open_mouth:\' /> <img align=\'absmiddle\' alt=\':open_mouth:\' class=\'emoji\' src=\'images/emoji/open_mouth.png\' title=\':open_mouth:\' />", result);
+        });
+
     });
 
     this.describe('with ignore_emoticons option enabled', function () {
