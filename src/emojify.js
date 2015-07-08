@@ -42,7 +42,7 @@
                 var emoticons = {
          /* :..: */ named: /:([a-z0-9A-Z_-]+):/,
          /* :-)  */ smile: /:-?\)/g,
-         /* :o   */ open_mouth: /:o/i,
+         /* :o   */ open_mouth: /:o/gi,
          /* :-o  */ scream: /:-o/gi,
          /* :-]  */ smirk: /[:;]-?]/g,
          /* :-D  */ grinning: /[:;]-?d/gi,
