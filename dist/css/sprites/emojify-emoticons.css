@@ -1,5 +1,5 @@
     .emoji {
-        background-image: url('../../images/emojify-emoticons.png');
+        background-image: url('../../images/sprites/emojify-emoticons.png');
         display: inline-block;
     }
 
@@ -117,3 +117,4 @@
         width: 32px;
         height: 32px;
     }
+
