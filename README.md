@@ -26,7 +26,7 @@ Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to 
 - Awesome
 - Converts emoticons like `:) :( :'(`
 - Allows customisation of processed emoji
-- Multiple modes; `img`, sprites and data-URI
+- Multiple modes; `img`, data-URI, and sprites (best for [load time](https://css-tricks.com/css-sprites/) and [render performance](https://medium.com/parlay-engineering/emoji-at-scale-render-performance-of-css-sprites-vs-individual-images-f0a0a2dd8039))
 - Available on a CDN **(gasp)**
 - Includes a [sample `.htaccess` file](.htaccess) for caching Javascript and CSS
 - Switchable emoji sets **(SOON!)**
