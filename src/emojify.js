@@ -238,7 +238,7 @@
                         return replacer.apply({
                                 config: defaultConfig
                             },
-                            [arguments[0], emojiName]
+                            [arguments[0], emojiName, index]
                         );
                     }
                     /* Did not validate, return the original value */
