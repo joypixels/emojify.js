@@ -342,7 +342,7 @@
                         ){
                             return false;
                         }
-                        if (node.nodeType === 1) {
+                        if (node.nodeType === node.TEXT_NODE) {
                             return true;
                         }
 
