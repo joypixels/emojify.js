@@ -314,7 +314,7 @@
                         el,
                         win.NodeFilter.SHOW_TEXT | win.NodeFilter.SHOW_ELEMENT,
                         function(node) {
-                            if(node.nodeType === node.TEXT_NODE) {
+                            if(node.nodeType !== node.ELEMENT_NODE) {
                                 /* Text Node? Good! */
                                 return win.NodeFilter.FILTER_ACCEPT;
                             }
@@ -342,7 +342,7 @@
                         ){
                             return false;
                         }
-                        if (node.nodeType === node.TEXT_NODE) {
+                        if (node.nodeType === node.ELEMENT_NODE) {
                             return true;
                         }
 
