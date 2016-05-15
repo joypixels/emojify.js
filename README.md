@@ -42,11 +42,11 @@ emojify.js is now available on cdnjs - https://cdnjs.com/libraries/emojify.js
 
 Add this to the rest of your stylesheet imports:
 
-`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.css" />`
+`<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify-emoticons.min.css" />`
 
 Then add this to your Javascript code:
 
-`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.js"></script>`
+`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>`
 
 ### Via Bower
 
