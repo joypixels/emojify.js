@@ -6,7 +6,6 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 ## Prerequisites
 
 1. Install the appropriate [EditorConfig](http://editorconfig.org) plugin for your IDE/editor. This helps keep the code style consistent.
-2. Install [PhantomJS](http://phantomjs.org). Make sure it's on your path / available when calling `phantomjs` from the command line.
 3. `npm install`
 
 ## Running the tests
@@ -19,6 +18,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 
 Make sure you do the following:
 
+- *If using Node 4*, `css-sprite` is deprecated and has a dependency `lwip` which doesn't build on Node 4. So you will need to  `npm install css-sprite --ignore-scripts`, go into `./node_modules/css-sprite/package.json` to `lwip@0.0.8` and `npm install` on the main project again. See https://github.com/aslansky/css-sprite/issues/73
 - Run `npm run build`
 
 Note: The build script will generate new `*.min.{css,js}` files. If, for example, you only changed the JavaScript then don't bother committing `emojify.min.css`.
