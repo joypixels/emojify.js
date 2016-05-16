@@ -33,7 +33,7 @@ git log --pretty=format:"- %s" >> log.md
 
 If you have rights to publish to npm, do the following first:
 
-- Run `gulp update`. This will update the project with the latest emoji from [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
-- Run `gulp`
-- Run `gulp bump`
+- Run `npm run task-update`. This will update the project with the latest emoji from [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
+- Run `npm run build`
+- Run `npm run task-bump`
 - Run `npm publish`

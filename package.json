@@ -5,7 +5,9 @@
   "main": "dist/js/emojify.js",
   "scripts": {
     "test": "phantomjs tests/phantom.js && node tests/node",
-    "build": "gulp"
+    "build": "gulp",
+    "task-update": "gulp update",
+    "task-bump": "gulp bump"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,11 @@
     "url": "https://github.com/hassankhan/emojify.js/issues"
   },
   "devDependencies": {
-    "css-sprite": "~0.9.0",
     "del": "~0.1.3",
     "gulp": "~3.8.9",
     "gulp-bump": "~0.1.11",
     "gulp-concat": "~2.4.1",
+    "gulp-css-spriter": "^0.3.3",
     "gulp-download": "0.0.1",
     "gulp-filter": "~1.0.2",
     "gulp-image-data-uri": "~1.0.0",
