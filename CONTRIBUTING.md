@@ -7,7 +7,6 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 
 1. Install the appropriate [EditorConfig](http://editorconfig.org) plugin for your IDE/editor. This helps keep the code style consistent.
 2. Install [PhantomJS](http://phantomjs.org). Make sure it's on your path / available when calling `phantomjs` from the command line.
-2. `npm install -g gulp`
 3. `npm install`
 
 ## Running the tests
@@ -20,7 +19,7 @@ This project follows [Git-Flow](http://nvie.com/posts/a-successful-git-branching
 
 Make sure you do the following:
 
-- Run `gulp`
+- Run `npm run build`
 
 Note: The build script will generate new `*.min.{css,js}` files. If, for example, you only changed the JavaScript then don't bother committing `emojify.min.css`.
 
