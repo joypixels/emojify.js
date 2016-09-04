@@ -46,7 +46,7 @@ Add this to the rest of your stylesheet imports:
 
 Then add this to your Javascript code:
 
-`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.0.1/emojify.min.js"></script>`
+`<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>`
 
 ### Via Bower
 
