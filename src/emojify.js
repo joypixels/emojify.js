@@ -40,7 +40,7 @@
             function initEmoticonsProcessed() {
                 /* List of emoticons used in the regular expression */
                 var emoticons = {
-                    /*numbers 0-10(may want to add to other list)*/
+                    /*numbers 0-10(may want to add to other list)
                     zero:/:(0):/g,
                     one:/:(1):/g,
                     two:/:(2):/g,
