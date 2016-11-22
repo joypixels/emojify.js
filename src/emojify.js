@@ -96,7 +96,7 @@
                 blacklist: {
                     'ids': [],
                     'classes': ['no-emojify'],
-                    'elements': ['script', 'textarea', 'a', 'pre', 'code']
+                    'elements': ['^script$', '^textarea$', '^a$', '^pre$', '^code$']
                 },
                 tag_type: null,
                 only_crawl_id: null,
