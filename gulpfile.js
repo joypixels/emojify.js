@@ -137,6 +137,7 @@ gulp.task('data-uri', function(){
                 return 'emoji-' + className
             }
         }))
+        .pipe($.replace('background:', 'background-image:'))
         .pipe(emoticonFilter)
         .pipe($.concat('emojify-emoticons.css'))
         .pipe($.replace('.emoji-+1', '.emoji-plus1'))
