@@ -5,7 +5,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
         this.it('should default to img element', function() {
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' />', result);
         });
 
         this.it('null tag_type should be img element', function() {
@@ -14,7 +14,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' />', result);
         });
 
         this.it('img tag_type should be well formed', function() {
@@ -23,7 +23,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' />', result);
         });
 
         this.it('div tag_type should be well formed', function() {
@@ -32,7 +32,7 @@ JS.Test.describe('emojify with differing tag_types', function() {
             });
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<div class=\'emoji emoji-smile\' title=\':smile:\'></div>', result);
+            this.assertEqual('<div class=\'emoji emoji-grinning\' title=\':grinning:\'></div>', result);
         });
     });
 
@@ -69,8 +69,8 @@ JS.Test.describe('emojify with differing tag_types', function() {
             emojify.run(this.el);
             var child = this.el.children[0];
             this.assertEqual( 'div', child.tagName.toLowerCase() );
-            this.assertEqual( 'emoji emoji-smile', child.className );
-            this.assertEqual( ':smile:', child.title );
+            this.assertEqual( 'emoji emoji-grinning', child.className );
+            this.assertEqual( ':grinning:', child.title );
         });
 
     });

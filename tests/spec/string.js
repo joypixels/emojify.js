@@ -5,25 +5,25 @@ JS.Test.describe('emojify used with flat strings', function() {
         this.it('works with no spacing around :)', function() {
             var text = ':)';
             var result = emojify.replace(text);
-            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' />', result);
         });
 
         this.it('works with spacing before :)', function() {
             var text = " :)";
             var result = emojify.replace(text);
-            this.assertEqual(' <img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' />', result);
+            this.assertEqual(' <img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' />', result);
         });
 
         this.it('works with spacing after :)', function() {
             var text = ":) ";
             var result = emojify.replace(text);
-            this.assertEqual('<img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' /> ', result);
+            this.assertEqual('<img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' /> ', result);
         });
 
         this.it('works with spacing before and after :)', function() {
             var text = " :) ";
             var result = emojify.replace(text);
-            this.assertEqual(' <img align=\'absmiddle\' alt=\':smile:\' class=\'emoji\' src=\'images/emoji/smile.png\' title=\':smile:\' /> ', result);
+            this.assertEqual(' <img align=\'absmiddle\' alt=\':grinning:\' class=\'emoji\' src=\'images/emoji/grinning.png\' title=\':grinning:\' /> ', result);
         });
 
         this.it('does not insert emoji into the middle of words', function () {
