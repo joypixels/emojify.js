@@ -100,7 +100,7 @@
                 },
                 tag_type: null,
                 only_crawl_id: null,
-                img_dir: 'images/emoji',
+                img_dir: 'images/basic',
                 ignore_emoticons: false,
                 mode: 'img'
             };
