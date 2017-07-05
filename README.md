@@ -1,11 +1,17 @@
 # emojify.js
 
+[![Maintenance](https://img.shields.io/maintenance/no/red.svg)]()
+
 [![npm version][ico-npm]][package-npm]
 [![Bower version][ico-bower]][package-bower]
 [![MIT Licensed][ico-license]][license]
 [![Gitter chat][ico-gitter]][gitter]
 
 ---
+
+> This project is currently unmaintained.
+
+--
 
 Master | Develop
 --- | ---
