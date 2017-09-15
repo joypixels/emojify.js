@@ -54,6 +54,18 @@ Then add this to your Javascript code:
 
 `<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>`
 
+### Via jsDelivr
+
+emojify.js is now available on jsDelivr - https://www.jsdelivr.com/package/npm/emojify.js
+
+Add this to the rest of your stylesheet imports:
+
+`<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/emojify.js@1.1.0/dist/css/basic/emojify.min.css" />`
+
+Then add this to your Javascript code:
+
+`<script src="//cdn.jsdelivr.net/npm/emojify.js@1.1.0/dist/js/emojify.min.js"></script>`
+
 ### Via Bower
 
 `bower install emojify.js --save`
