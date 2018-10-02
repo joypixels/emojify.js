@@ -24,7 +24,7 @@ A swiss-army-knife for all emoji, in Javascript. Used by [Gitter](https://gitter
 
 The emoji keywords are as described by [emoji-cheat-sheet.com](http://www.emoji-cheat-sheet.com).
 
-Go to this project's [GitHub pages](http://hassankhan.github.com/emojify.js) to see the code in action.
+Go to this project's [GitHub pages](http://emojione.github.io/emojify.js/) to see the code in action.
 
 ## Features
 
